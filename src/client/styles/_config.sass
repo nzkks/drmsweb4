@@ -1,0 +1,83 @@
+//  = Colours
+//  ---------------------------------------------------------------------------
+
+$black:                 #000
+$white:                 #fff
+
+$primaryColor:          #1f6b92
+$secondaryColor:        #099659
+$tertiaryColor:         #981a11
+
+$bodyBgColor:           darken($white, 5%)
+$textColor:             lighten($black, 15%)
+$linkColor:             darken($secondaryColor, 8%)
+$linkColorHover:        darken($secondaryColor, 16%)
+
+//  = TYPOGRAPHY
+//  ---------------------------------------------------------------------------
+
+$sansFontFamily:        "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+$serifFontFamily:       "ff-meta-serif-web-pro", "Georgia", "Geneva", "Times New Roman", serif
+$monoFontFamily:        "Menlo", "Monaco", "Consolas", "Courier New", monospace
+
+$htmlFontSize:          62.5%
+$htmlLineHeight:        1
+$baseLineHeight:				1.4 //px
+$bodyFontSize:          1.8 //px
+$bodyLineHeight:        $baseLineHeight * 2
+$baseFontFamily:        $serifFontFamily
+$altFontFamily:         $sansFontFamily
+
+$smallFontSize:				  $baseLineHeight - 0.2
+
+$normalFontWeight:			400
+$boldFontWeight:			  700
+
+$headingsFontFamily:    $sansFontFamily 	// empty to use BS default, $baseFontFamily
+$headingsFontWeight:    700	 			// same as browser default, bold
+$headingsColor:         inherit			// empty to use BS default, $textColor
+
+$h1Size:							  4.2 //px
+$h1LineHeight:					4.2 //px
+
+$h2Size:							  3.4 //px
+$h2LineHeight:					4.2 //px
+
+$h3Size:							  2.6 //px
+$h3LineHeight:					2.8 //px
+
+$h4Size:							  2.1 //px
+$h4LineHeight:					2.8 //px
+
+//  = BREAKPOINTS
+//  ---------------------------------------------------------------------------
+
+// Base is 16px at this point
+
+// Feature phone		: 0px		 2 columns	-->	   0 -> up
+$tiny-width:            0
+// $tiny-cols:             2
+
+// Smartphone			: 320px		 4 columns 	-->  320 -> up
+$small-width:           20em
+// $small-cols:            4
+
+// Smartphone landscape	: 480px 	 6 columns 	-->  480 -> up
+$medium-width:          30em
+// $medium-cols:           6
+
+// Tablet 				: 768px, 	 8 columns 	-->  768 -> up
+$large-width:           48em
+// $large-cols:            8
+
+// Tablet landscape		: 1024px 	12 columns 	--> 1024 -> up
+$huge-width:            64em
+// $huge-cols:             12
+
+// Desktop 				: 1280px 	16 columns 	--> 1280 -> up
+$giant-width:           80em
+// $giant-cols:            16
+
+// Desktop large 		: 1600px 	20 columns 	--> 1600 -> up
+$monstrous-width:       100em
+// $monstrous-cols:        20

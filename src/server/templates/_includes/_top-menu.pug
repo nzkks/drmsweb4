@@ -1,0 +1,26 @@
+mixin top-menu(main_sel)
+  nav.navbar.navbar-inverse.navbar-fixed
+    .container
+      .navbar-header
+        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#main-top-menu', aria-expanded='false')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href='#')= title
+      #main-top-menu.collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar-right
+          li.item(class=main_sel === 'home' ? 'active' : '')
+            a(href='/') Home
+          li.item(class=main_sel === 'skills' ? 'active' : '')
+            a(href='/skills') Skills
+          li.item(class=main_sel === 'experience' ? 'active' : '')
+            a(href='/experience') Experience
+          li.item(class=main_sel === 'works' ? 'active' : '')
+            a(href='/works') Works
+          li.item(class=main_sel === 'recommendations' ? 'active' : '')
+            a(href='/recommendations') Recommendations
+          li.item(class=main_sel === 'education' ? 'active' : '')
+            a(href='/education') Education
+          li.item(class=main_sel === 'contact' ? 'active' : '')
+            a(href='/contact') Contact
