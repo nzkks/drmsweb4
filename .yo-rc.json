@@ -1,0 +1,23 @@
+{
+  "generator-webpack-versatile": {
+    "appname": "drmsweb4",
+    "dirs": {
+      "bower": "bower_components",
+      "src": "src",
+      "test": "test",
+      "tmp": ".tmp",
+      "dist": "dist",
+      "serverSrc": "src/server",
+      "clientSrc": "src/client",
+      "tmpDev": ".tmp/dev",
+      "tmpTest": ".tmp/test"
+    },
+    "framework": "none",
+    "frontend": "bootstrap",
+    "features": [
+      "modernizr",
+      "sass",
+      "crusher"
+    ]
+  }
+}

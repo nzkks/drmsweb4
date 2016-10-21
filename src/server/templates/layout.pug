@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/app/styles/main.css')
+    script(type='text/javascript', src='/vendor/modernizr/modernizr.js')
+    script(type='text/javascript', src='<%= builder.getBundleUrl() %>/vendor.bundle.js')
+    script(type='text/javascript', src='<%= builder.getBundleUrl() %>/app.bundle.js')
+  body
+    <!--[if lt IE 9]>
+    p.browsehappy
+      | You are using an <strong>outdated</strong> browser. Please
+      a(href='http://browsehappy.com/') upgrade your browser
+      |  to improve your experience.
+    <![endif]-->
+    block content

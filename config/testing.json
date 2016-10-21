@@ -1,0 +1,13 @@
+{
+  "dirs": {
+    "tgt": {
+      "root": ".tmp/test"
+    }
+  },
+  "server": {
+    "port": 8002
+  }
+}
+
+
+
