@@ -5,8 +5,12 @@ html
     include _includes/_head.pug
   body
     include _includes/_browse-happy.pug
-    header
-      block headerContent
+    header.header
+      include _includes/_header.pug
+      +top-menu('home')
+
+    main
+      block content
 
     footer
       include _includes/_footer.pug

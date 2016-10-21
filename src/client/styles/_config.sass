@@ -1,83 +1,29 @@
 //  = Colours
 //  ---------------------------------------------------------------------------
+$gray-base:             #000
+$gray-darker:           lighten($gray-base, 13.5%) // #222
+$gray-dark:             lighten($gray-base, 20%)   // #333
+$gray:                  lighten($gray-base, 33.5%) // #555
+$gray-light:            lighten($gray-base, 46.7%) // #777
+$gray-lighter:          lighten($gray-base, 93.5%) // #eee
 
-$black:                 #000
-$white:                 #fff
+$brand-primary:         darken(#428bca, 6.5%) // #337ab7
+$brand-success:         #5cb85c
+$brand-info:            #5bc0de
+$brand-warning:         #f0ad4e
+$brand-danger:          #d9534f
 
-$primaryColor:          #1f6b92
-$secondaryColor:        #099659
-$tertiaryColor:         #981a11
 
-$bodyBgColor:           darken($white, 5%)
-$textColor:             lighten($black, 15%)
-$linkColor:             darken($secondaryColor, 8%)
-$linkColorHover:        darken($secondaryColor, 16%)
+$screen-xs-min:         480px
+$screen-sm-min:         768px
+$screen-md-min:         992px
+$screen-lg-min:         1200px
+$screen-xs-max:         ($screen-sm-min - 1) // 767px
+$screen-sm-max:         ($screen-md-min - 1) // 991px
+$screen-md-max:         ($screen-lg-min - 1) // 1199px
 
-//  = TYPOGRAPHY
-//  ---------------------------------------------------------------------------
+$grid-gutter-width:     30px
 
-$sansFontFamily:        "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif
-$serifFontFamily:       "ff-meta-serif-web-pro", "Georgia", "Geneva", "Times New Roman", serif
-$monoFontFamily:        "Menlo", "Monaco", "Consolas", "Courier New", monospace
-
-$htmlFontSize:          62.5%
-$htmlLineHeight:        1
-$baseLineHeight:				1.4 //px
-$bodyFontSize:          1.8 //px
-$bodyLineHeight:        $baseLineHeight * 2
-$baseFontFamily:        $serifFontFamily
-$altFontFamily:         $sansFontFamily
-
-$smallFontSize:				  $baseLineHeight - 0.2
-
-$normalFontWeight:			400
-$boldFontWeight:			  700
-
-$headingsFontFamily:    $sansFontFamily 	// empty to use BS default, $baseFontFamily
-$headingsFontWeight:    700	 			// same as browser default, bold
-$headingsColor:         inherit			// empty to use BS default, $textColor
-
-$h1Size:							  4.2 //px
-$h1LineHeight:					4.2 //px
-
-$h2Size:							  3.4 //px
-$h2LineHeight:					4.2 //px
-
-$h3Size:							  2.6 //px
-$h3LineHeight:					2.8 //px
-
-$h4Size:							  2.1 //px
-$h4LineHeight:					2.8 //px
-
-//  = BREAKPOINTS
-//  ---------------------------------------------------------------------------
-
-// Base is 16px at this point
-
-// Feature phone		: 0px		 2 columns	-->	   0 -> up
-$tiny-width:            0
-// $tiny-cols:             2
-
-// Smartphone			: 320px		 4 columns 	-->  320 -> up
-$small-width:           20em
-// $small-cols:            4
-
-// Smartphone landscape	: 480px 	 6 columns 	-->  480 -> up
-$medium-width:          30em
-// $medium-cols:           6
-
-// Tablet 				: 768px, 	 8 columns 	-->  768 -> up
-$large-width:           48em
-// $large-cols:            8
-
-// Tablet landscape		: 1024px 	12 columns 	--> 1024 -> up
-$huge-width:            64em
-// $huge-cols:             12
-
-// Desktop 				: 1280px 	16 columns 	--> 1280 -> up
-$giant-width:           80em
-// $giant-cols:            16
-
-// Desktop large 		: 1600px 	20 columns 	--> 1600 -> up
-$monstrous-width:       100em
-// $monstrous-cols:        20
+$container-sm:          (720px + $grid-gutter-width) // 750px
+$container-md:          (940px + $grid-gutter-width) // 970px
+$container-lg:          (1140px + $grid-gutter-width) // 1170px
