@@ -20,7 +20,7 @@
     margin-left: 23px
     @include breakpoint(max-width 525px)
       float: none
-		  margin: 0px auto
+      margin: 0 auto
   .bio-details
     margin-left: 240px
     @include breakpoint(max-width 525px)
@@ -36,9 +36,13 @@
     .col-pad
     	padding-left: 0px
     	padding-right: 0px
+    .txt-col
+      columns: 2 200px
+      column-gap: 4em
+      column-rule: 1px dotted #ddd
     .bio-item
       padding: 7px 10px
-      max-width: 286px
+      max-width: 90%
       margin: 0px auto 10px
       @include breakpoint(max-width 767px)
         text-align: center
