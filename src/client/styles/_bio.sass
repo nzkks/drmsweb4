@@ -6,18 +6,50 @@
   background: #fff
   border: 1px solid #e7e7e7
   box-shadow: 3px 3px 0px 1px rgba(0,0,0,0.05)
+  @include breakpoint(max-width 800px)
+    margin-left: 20px
+    margin-right: 20px
   img
     width: 100%
     max-width: 200px
     float: left
+    border-radius: 100%
+    border: 1px solid #eee
+    padding: 3px
+    box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.05)
     margin-left: 23px
-    border-radius: 3px
+    @include breakpoint(max-width 525px)
+      float: none
+		  margin: 0px auto
   .bio-details
     margin-left: 240px
+    @include breakpoint(max-width 525px)
+      margin-left: 0px
+    @include breakpoint(max-width 357px)
+      margin-left: 0px
+      text-align: center
+    .col-mob
+      //@include breakpoint(max-width 767px)
+        //width: 50%
+      //@include breakpoint(max-width 357px)
+    		//width: 100%
+    .col-pad
+    	padding-left: 0px
+    	padding-right: 0px
+    .bio-item
+      padding: 7px 10px
+      max-width: 286px
+      margin: 0px auto 10px
+      @include breakpoint(max-width 767px)
+        text-align: center
   .bio-social
     position: absolute
     top: -15px
     right: 15px
+    @include breakpoint(max-width 525px)
+      text-align: center
+      right: 0
+      width: 100%
     a > i
       width: 33px
       height: 33px

@@ -1,11 +1,15 @@
 $icon-font-path: "/vendor/bootstrap/assets/fonts/bootstrap/"
 @import "<%= bootstrapSassMain %>"
+@import "<%= breakpointSassMain %>"
 $fa-font-path: "/vendor/font-awesome/fonts/"
 @import "<%= fontAwesomeSassMain %>"
 @import "config"
 @import "header"
 @import "accordion-slider"
 @import "bio"
+
+//$Breakpoint-Settings:('default media': all,'default feature': max-width,'default pair': width)
+// $Breakpoint-Settings:('default feature': max-width)
 
 .browsehappy
   margin: 0.2em 0

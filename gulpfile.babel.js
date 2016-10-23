@@ -116,6 +116,8 @@ gulp.task('build-client-styles', function() {
   templateConfig.bootstrapSassMain = templateConfig.bootstrapSassPath + '/' + '_bootstrap.scss';
   templateConfig.fontAwesomeSassPath = 'node_modules/font-awesome/scss';
   templateConfig.fontAwesomeSassMain = templateConfig.fontAwesomeSassPath + '/' + 'font-awesome.scss';
+  templateConfig.breakpointSassPath = 'bower_components/breakpoint-sass/stylesheets';
+  templateConfig.breakpointSassMain = templateConfig.breakpointSassPath + '/' + '_breakpoint.scss';
   let sassFilter = plugins.filter([gp.SASS], {restore: true});
   let scssFilter = plugins.filter([gp.SCSS], {restore: true});
   return gulp.src([gp.CSS, gp.SASS, gp.SCSS], {cwd: `${builder.dirs.src.client}/styles`})
