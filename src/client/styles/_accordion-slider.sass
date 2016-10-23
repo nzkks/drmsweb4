@@ -89,14 +89,7 @@
   -webkit-transform: translateX(0)
   transform: translateX(0)
 
-@media screen and (max-width: 600px)
-  body
-    margin: 0
-
-  .main-slider-container
-    padding-left: 0
-    padding-right: 0
-
+@include breakpoint(max-width 600px)
   .accordion-slider
     height: auto
     li,
