@@ -8,14 +8,19 @@ $fa-font-path: "/vendor/font-awesome/fonts/"
 @import "accordion-slider"
 @import "bio"
 @import "specialities"
+@import "skills"
 
 //$Breakpoint-Settings:('default media': all,'default feature': max-width,'default pair': width)
 // $Breakpoint-Settings:('default feature': max-width)
 
+body
+  background: $gray-lighter
+  @include breakpoint(max-width 600px)
+    margin: 0
+
 .browsehappy
   margin: 0.2em 0
   padding: 0.2em 0
-  background: $gray-lighter
   color: $gray-base
 
 .main
@@ -28,10 +33,7 @@ $fa-font-path: "/vendor/font-awesome/fonts/"
     margin-top: 2px
 
 
-@include breakpoint(max-width 600px)
-  body
-    margin: 0
-
-  .main-slider-container
+.main-slider-container
+  @include breakpoint(max-width 600px)
     padding-left: 0
     padding-right: 0

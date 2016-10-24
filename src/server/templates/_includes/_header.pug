@@ -10,8 +10,6 @@ mixin top-menu(main_sel)
         a.navbar-brand(href='#')= title
       #main-top-menu.collapse.navbar-collapse
         ul.nav.navbar-nav.navbar-right
-          li.item(class=main_sel === 'home' ? 'active' : '')
-            a(href='/') Home
           li.item(class=main_sel === 'about' ? 'active' : '')
             a(href='/about') About
           li.item(class=main_sel === 'portfolio' ? 'active' : '')
