@@ -1,9 +1,19 @@
+.main-slider-container
+  @include breakpoint(max-width 600px)
+    padding-left: 0
+    padding-right: 0
 .accordion-slider
+  margin: 50px auto
+  height: auto
   width: 100%
   max-width: 1140px
-  height: 250px
   overflow: hidden
-  margin: 50px auto
+  @include breakpoint(max-width 990px)
+    margin: 25px auto
+  @include breakpoint(max-width 768px)
+    margin: 15px auto
+  @include breakpoint(max-width 600px)
+    margin: 1px auto
   ul
     width: 100%
     display: table
@@ -15,7 +25,7 @@
       vertical-align: bottom
       position: relative
       width: 16.666%
-      height: 250px
+      height: auto
       background-repeat: no-repeat
       background-position: center center
       transition: all 500ms ease

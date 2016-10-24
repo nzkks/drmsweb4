@@ -5,15 +5,14 @@ html
     include _includes/_head.pug
   body
     include _includes/_browse-happy.pug
-    header.header
+    header.header.clearfix
       include _includes/_header.pug
       +top-menu('home')
 
-    main.main
-      .container.main-slider-container
-        include _includes/_accordion-slider.pug
+    main.main.clearfix
+      include _includes/_accordion-slider.pug
       block content
 
-    footer
+    footer.clearfix
       include _includes/_footer.pug
     include _includes/_foot-scripts.pug

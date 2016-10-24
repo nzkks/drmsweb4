@@ -6,9 +6,11 @@ $fa-font-path: "/vendor/font-awesome/fonts/"
 @import "config"
 @import "header"
 @import "accordion-slider"
+@import "cta-top"
 @import "bio"
 @import "specialities"
 @import "skills"
+@import "portfolio"
 
 //$Breakpoint-Settings:('default media': all,'default feature': max-width,'default pair': width)
 // $Breakpoint-Settings:('default feature': max-width)
@@ -24,16 +26,4 @@ body
   color: $gray-base
 
 .main
-  margin-top: 50px
-  @include breakpoint(max-width 990px)
-    margin-top: 25px
-  @include breakpoint(max-width 768px)
-    margin-top: 15px
-  @include breakpoint(max-width 600px)
-    margin-top: 2px
-
-
-.main-slider-container
-  @include breakpoint(max-width 600px)
-    padding-left: 0
-    padding-right: 0
+  margin-top: 51px
