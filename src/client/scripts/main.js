@@ -32,7 +32,7 @@ $(document).ready(function() {
 
   // BEGIN: Show / hide top contact panel
 
-  $('.main-contact-btn').on('click',function(e) {
+  $('.main-contact-btn, .contact-btn').on('click',function(e) {
     e.preventDefault();
     $('.contact-panel').slideDown(400);
     $('.contact-panel').addClass('open');
