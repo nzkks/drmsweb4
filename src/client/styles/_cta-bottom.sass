@@ -1,0 +1,56 @@
+.cta-bottom
+  background-image: url(../images/cta_bottom_blur_bg-min.jpg)
+  .cta-style__content
+    position: relative
+    .contact-btn
+      @include breakpoint(max-width 990px)
+        margin-bottom: 20px
+    .download-files-container
+      position: absolute
+      top: 55px
+      left: -10px
+      z-index: 1024
+      display: none
+      min-width: 250px
+      @include breakpoint(max-width 990px)
+        left: calc(50% - 125px)
+      .download-item
+        padding: 20px 5px
+        max-width: 120px
+        display: block
+        border-radius: 5px
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1)
+        text-align: center
+        position: relative
+        background: rgba(255, 255, 255, 0.9)
+        &:before
+          bottom: 100%
+          left: 45px
+          border: solid transparent
+          content: " "
+          height: 0
+          width: 0
+          position: absolute
+          pointer-events: none
+        &:before
+          border-color: transparent
+          border-width: 10px
+          border-bottom-color: rgba(255, 255, 255, 0.9)
+        i
+          font-size: 40px
+          position: relative
+          margin-bottom: 10px
+          font-weight: normal
+          color: #888
+        span
+          display: block
+          position: absolute
+          padding: 0 5px
+          border-radius: 2px
+          color: #fff
+          top: 40px
+          left: 60px
+          font-weight: 600
+          font-size: 10px
+          line-height: 17px
+          text-transform: uppercase
