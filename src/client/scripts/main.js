@@ -6,6 +6,9 @@ $(function() {
 });
 
 $(document).ready(function() {
+
+  // BEGIN: Show download menu
+
   var hidden = true;
   $('.download-btn').click(function(e) {
     e.preventDefault();
@@ -24,4 +27,23 @@ $(document).ready(function() {
   $('.download-files-container').click(function(event) {
     event.stopPropagation();
   });
+
+  // END: Show download menu
+
+  // BEGIN: Show / hide top contact panel
+
+  $('.main-contact-btn').on('click',function(e) {
+    e.preventDefault();
+    $('.contact-panel').slideDown(400);
+    $('.contact-panel').addClass('open');
+  });
+
+  $('.contact-panel-close').on('click', function(e){
+    e.preventDefault();
+    $('.contact-panel').removeClass('open');
+    $('.contact-panel').slideUp(400);
+  });
+
+// END: Show / hide top contact panel
+
 });

@@ -3,7 +3,7 @@
   .cta-style__content
     position: relative
     .contact-btn
-      @include breakpoint(max-width 990px)
+      @include breakpoint(max-width $screen-sm-max)
         margin-bottom: 20px
     .download-files-container
       position: absolute
@@ -12,7 +12,7 @@
       z-index: 1024
       display: none
       min-width: 250px
-      @include breakpoint(max-width 990px)
+      @include breakpoint(max-width $screen-sm-max)
         left: calc(50% - 125px)
       .download-item
         padding: 20px 5px

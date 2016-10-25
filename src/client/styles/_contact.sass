@@ -1,0 +1,69 @@
+.contact-panel
+  padding: 50px 0 20px
+  position: fixed
+  top: 50px
+  left: 0
+  right: 0
+  margin: 0 auto
+  z-index: 2000
+  display: none
+  .container
+    position: relative
+  .contact-panel-close
+    position: absolute
+    top: 0
+    right: 0
+    display: inline-block
+    width: 50px
+    height: 50px
+    text-align: center
+    color: #fff
+    font-size: 30px
+  h3
+    margin-top: 0
+    margin-bottom: 20px
+    color: #fff
+    @include breakpoint(max-width $screen-xs-max)
+      text-align: center
+  .contact-form
+    padding: 10px
+    max-width: 400px
+    @include breakpoint(max-width $screen-xs-max)
+      max-width: none
+      width: 100%
+    input,
+    textarea
+      border: 0
+      padding: 20px
+      border-radius: 4px
+    .button-group
+      @include breakpoint(max-width $screen-xs-max)
+        text-align: center
+    .btn
+      padding: 10px 20px
+      border-radius: 4px
+      background: #fff
+      color: #888
+      font-weight: 600
+  .contact-details
+    padding: 10px
+    h4
+      line-height: 44px
+      font-weight: 300
+      @include breakpoint(max-width $screen-xs-max)
+        text-align: center
+      a
+        color: #fff
+    .social-container
+      display: inline-block
+      margin-top: 10px
+      padding: 5px
+      background: rgba(255, 255, 255, 0.6)
+      border-radius: 5px
+      .social-icons
+        a
+          margin-right: 20px
+        a:last-child
+          margin-right: 0
+      .email-link
+          display: none

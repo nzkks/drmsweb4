@@ -1,0 +1,35 @@
+.contact-panel.bg-blue
+  a.contact-panel-close(href='#')
+    | X
+  .container
+    .row
+      .col-md-6.col-sm-6.col-xs-12
+        .contact-form
+          h3 Contact Form
+          form
+            .form-group
+              input.form-control(type='name', placeholder='Enter Name')
+            .form-group
+              input.form-control(type='email', placeholder='Enter Email')
+            .form-group
+              textarea.form-control(rows='5', placeholder='Enter Message')
+            .form-group.button-group
+              button.btn(type='submit') Submit
+              button.btn(type='reset') Reset
+      .col-md-6.col-sm-6.col-xs-12
+        .contact-details
+          h3 Contact Details
+          h4
+            a(href='mailto:kkshanthosh@gmail.com')
+              i.fa.fa-envelope
+              |    kkshanthosh@gmail.com
+          h4
+            a(href='#')
+              i.fa.fa-phone
+              |    +64 21 024 95 070
+          h4
+            a(href='http://drmsweb.com')
+              i.fa.fa-globe
+              |    www.drmsweb.com
+          .social-container
+            include _social-icons.pug

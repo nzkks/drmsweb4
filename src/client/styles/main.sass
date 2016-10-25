@@ -5,6 +5,8 @@ $fa-font-path: "/vendor/font-awesome/fonts/"
 @import "<%= fontAwesomeSassMain %>"
 @import "config"
 @import "common"
+@import "social-icons"
+@import "contact"
 @import "header"
 @import "accordion-slider"
 @import "cta-top"
@@ -19,7 +21,7 @@ $fa-font-path: "/vendor/font-awesome/fonts/"
 
 body
   background: $gray-lighter
-  @include breakpoint(max-width 600px)
+  @include breakpoint(max-width $screen-xs-min)
     margin: 0
 
 .browsehappy

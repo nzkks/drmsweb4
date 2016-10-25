@@ -5,7 +5,7 @@
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1), inset 0px 0px 15px rgba(0,0,0,0.1)
   .skills-heading
     float: left
-    @include breakpoint(max-width 500px)
+    @include breakpoint(max-width $screen-xs-min)
       width: 100%
       float: none
       padding: 10px 20px
@@ -15,7 +15,7 @@
       font-size: 16px
       font-weight: 600
       text-transform: uppercase
-      @include breakpoint(max-width 500px)
+      @include breakpoint(max-width $screen-xs-min)
         transform: none
         text-align: left
       a
@@ -27,7 +27,7 @@
           top: 12px
           min-width: 200px
           text-align: right
-          @include breakpoint(max-width 500px)
+          @include breakpoint(max-width $screen-xs-min)
             position: static
   .skills-content
     margin-left: 42px
@@ -35,7 +35,7 @@
     border: 1px solid #ddd
     border-left: 0
     background: #fff
-    @include breakpoint(max-width 500px)
+    @include breakpoint(max-width $screen-xs-min)
       width: 100%
       margin-left: 0
       border-top: 0
@@ -52,10 +52,10 @@
       width: 100%
       float: none
       margin: 10px auto 8px
-      @include breakpoint(max-width 990px)
+      @include breakpoint(max-width $screen-sm-max)
         width: 50%
         float: left
-      @include breakpoint(max-width 650px)
+      @include breakpoint(max-width $screen-xs-max)
         width: 100%
         float: none
       h4

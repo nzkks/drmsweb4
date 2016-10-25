@@ -1,5 +1,5 @@
 .main-slider-container
-  @include breakpoint(max-width 600px)
+  @include breakpoint(max-width $screen-xs-min)
     padding-left: 0
     padding-right: 0
 .accordion-slider
@@ -8,11 +8,11 @@
   width: 100%
   max-width: 1140px
   overflow: hidden
-  @include breakpoint(max-width 990px)
+  @include breakpoint(max-width $screen-sm-max)
     margin: 25px auto
-  @include breakpoint(max-width 768px)
+  @include breakpoint(max-width $screen-xs-max)
     margin: 15px auto
-  @include breakpoint(max-width 600px)
+  @include breakpoint(max-width $screen-xs-min)
     margin: 1px auto
   ul
     width: 100%
@@ -99,7 +99,7 @@
   -webkit-transform: translateX(0)
   transform: translateX(0)
 
-@include breakpoint(max-width 600px)
+@include breakpoint(max-width $screen-xs-min)
   .accordion-slider
     height: auto
     li,
