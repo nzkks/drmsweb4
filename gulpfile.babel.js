@@ -114,7 +114,7 @@ gulp.task('build-client-styles', function() {
   let includePaths = [];
   templateConfig.bootstrapSassPath = 'node_modules/bootstrap-sass/assets/stylesheets';
   templateConfig.bootstrapSassMain = templateConfig.bootstrapSassPath + '/' + '_bootstrap.scss';
-  templateConfig.fontAwesomeSassPath = 'node_modules/font-awesome/scss';
+  templateConfig.fontAwesomeSassPath = 'bower_components/font-awesome/scss';
   templateConfig.fontAwesomeSassMain = templateConfig.fontAwesomeSassPath + '/' + 'font-awesome.scss';
   templateConfig.breakpointSassPath = 'bower_components/breakpoint-sass/stylesheets';
   templateConfig.breakpointSassMain = templateConfig.breakpointSassPath + '/' + '_breakpoint.scss';
@@ -147,7 +147,7 @@ gulp.task('build-client-vendor-bootstrap-fonts', () =>
 );
 
 gulp.task('build-client-vendor-fontawesome-fonts', () =>
-  gulp.src(['**/*'], {cwd: 'node_modules/font-awesome/fonts'})
+  gulp.src(['**/*'], {cwd: 'bower_components/font-awesome/fonts'})
     .pipe(gulp.dest(`${builder.dirs.tgt.clientVendor}/font-awesome/fonts`))
 );
 
