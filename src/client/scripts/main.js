@@ -7,6 +7,7 @@ $(function() {
 
 $(document).ready(function() {
 
+
   // BEGIN: Show download menu
 
   var hidden = true;

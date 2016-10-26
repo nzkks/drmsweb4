@@ -1,0 +1,36 @@
+#testimonial-carousel1
+  position: relative
+  a, .text-brand
+    color: $bg-yellow
+
+  .carousel-indicators
+    position: absolute
+    top: 0
+    li
+      border: 1px solid $gray-light
+    .active
+      background: $bg-yellow
+  .no-margin
+    margin: 0
+
+  .carousel-control
+    position: absolute
+    top: 100px
+    color: $bg-red
+    width: 5%
+    &:hover, &:focus
+      color: $bg-red
+    &.left, &.right
+      background-image: none
+
+  .item
+    padding: 15px 40px
+    border-radius: 5px
+    background: $bg-white
+
+  .media-object
+    margin: auto
+
+  @include breakpoint(max-width $screen-xs-max)
+    .media-object
+      margin-bottom: 15px
