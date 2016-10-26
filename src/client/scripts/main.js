@@ -44,6 +44,23 @@ $(document).ready(function() {
     $('.contact-panel').slideUp(400);
   });
 
-// END: Show / hide top contact panel
+  // END: Show / hide top contact panel
+
+  // BEGIN: Scroll to top
+
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 200) {
+      $('.to-top').fadeIn();
+    } else {
+      $('.to-top').fadeOut();
+    }
+  });
+  $('.to-top a').click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, 'slow');
+    return false;
+  });
+
+  // END: Scroll to top
 
 });
