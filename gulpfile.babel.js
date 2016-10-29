@@ -118,6 +118,8 @@ gulp.task('build-client-styles', function() {
   templateConfig.fontAwesomeSassMain = templateConfig.fontAwesomeSassPath + '/' + 'font-awesome.scss';
   templateConfig.breakpointSassPath = 'bower_components/breakpoint-sass/stylesheets';
   templateConfig.breakpointSassMain = templateConfig.breakpointSassPath + '/' + '_breakpoint.scss';
+  templateConfig.fancyboxScssPath = 'node_modules/fancybox/dist/scss';
+  templateConfig.fancyboxScssMain = templateConfig.fancyboxScssPath + '/' + 'jquery.fancybox.scss';
   let sassFilter = plugins.filter([gp.SASS], {restore: true});
   let scssFilter = plugins.filter([gp.SCSS], {restore: true});
   return gulp.src([gp.CSS, gp.SASS, gp.SCSS], {cwd: `${builder.dirs.src.client}/styles`})
@@ -139,7 +141,6 @@ gulp.task('build-client-vendor-modernizr', () =>
     .pipe(gulp.dest(`${builder.dirs.tgt.clientVendor}/modernizr`))
 
 );
-
 
 gulp.task('build-client-vendor-bootstrap-fonts', () =>
   gulp.src(['**/*'], {cwd: 'node_modules/bootstrap-sass/assets/fonts'})

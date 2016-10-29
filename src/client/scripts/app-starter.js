@@ -4,6 +4,7 @@ import $ from 'jquery';
 
 window.jQuery = $; // bootstrap needs this
 require('bootstrap-sass');
+window.fancybox = require('fancybox')($);
 
 class App {
   constructor(options) {
