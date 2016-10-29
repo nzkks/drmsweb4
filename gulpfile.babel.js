@@ -139,7 +139,6 @@ gulp.task('build-client-styles', function() {
 gulp.task('build-client-vendor-modernizr', () =>
   builder.modernizr(builder.config.modernizr)
     .pipe(gulp.dest(`${builder.dirs.tgt.clientVendor}/modernizr`))
-
 );
 
 gulp.task('build-client-vendor-bootstrap-fonts', () =>
@@ -152,6 +151,11 @@ gulp.task('build-client-vendor-fontawesome-fonts', () =>
     .pipe(gulp.dest(`${builder.dirs.tgt.clientVendor}/font-awesome/fonts`))
 );
 
+gulp.task('build-client-vendor-fancybox-assets', () =>
+  gulp.src(['**/*.{jpg,png,svg,gif,webp,ico}'], {cwd: 'node_modules/fancybox/dist/img'})
+    .pipe(gulp.dest(`${builder.dirs.tgt.clientVendor}/fancybox/img`))
+);
+
 gulp.task('nop', function() {});
 
 gulp.task('build-client-vendor-assets', done =>
@@ -159,6 +163,7 @@ gulp.task('build-client-vendor-assets', done =>
     'build-client-vendor-modernizr',
     'build-client-vendor-bootstrap-fonts',
     'build-client-vendor-fontawesome-fonts',
+    'build-client-vendor-fancybox-assets',
     'nop'
   ], done)
 );
