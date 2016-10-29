@@ -48,6 +48,13 @@ $(document).ready(function() {
 
   // END: Show / hide top contact panel
 
+  // BEGIN: Fancybox for portfolio
+  $('.fancybox').fancybox({
+    openEffect: 'none',
+    closeEffect: 'none'
+  });
+  // END: Fancybox for portfolio
+
   // BEGIN: Scroll to top
 
   $(window).scroll(function(){
