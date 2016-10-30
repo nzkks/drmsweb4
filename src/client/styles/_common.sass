@@ -12,6 +12,17 @@ a
 ::-moz-focus-inner
 	border: 0
 
+.row.row-grid [class*="col-"] + [class*="col-"]
+  margin-bottom: 1.5rem
+@media (min-width: $screen-lg-min)
+  .row.row-grid [class*="col-lg-"] + [class*="col-lg-"]
+    margin-bottom: 0
+@media (min-width: $screen-md-min)
+  .row.row-grid [class*="col-md-"] + [class*="col-md-"]
+    margin-bottom: 0
+@media (min-width: $screen-sm-min)
+  .row.row-grid [class*="col-sm-"] + [class*="col-sm-"]
+    margin-bottom: 0
 
 .cta-style
   margin: 0 auto 50px
