@@ -53,11 +53,14 @@ a
       @include breakpoint(max-width $screen-sm-max)
         margin-top: 0
     .btn
-      background: rgba(0,0,0,0.1)
+      background: rgb(255, 152, 0)
       border: 1px solid rgba(255,255,255,0.4)
-      color: #fff
+      color: #000
       -webkit-transition: all 0.4s ease-out
       -moz-transition: all 0.4s ease-out
       -o-transition: all 0.4s ease-out
       -ms-transition: all 0.4s ease-out
       transition: all 0.4s ease-out
+      &:hover
+        background: rgb(255, 87, 34)
+        color: #fff
