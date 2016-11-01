@@ -1,5 +1,12 @@
 .skills
   margin: 50px 0
+  .panel
+    border: none
+    .panel-heading
+      padding: 10px 0
+      background-color: inherit
+    .panel-body
+      padding: 0
 .skills-item
   margin: 20px auto
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1), inset 0px 0px 15px rgba(0,0,0,0.1)
@@ -8,11 +15,11 @@
     @include breakpoint(max-width $screen-xs-min)
       width: 100%
       float: none
-      padding: 10px 20px
-    h3
+      padding: 10px
+    h2
       transform: rotate(270deg)
       margin: 0
-      font-size: 16px
+      font-size: 20px
       font-weight: 600
       text-transform: uppercase
       @include breakpoint(max-width $screen-xs-min)
@@ -29,9 +36,10 @@
           text-align: right
           @include breakpoint(max-width $screen-xs-min)
             position: static
+            min-width: inherit
   .skills-content
     margin-left: 42px
-    padding: 10px 20px
+    padding: 10px
     border: 1px solid #ddd
     border-left: 0
     background: #fff
@@ -40,7 +48,7 @@
       margin-left: 0
       border-top: 0
       border-left: 1px solid #ddd
-    h2
+    h3
       font-size: 22px
       line-height: 32px
       font-weight: 400
@@ -52,39 +60,34 @@
       width: 100%
       float: none
       margin: 10px auto 8px
-      @include breakpoint(max-width $screen-sm-max)
-        width: 50%
-        float: left
-      @include breakpoint(max-width $screen-xs-max)
-        width: 100%
-        float: none
-      h4
-        font-size: 15px
-        line-height: 25px
-        text-transform: uppercase
+
+    h4
+      font-size: 18px
+      line-height: 25px
+      text-transform: uppercase
+      &:before
+        content: "\f105"
+        font-family: "FontAwesome"
+        display: inline-block
+        width: 23px
+        height: 23px
+        line-height: 21px
+        text-align: center
+        border: 1px solid #32c8de
+        border-radius: 100%
+        margin-right: 5px
+    .skill-progress
+      margin: 15px 0
+      padding: 0 5px
+      p
+        font-size: 13px
+        line-height: 26px
+        text-transform: none
         &:before
-          content: "\f105"
-          font-family: "FontAwesome"
-          display: inline-block
-          width: 23px
-          height: 23px
-          line-height: 21px
-          text-align: center
-          border: 1px solid #32c8de
-          border-radius: 100%
-          margin-right: 5px
-      .skill-progress
-        margin: 15px 0
-        padding: 0 5px
-        h4
-          font-size: 13px
-          line-height: 26px
-          text-transform: none
-          &:before
-            content: none
-          span
-            float: right
-        .progress
-          height: 5px
-          margin-bottom: 8px
-          box-shadow: none
+          content: none
+        span
+          float: right
+      .progress
+        height: 3px
+        margin-bottom: 8px
+        box-shadow: none

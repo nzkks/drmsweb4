@@ -20,18 +20,16 @@ $fancybox-image-url: "/vendor/fancybox/img/"
 @import "testimonials"
 @import "footer"
 
-//$Breakpoint-Settings:('default media': all,'default feature': max-width,'default pair': width)
-// $Breakpoint-Settings:('default feature': max-width)
+a
+	text-decoration: none
+	&:hover,
+	&:active,
+  &:focus
+		outline: 0
+		text-decoration: none
 
-body
-  background: $gray-lighter
-  @include breakpoint(max-width $screen-xs-min)
-    margin: 0
+:focus
+	outline: none
 
-.browsehappy
-  margin: 0.2em 0
-  padding: 0.2em 0
-  color: $gray-base
-
-.main
-  margin-top: 51px
+::-moz-focus-inner
+	border: 0

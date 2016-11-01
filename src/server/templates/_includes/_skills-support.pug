@@ -1,0 +1,33 @@
+h3
+  a(href='#')
+    | Testing, Hosting & Support
+#supportAccordion.panel-group(role='tablist', aria-multiselectable='true')
+  .panel.panel-default
+    #supportHeading1.panel-heading.skill-category-item(role='tab')
+      h4.panel-title
+        a(role='button', data-toggle='collapse', data-parent='#supportAccordion', href='#supportCollapse1', aria-expanded='true', aria-controls='supportCollapse1')
+          | Web Testing Tools
+    #supportCollapse1.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='supportHeading1')
+      .panel-body
+        .skill-progress.clearfix
+          p Chrome Dev Tools, jshint, W3C, Webaim Wave, UITest.com, GTMetrix, Pingdom
+
+  .panel.panel-default
+    #supportHeading2.panel-heading.skill-category-item(role='tab')
+      h4.panel-title
+        a(role='button', data-toggle='collapse', data-parent='#supportAccordion', href='#supportCollapse2', aria-expanded='true', aria-controls='supportCollapse2')
+          | Web Analysis Tools
+    #supportCollapse2.panel-collapse.collapse(role='tabpanel', aria-labelledby='supportHeading2')
+      .panel-body
+        .skill-progress.clearfix
+          p Google Analytics, AdWords, Webmaster Tools, MOZ
+
+  .panel.panel-default
+    #supportHeading3.panel-heading.skill-category-item(role='tab')
+      h4.panel-title
+        a(role='button', data-toggle='collapse', data-parent='#supportAccordion', href='#supportCollapse3', aria-expanded='true', aria-controls='supportCollapse3')
+          | Platforms & Version Control
+    #supportCollapse3.panel-collapse.collapse(role='tabpanel', aria-labelledby='supportHeading3')
+      .panel-body
+        .skill-progress.clearfix
+          p Windows, Mac, Ubuntu, Git

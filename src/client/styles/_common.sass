@@ -1,16 +1,16 @@
-a
-	text-decoration: none
-	&:hover,
-	&:active,
-  &:focus
-		outline: 0
-		text-decoration: none
+body
+  background: $gray-lighter
+  @include breakpoint(max-width $screen-xs-min)
+    margin: 0
 
-:focus
-	outline: none
+.browsehappy
+  margin: 0.2em 0
+  padding: 0.2em 0
+  color: $gray-base
 
-::-moz-focus-inner
-	border: 0
+.main
+  margin-top: 51px
+
 
 .row.row-grid [class*="col-"] + [class*="col-"]
   margin-bottom: 1.5rem

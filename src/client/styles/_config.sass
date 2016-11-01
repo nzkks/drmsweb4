@@ -41,6 +41,16 @@ $container-sm:          (720px + $grid-gutter-width) // 750px
 $container-md:          (940px + $grid-gutter-width) // 970px
 $container-lg:          (1140px + $grid-gutter-width) // 1170px
 
+$bp-sm: 24em
+$bp-sm2: 29.75em
+$bp-sm3: 39.8em
+$bp-md: 46.8em
+$bp-md2: 48em
+$bp-lg: 50em
+$bp-lg2: 54.5em
+$bp-xl: 60em
+$bp-xl2: 67em
+
 .bg-white
   background-color: $bg-white
 .bg-grey
@@ -61,8 +71,8 @@ $container-lg:          (1140px + $grid-gutter-width) // 1170px
   background-color: $bg-yellow
 .bg-purple
   background-color: $bg-purple
-.bg-rose
-  background-color: $bg-rose
+.bg-pink
+  background-color: $bg-pink
 .bg-brown
   background-color: $bg-brown
 
@@ -76,3 +86,14 @@ $margins: (xs: 0.5rem, sm: 1rem, md: 1.5rem, lg: 2rem, xl: 2.5rem)
     margin-top: $value
   .mbot-#{$name}
     margin-bottom: $value
+
+@import url('https://fonts.googleapis.com/css?family=Teko:400')
+h1, h2, h3, h4
+  font-family: 'Teko', sans-serif
+  font-weight: 400
+  letter-spacing: 1px
+
+
+/* @include breakpoint-set('default media': screen) */
+/* @include breakpoint-set('default feature': max-width) */
+/* @include breakpoint-set('default pair': width) */
