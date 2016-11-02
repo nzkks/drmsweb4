@@ -47,49 +47,53 @@
   text-decoration: none
   transition: all 200ms ease
   *
-    opacity: 0
     margin: 0
     width: 100%
-    text-overflow: ellipsis
     position: relative
     z-index: 5
     white-space: nowrap
-    overflow: hidden
     -webkit-transform: translateX(-20px)
     transform: translateX(-20px)
     -webkit-transition: all 400ms ease
     transition: all 400ms ease
   h2
-    text-overflow: clip
     font-size: 24px
     text-transform: uppercase
     margin-bottom: 2px
-    top: 160px
+    top: 150px
+    left: -50px
+    transform: rotate(270deg)
   p
-    top: 160px
+    top: 140px
     font-size: 13.5px
 
 
 .accordion-slider ul
   li:nth-child(1)
-    background-image: url("../images/lorem1.jpg")
+    background-image: url("../images/drms_slider1-min.jpg")
   li:nth-child(2)
-    background-image: url("../images/lorem2.jpg")
+    background-image: url("../images/drms_slider2-min.jpg")
   li:nth-child(3)
-    background-image: url("../images/lorem3.jpg")
+    background-image: url("../images/drms_slider3-min.jpg")
   li:nth-child(4)
-    background-image: url("../images/lorem4.jpg")
+    background-image: url("../images/drms_slider4-min.jpg")
   li:nth-child(5)
-    background-image: url("../images/lorem5.jpg")
+    background-image: url("../images/drms_slider5-min.jpg")
   li:nth-child(6)
-    background-image: url("../images/lorem8.jpg")
+    background-image: url("../images/drms_slider6-min.jpg")
 
 
 .accordion-slider ul:hover li
   width: 8%
+  h2
+    top: 190px
+    left: -5px
 
 .accordion-slider ul:hover li:hover
   width: 60%
+  h2
+    left: 0
+    transform: rotate(0deg)
 
 //.accordion-slider ul:hover li:hover a
 //  background: rgba(0, 0, 0, 0.4)
