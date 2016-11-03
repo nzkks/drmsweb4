@@ -60,9 +60,15 @@ mixin top-menu(main_sel)
 
       #main-top-menu.collapse.navbar-collapse
         ul.nav.navbar-nav.navbar-right
-          li.item(class=main_sel === 'portfolio' ? 'active' : '')
-            a(href='#portfolio') Portfolio
-          li.item(class=main_sel === 'about' ? 'active' : '')
+          li.dropdown
+            a.dropdown-toggle(href='#', data-toggle='dropdown', role='button') Portfolio
+              span.caret
+            ul.dropdown-menu
+              li
+                a(href='#webGallery') Web Design / Development
+              li
+                a(href='#printGallery') Graphic Design
+          li
             a(href='#top') About
-          li.item(class=main_sel === 'contact' ? 'active' : '')
+          li
             a.main-contact-btn(href='#') Contact
