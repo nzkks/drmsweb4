@@ -63,6 +63,15 @@
     top: 150px
     left: -50px
     transform: rotate(270deg)
+    @include breakpoint(max-width $screen-sm-max)
+      top: 160px
+      left: -40px
+    @include breakpoint(max-width $screen-xs-max)
+      top: 170px
+      left: -25px
+    @include breakpoint(max-width $screen-xs-min)
+      top: 190px
+      left: -10px
   p
     top: 140px
     font-size: 13.5px

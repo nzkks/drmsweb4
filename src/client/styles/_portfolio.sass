@@ -1,0 +1,13 @@
+.portfolio .web-gallery,
+.portfolio .print-gallery
+  display: flex
+  flex-wrap: wrap
+  align-content: flex-start
+  .item
+    flex: 0 1 150px
+    height: 150px
+    margin: 10px
+    &:empty
+      height: 0
+    img
+      width: 150px
