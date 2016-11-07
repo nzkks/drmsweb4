@@ -5,14 +5,22 @@ html(itemscope itemtype='http://schema.org/Person')
     include _includes/_head.pug
   body#top
     include _includes/_browse-happy.pug
+    // BEGIN: Header Section
     header.header.clearfix
       include _includes/_header.pug
       +top-menu('about')
+      // BEGIN: Contact Panel
       include _includes/_contact.pug
-
+      // END: Contact Panel
+    // END: Header Section
+    // BEGIN: Main Section
     main.main.clearfix
       block content
-
+    // END: Main Section
+    // BEGIN: Footer Section
     footer.clearfix
       include _includes/_footer.pug
+    // END: Footer Section
+    // BEGIN: Footer Scripts
     include _includes/_foot-scripts.pug
+    // END: Footer Scripts
