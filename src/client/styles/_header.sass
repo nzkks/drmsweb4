@@ -6,16 +6,34 @@
   .icon-bar
     background: #2C3E50
   .navbar-brand
-    padding: 5px 15px
+    padding: 23px 15px
     height: 70px
+    font-weight: bold
+    color: #2C3E50
+  .top-text-logo
+    position: relative
+    .short-txt
+      font-size: 40px
 
-#mainTopLogo, #mainTopLogo .st3
-  width: 150.739px
-  height: 60px
+    .full-txt
+      display: block
+      width: 270px
+      padding: 15px 0
+      font-size: 20px
+      font-variant: small-caps
 
-@include breakpoint(768px)
-  .navbar-right
-    margin-top: 10px
+    &:hover .short-txt, .full-txt
+      position: absolute !important
+      top: 7px !important
+      left: -500px !important
+      opacity: 0
+      transition: opacity 0.5s linear
+
+    &:hover .full-txt
+      position: absolute !important
+      top: 7px !important
+      left: 15px !important
+      opacity: 1
 
 
 #main-top-menu
@@ -28,3 +46,7 @@
 
 .dropdown-menu > li > a
   padding: 15px
+
+@include breakpoint(768px)
+  .navbar-right
+    margin-top: 10px
