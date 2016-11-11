@@ -6,7 +6,7 @@ html(itemscope itemtype='http://schema.org/Person')
   body#top
     include _includes/_browse-happy.pug
     // BEGIN: Header Section
-    header.header.clearfix
+    header.header
       include _includes/_header.pug
       +top-menu('about')
       // BEGIN: Contact Panel
@@ -14,11 +14,11 @@ html(itemscope itemtype='http://schema.org/Person')
       // END: Contact Panel
     // END: Header Section
     // BEGIN: Main Section
-    main.main.clearfix
+    main.main
       block content
     // END: Main Section
     // BEGIN: Footer Section
-    footer.clearfix
+    footer.footer
       include _includes/_footer.pug
     // END: Footer Section
     // BEGIN: Footer Scripts

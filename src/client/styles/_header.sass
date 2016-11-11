@@ -1,61 +1,99 @@
-.main-navbar
-  min-height: inherit
+.header
+  @include full
+  min-height: 60px
   background: #fff
-  .navbar-toggle
-    margin: 0
-    padding: 21px 15px
-  .fa-bars
-    font-size: 24px
-    color: #2C3E50
-  .navbar-brand
-    padding: 23px 15px
-    height: 70px
-    font-weight: bold
-    color: #2C3E50
-  .top-text-logo
+  .container
+    @include container()
+    .top-txt-logo
+      @include span(first 3)
+      font-weight: bold
+      color: #2C3E50
+      position: relative
+      .short-txt
+        font-size: 40px
+      .full-txt
+        position: absolute !important
+        top: 0 !important
+        left: -500px !important
+        opacity: 0
+      &:hover .short-txt
+        @include breakpoint($bp-sm3)
+          position: absolute !important
+          top: 0 !important
+          left: -500px !important
+          opacity: 0
+      &:hover .full-txt
+        @include breakpoint($bp-sm3)
+          position: absolute !important
+          top: 0 !important
+          left: 0 !important
+          opacity: 1
+          display: block
+          width: 270px
+          padding: 16px 0
+          font-size: 20px
+          font-variant: small-caps
+      @include breakpoint($bp-sm3)
+        @include span(first 4)
+
+    .nav-block
+      @include span(last 9)
+      text-align: right
+      @include breakpoint($bp-sm3)
+        @include span(last 8)
+
+.nav-block ul
+  list-style-type: none
+  padding-left: 0
+  margin-bottom: 0
+  li
+    display: inline-flex
+    a
+      padding: 17px 20px
+      font-size: 18px
+      font-weight: bold
+      position: relative
+      &:hover span
+        @include breakpoint($bp-sm $bp-sm2)
+          position: static
+          display: inline-block
+          margin-left: 10px
+          opacity: 1
+      i
+        color: #333
+      span
+        position: absolute
+        top: 0
+        left: -9999px
+        opacity: 0
+        @include breakpoint($bp-sm2)
+          position: static
+          display: inline-block
+          margin-left: 10px
+          opacity: 1
+      .fa-caret-down
+        margin-left: 10px
+  li.has-sub-menu
     position: relative
-    .short-txt
-      font-size: 40px
-
-    .full-txt
-      display: block
-      width: 270px
-      padding: 15px 0
-      font-size: 20px
-      font-variant: small-caps
-
-    &:hover .short-txt, .full-txt
+    ul
       position: absolute !important
-      top: 7px !important
-      left: -500px !important
+      top: 58px !important
+      left: -9999px !important
+      width: 280px
       opacity: 0
-      transition: opacity 0.5s linear
+      text-align: center
+      background: #fff
+      @include breakpoint($bp-sm2)
+        right: auto !important
+      li
+        display: block
+      li > a
+        display: block
+        padding: 15px
 
-    &:hover .full-txt
-      position: absolute !important
-      top: 7px !important
-      left: 15px !important
+    &:hover ul
+      z-index: 99
+      display: block
       opacity: 1
-
-
-#main-top-menu
-  a
-    font-size: 18px
-    font-weight: bold
-    i
-      color: #333
-    span
-      display: inline-block
-      margin-left: 10px
-    .fa-caret-down
-      margin-left: 10px
-
-.dropdown:hover .dropdown-menu
-  display: block
-
-.dropdown-menu > li > a
-  padding: 15px
-
-@include breakpoint(768px)
-  .navbar-right
-    margin-top: 10px
+      left: -90px !important
+      @include breakpoint($bp-sm2)

@@ -1,31 +1,25 @@
 mixin top-menu(main_sel)
-  nav.navbar.navbar-fixed-top.main-navbar(role='navigation')
-    .container
-      .navbar-header
-        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#main-top-menu', aria-expanded='false')
-          span.sr-only Toggle navigation
-          i.fa.fa-bars
-        a.navbar-brand.top-text-logo(href='/')
-          span.short-txt SK
-          span.full-txt Shanthosh Krishnakumar
-
-      #main-top-menu.collapse.navbar-collapse
-        ul.nav.navbar-nav.navbar-right
-          li.dropdown
-            a.dropdown-toggle(href='#', data-toggle='dropdown', role='button')
-              i.fa.fa-briefcase
-              span Portfolio
-              i.fa.fa-caret-down
-            ul.dropdown-menu
-              li
-                a(href='#webGallery') Web Design / Development
-              li
-                a(href='#printGallery') Graphic Design
-          li
-            a(href='#top')
-              i.fa.fa-user
-              span About
-          li
-            a.main-contact-btn(href='#')
-              i.fa.fa-phone
-              span Contact
+  .container
+    a.top-txt-logo(href='/')
+      span.short-txt SK
+      span.full-txt Shanthosh Krishnakumar
+    .nav-block
+      ul
+        li.has-sub-menu
+          a
+            i.fa.fa-briefcase
+            span Portfolio
+            i.fa.fa-caret-down
+          ul
+            li
+              a(href='#webGallery') Web Design / Development
+            li
+              a(href='#printGallery') Graphic Design
+        li
+          a(href='#top')
+            i.fa.fa-user
+            span About
+        li
+          a.main-contact-btn(href='#')
+            i.fa.fa-phone
+            span Contact

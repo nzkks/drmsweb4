@@ -116,6 +116,8 @@ gulp.task('build-client-styles', function() {
   templateConfig.bootstrapSassMain = templateConfig.bootstrapSassPath + '/' + '_bootstrap.scss';
   templateConfig.fontAwesomeSassPath = 'bower_components/font-awesome/scss';
   templateConfig.fontAwesomeSassMain = templateConfig.fontAwesomeSassPath + '/' + 'font-awesome.scss';
+  templateConfig.susySassPath = 'node_modules/susy/sass';
+  templateConfig.susySassMain = templateConfig.susySassPath + '/' + '_susy.scss';
   templateConfig.breakpointSassPath = 'bower_components/breakpoint-sass/stylesheets';
   templateConfig.breakpointSassMain = templateConfig.breakpointSassPath + '/' + '_breakpoint.scss';
   templateConfig.fancyboxScssPath = 'node_modules/fancybox/dist/scss';
