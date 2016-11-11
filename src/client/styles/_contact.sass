@@ -7,8 +7,6 @@
   margin: 0 auto
   z-index: 2000
   display: none
-  .container
-    position: relative
   .contact-panel-close
     position: absolute
     top: 0
@@ -19,39 +17,77 @@
     text-align: center
     color: #fff
     font-size: 30px
+  .container
+    @include container()
   h3
     margin-top: 0
     margin-bottom: 20px
     color: #fff
-    @include breakpoint(max-width $screen-xs-max)
-      text-align: center
+    text-align: center
   .contact-form
-    padding: 10px
-    max-width: 400px
-    @include breakpoint(max-width $screen-xs-max)
-      max-width: none
-      width: 100%
-    input,
-    textarea
-      border: 0
+    max-width: none
+    width: 100%
+    margin-bottom: 30px
+    @include breakpoint($bp-sm3)
+      @include span(6 of 12)
+      padding: 10px
+      max-width: 400px
+      margin-bottom: 0
+    input, textarea
+      margin-bottom: 15px
       padding: 20px
+      border: 0
       border-radius: 4px
+      display: block
+      width: 100%
+      height: 34px
+      font-size: 14px
+      line-height: 1.42857
+      color: #555555
+      background-color: #fff
+      background-image: none
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+      -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s
+      -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s
+    textarea
+      height: auto
     .button-group
-      @include breakpoint(max-width $screen-xs-max)
+      text-align: center
+      @include breakpoint($bp-sm3)
+        text-align: left
+      .btn
+        padding: 10px 20px
+        border-radius: 4px
+        background: #fff
+        color: #888
+        font-weight: 600
+        display: inline-block
+        margin-bottom: 0
+        font-weight: normal
         text-align: center
-    .btn
-      padding: 10px 20px
-      border-radius: 4px
-      background: #fff
-      color: #888
-      font-weight: 600
+        vertical-align: middle
+        touch-action: manipulation
+        cursor: pointer
+        background-image: none
+        border: 1px solid transparent
+        white-space: nowrap
+        font-size: 14px
+        line-height: 1.42857
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
   .contact-details
     padding: 10px
+    text-align: center
+    @include breakpoint($bp-sm3)
+      @include span(6 at 7 of 12)
     h4
       line-height: 44px
       font-weight: 300
-      @include breakpoint(max-width $screen-xs-max)
-        text-align: center
+      text-align: center
       a
         color: #fff
     .social-container

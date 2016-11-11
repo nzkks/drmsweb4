@@ -9,14 +9,14 @@ html(itemscope itemtype='http://schema.org/Person')
     header.header
       include _includes/_header.pug
       +top-menu('about')
-      // BEGIN: Contact Panel
-      include _includes/_contact.pug
-      // END: Contact Panel
     // END: Header Section
     // BEGIN: Main Section
     main.main
       block content
     // END: Main Section
+    // BEGIN: Contact Panel
+    include _includes/_contact.pug
+    // END: Contact Panel
     // BEGIN: Footer Section
     footer.footer
       include _includes/_footer.pug
