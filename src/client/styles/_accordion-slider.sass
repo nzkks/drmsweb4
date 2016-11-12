@@ -1,19 +1,60 @@
 .main-slider-container
-  @include breakpoint(max-width $screen-xs-min)
-    padding-left: 0
-    padding-right: 0
+  padding-left: 0
+  padding-right: 0
 .accordion-slider
-  margin: 50px auto
+  margin: 1px auto
   height: auto
   width: 100%
   max-width: 1140px
   overflow: hidden
-  @include breakpoint(max-width $screen-sm-max)
-    margin: 25px auto
-  @include breakpoint(max-width $screen-xs-max)
+  @include breakpoint($bp-sm2)
+    margin: 10px auto
+  @include breakpoint($bp-sm3)
     margin: 15px auto
-  @include breakpoint(max-width $screen-xs-min)
-    margin: 1px auto
+  @include breakpoint($bp-md)
+    margin: 25px auto
+  @include breakpoint($bp-md2)
+    margin: 35px auto
+  @include breakpoint($bp-lg)
+    margin: 50px auto
+  a
+    display: block
+    height: 250px
+    width: 100%
+    position: relative
+    z-index: 3
+    vertical-align: bottom
+    padding: 15px 20px
+    box-sizing: border-box
+    color: #fff
+    text-decoration: none
+    transition: all 200ms ease
+    *
+      margin: 0
+      width: 100%
+      position: relative
+      z-index: 5
+      white-space: nowrap
+      -webkit-transform: translateX(-20px)
+      transform: translateX(-20px)
+      -webkit-transition: all 400ms ease
+      transition: all 400ms ease
+    h2
+      font-size: 24px
+      text-transform: uppercase
+      margin-bottom: 2px
+      transform: rotate(270deg)
+      top: 190px
+      left: -10px
+      @include breakpoint($bp-sm2)
+        top: 170px
+        left: -25px
+      @include breakpoint($bp-sm3)
+        top: 160px
+        left: -40px
+      @include breakpoint($bp-md)
+        top: 150px
+        left: -50px
   ul
     width: 100%
     display: table
@@ -33,86 +74,39 @@
         display: block
         overflow: hidden
         width: 100%
+    li:nth-child(1)
+      background-image: url("../images/drms_slider1-min.jpg")
+    li:nth-child(2)
+      background-image: url("../images/drms_slider2-min.jpg")
+    li:nth-child(3)
+      background-image: url("../images/drms_slider3-min.jpg")
+    li:nth-child(4)
+      background-image: url("../images/drms_slider4-min.jpg")
+    li:nth-child(5)
+      background-image: url("../images/drms_slider5-min.jpg")
+    li:nth-child(6)
+      background-image: url("../images/drms_slider6-min.jpg")
 
-.accordion-slider a
-  display: block
-  height: 250px
-  width: 100%
-  position: relative
-  z-index: 3
-  vertical-align: bottom
-  padding: 15px 20px
-  box-sizing: border-box
-  color: #fff
-  text-decoration: none
-  transition: all 200ms ease
-  *
-    margin: 0
-    width: 100%
-    position: relative
-    z-index: 5
-    white-space: nowrap
-    -webkit-transform: translateX(-20px)
-    transform: translateX(-20px)
-    -webkit-transition: all 400ms ease
-    transition: all 400ms ease
-  h2
-    font-size: 24px
-    text-transform: uppercase
-    margin-bottom: 2px
-    top: 150px
-    left: -50px
-    transform: rotate(270deg)
-    @include breakpoint(max-width $screen-sm-max)
-      top: 160px
-      left: -40px
-    @include breakpoint(max-width $screen-xs-max)
-      top: 170px
-      left: -25px
-    @include breakpoint(max-width $screen-xs-min)
-      top: 190px
-      left: -10px
-  p
-    top: 140px
-    font-size: 13.5px
-
-
-.accordion-slider ul
-  li:nth-child(1)
-    background-image: url("../images/drms_slider1-min.jpg")
-  li:nth-child(2)
-    background-image: url("../images/drms_slider2-min.jpg")
-  li:nth-child(3)
-    background-image: url("../images/drms_slider3-min.jpg")
-  li:nth-child(4)
-    background-image: url("../images/drms_slider4-min.jpg")
-  li:nth-child(5)
-    background-image: url("../images/drms_slider5-min.jpg")
-  li:nth-child(6)
-    background-image: url("../images/drms_slider6-min.jpg")
-
-
-.accordion-slider ul:hover li
-  width: 8%
-  h2
-    top: 190px
-    left: -5px
-
-.accordion-slider ul:hover li:hover
-  width: 60%
-  h2
-    left: 0
-    transform: rotate(0deg)
+    &:hover li
+      width: 8%
+      h2
+        top: 190px
+        left: -5px
+      &:hover
+        width: 60%
+        h2
+          left: 0
+          transform: rotate(0deg)
+        a *
+          opacity: 1
+          -webkit-transform: translateX(0)
+          transform: translateX(0)
 
 //.accordion-slider ul:hover li:hover a
 //  background: rgba(0, 0, 0, 0.4)
 
-.accordion-slider ul:hover li:hover a *
-  opacity: 1
-  -webkit-transform: translateX(0)
-  transform: translateX(0)
 
-@include breakpoint(max-width $screen-xs-min)
+@include breakpoint(max-width 480px)
   .accordion-slider
     height: auto
     li,
