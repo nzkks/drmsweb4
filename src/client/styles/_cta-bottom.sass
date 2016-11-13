@@ -2,57 +2,90 @@
   background-image: url(../images/cta_bottom_blur_bg-min.jpg)
   //background: url(../images/slanted-line-mask.png), url(../images/cta_bottom_blur_bg-min.jpg) center center
   //background-attachment: fixed
-  .cta-style__content
+  .col1
+    margin-bottom: 2rem
+    @include breakpoint($bp-sm)
+      @include span(12)
+    @include breakpoint($bp-sm2)
+      @include span(4 of 12)
+      margin-bottom: 0
+    @include breakpoint($bp-sm3)
+      @include span(4 of 12)
+  .col2
+    margin-bottom: 2rem
+    @include breakpoint($bp-sm)
+      @include span(6 of 12)
+      text-align: right
+      margin-bottom: 0
+    @include breakpoint($bp-sm2)
+      @include span(4 at 5 of 12)
+      margin-bottom: 0
+      text-align: right
+    @include breakpoint($bp-sm3)
+      @include span(4 at 5 of 12)
+      text-align: right
+  .col3
     position: relative
-    .contact-btn
-      @include breakpoint(max-width $screen-sm-max)
-        margin-bottom: 20px
-    .download-files-container
-      position: absolute
-      top: 55px
+    text-align: center
+    @include breakpoint($bp-sm)
+      @include span(6 at 7 of 12)
+      text-align: left
+    @include breakpoint($bp-sm2)
+      @include span(4 at 9 of 12)
+      text-align: left
+    @include breakpoint($bp-sm3)
+      @include span(4 at 9 of 12)
+      text-align: left
+
+  .download-files-container
+    @include container
+    position: absolute
+    top: 55px
+    left: calc(50% - 90px)
+    z-index: 1024
+    display: none
+    min-width: 180px
+    @include breakpoint($bp-md)
       left: -10px
-      z-index: 1024
-      display: none
-      min-width: 250px
-      @include breakpoint(max-width $screen-sm-max)
-        left: calc(50% - 125px)
-      .download-item
-        padding: 20px 5px
-        max-width: 120px
-        display: block
-        border-radius: 5px
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1)
-        text-align: center
+    .col4
+      @include span(6 of 12)
+    .col5
+      @include span(6 at 7 of 12)
+    .download-item
+      padding: 10px 5px
+      max-width: 75px
+      display: block
+      border-radius: 5px
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3)
+      text-align: center
+      position: relative
+      background: rgba(255, 255, 255, 0.9)
+      &:before
+        bottom: 100%
+        left: 27px
+        border: solid transparent
+        content: " "
+        height: 0
+        width: 0
+        position: absolute
+        pointer-events: none
+      &:before
+        border-color: transparent
+        border-width: 10px
+        border-bottom-color: rgba(255, 255, 255, 0.9)
+      i
+        font-size: 30px
         position: relative
-        background: rgba(255, 255, 255, 0.9)
-        &:before
-          bottom: 100%
-          left: 45px
-          border: solid transparent
-          content: " "
-          height: 0
-          width: 0
-          position: absolute
-          pointer-events: none
-        &:before
-          border-color: transparent
-          border-width: 10px
-          border-bottom-color: rgba(255, 255, 255, 0.9)
-        i
-          font-size: 40px
-          position: relative
-          margin-bottom: 10px
-          font-weight: normal
-          color: #888
-        span
-          display: block
-          position: absolute
-          padding: 0 5px
-          border-radius: 2px
-          color: #fff
-          top: 40px
-          left: 60px
-          font-weight: 600
-          font-size: 10px
-          line-height: 17px
-          text-transform: uppercase
+        color: #888
+      span
+        display: block
+        position: absolute
+        padding: 0 5px
+        border-radius: 2px
+        color: #fff
+        top: 20px
+        left: 40px
+        font-weight: 600
+        font-size: 10px
+        line-height: 1.5
+        text-transform: uppercase

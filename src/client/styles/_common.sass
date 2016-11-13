@@ -28,38 +28,16 @@ body
   @include breakpoint($bp-md2)
     padding: 40px
   .container
-    @include container()
+    @include container
     padding: 20px
     border: 2px solid rgba(255,255,255,0.2)
     border-radius: 8px
     text-align: center
     background: rgba(0,0,0,0.1)
+    position: relative
     @include breakpoint($bp-md)
       padding: 30px 20px
       max-width: 1000px
-    .col1
-      margin-bottom: 2rem
-      @include breakpoint($bp-sm2)
-        @include span(3 of 12)
-        margin-bottom: 0
-      @include breakpoint($bp-sm3)
-        @include span(4 of 12)
-    .col2
-      margin-bottom: 2rem
-      @include breakpoint($bp-sm2)
-        @include span(5 at 4 of 12)
-        margin-bottom: 0
-        text-align: right
-      @include breakpoint($bp-sm3)
-        @include span(4 at 5 of 12)
-        text-align: right
-    .col3
-      @include breakpoint($bp-sm2)
-        @include span(4 at 9 of 12)
-        text-align: left
-      @include breakpoint($bp-sm3)
-        @include span(4 at 9 of 12)
-        text-align: left
     h3
       margin-top: 10px
       color: #fff
