@@ -1,57 +1,64 @@
 .bio-info
-  position: relative
-  padding: 35px 0px 25px
-  margin: 20px 0px 40px
-  background: #fff
-  border: 1px solid #ddd
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1), inset 0px 0px 15px rgba(0,0,0,0.1)
-  @include breakpoint(max-width $screen-xs-max)
-    margin-left: 20px
-    margin-right: 20px
+  @include full
+  margin: 20px auto 40px
+  padding: 5px
+  .container
+    @include container
+    padding: 35px 0px 25px
+    background: #fff
+    border: 1px solid #ddd
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1), inset 0px 0px 15px rgba(0,0,0,0.1)
+    position: relative
+    .social-icons
+      position: absolute
+      top: -15px
+      right: 0
+      width: 100%
+      text-align: center
+      @include breakpoint($bp-sm3)
+        text-align: right
+      a
+        margin-right: 5px
   img
+    float: none
+    margin: 0 auto
     width: 100%
     max-width: 200px
-    float: left
     border-radius: 100%
     border: 1px solid #eee
     padding: 3px
     box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.05)
-    margin-left: 23px
-    @include breakpoint(max-width 525px)
-      float: none
-      margin: 0 auto
+    @include breakpoint($bp-sm3)
+      float: left
+      margin-left: 23px
   .bio-details
-    margin-left: 240px
-    @include breakpoint(max-width 525px)
+    @include container
+    margin-left: 0px
+    text-align: center
+    @include breakpoint($bp-sm2)
       margin-left: 0px
-    @include breakpoint(max-width 357px)
-      margin-left: 0px
-      text-align: center
-    .col-mob
-      //@include breakpoint(max-width 767px)
-        //width: 50%
-      //@include breakpoint(max-width 357px)
-    		//width: 100%
-    .col-pad
-    	padding-left: 0px
-    	padding-right: 0px
-    .txt-col
-      columns: 2 200px
-      column-gap: 4em
-      column-rule: 1px dotted #ddd
+    @include breakpoint($bp-sm3)
+      margin-left: 240px
     .bio-item
+      margin: 0px auto 10px
       padding: 7px 10px
       max-width: 90%
-      margin: 0px auto 10px
-      @include breakpoint(max-width $screen-xs-max)
-        text-align: center
-  .social-icons
-    position: absolute
-    top: -15px
-    right: 15px
-    @include breakpoint(max-width 525px)
       text-align: center
-      right: 0
-      width: 100%
-    a
-      margin-right: 5px
+    .item1
+      @include breakpoint($bp-sm2)
+        @include span(6 of 12)
+    .item2
+      @include breakpoint($bp-sm2)
+        @include span(6 at 7 of 12)
+    .item3
+      @include breakpoint($bp-sm2)
+        @include span(6 of 12)
+    .item4
+      @include breakpoint($bp-sm2)
+        @include span(6 at 7 of 12)
+
+  .txt-row
+    padding: 20px 20px 0
+    columns: 2 200px
+    column-gap: 40px
+    column-rule: 1px dotted #ddd

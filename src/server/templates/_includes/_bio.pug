@@ -1,29 +1,22 @@
-.container
-  .bio-info.clearfix
-    img.img-responsive(src='/app/images/ShanthoshK_profile3_400x400-min.jpg', alt='Shanthosh Krishnakumar')
-    .bio-details
-      .container-fluid
-        .row
-          .col-md-6.col-sm-6.col-xs-12.col-mob.col-pad
-            .bio-item
-              h3 Name
-              p Shanthosh Krishnakumar
-          .col-md-6.col-sm-6.col-xs-12.col-mob.col-pad
-            .bio-item
-              h3 Current Location
-              p Auckland
-          .col-md-6.col-sm-6.col-xs-12.col-mob.col-pad
-            .bio-item
-              h3 Experience
-              p 9 years in New Zealand
-          .col-md-6.col-sm-6.col-xs-12.col-mob.col-pad
-            .bio-item
-              h3 VISA Type
-              p NZ Citizen
-        .row
-          .col-md-12.txt-col
-            p As a Web Designer or Front End Web Developer I have experience managing all stages of the web development life cycle including website concepts, wire-framing, design, development, testing, deployment and after-support.
-            p As a Graphic Designer I would love to design clean, smart and effective visuals using Adobe Photoshop, Illustrator and InDesign. Most of my projects focus on effective colour and layout utilization.
+.bio-info
+  .container
     // BEGIN: Social Sub-Section
     include _social-icons.pug
     // END: Social Sub-Section
+    img.img-responsive(src='/app/images/ShanthoshK_profile3_400x400-min.jpg', alt='Shanthosh Krishnakumar')
+    .bio-details
+      .bio-item.item1
+        h3 Name
+        p Shanthosh Krishnakumar
+      .bio-item.item2
+        h3 Current Location
+        p Auckland
+      .bio-item.item3
+        h3 Experience
+        p 9 years in New Zealand
+      .bio-item.item4
+        h3 VISA Type
+        p NZ Citizen
+    .txt-row
+      p As a Web Designer or Front End Web Developer I have experience managing all stages of the web development life cycle including website concepts, wire-framing, design, development, testing, deployment and after-support.
+      p As a Graphic Designer I would love to design clean, smart and effective visuals using Adobe Photoshop, Illustrator and InDesign. Most of my projects focus on effective colour and layout utilization.
