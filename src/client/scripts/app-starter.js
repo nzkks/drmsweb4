@@ -5,6 +5,7 @@ import $ from 'jquery';
 window.jQuery = $; // bootstrap needs this
 require('bootstrap-sass');
 window.fancybox = require('fancybox')($);
+require('slick-carousel');
 
 class App {
   constructor(options) {

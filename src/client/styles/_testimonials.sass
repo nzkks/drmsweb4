@@ -1,43 +1,31 @@
-#testimonial-carousel1
-  position: relative
-  .carousel-indicators
-    position: absolute
-    bottom: 0
-    li
-      border: 1px solid $gray-light
-    .active
-      background: $gray-light
-  .no-margin
-    margin: 0
-
-  .carousel-control
-    display: block
-    padding: 3px 10px
-    position: absolute
-    top: 0
-    bottom: 0
-    margin: auto 0
-    width: 40px
-    height: 60px
-    background-color: $bg-lblue
-    opacity: 0.5
-    &:hover, &:focus
-      opacity: 1
-    &.left, &.right
-      background-image: none
+.testimonials
+  @include full
+  margin: 50px auto
+  .container
+    margin: 0 30px
+    .item
+      padding: 5px
+      border-radius: 5px
+      background: $bg-white
+  figure
+    @include container
+    img
+      border-radius: 4px
+      margin: 0 auto 15px
+      @include breakpoint($bp-sm3)
+        @include span(2 of 12)
+        margin: auto
+    figcaption
+      @include breakpoint($bp-sm3)
+        @include span(10 at 3 of 12)
     i
-      font-size: 40px
-      line-height: 50px
-      color: $bg-white
-
-  .item
-    padding: 15px 40px 40px
-    border-radius: 5px
-    background: $bg-white
-
-  .media-object
-    margin: auto
-
-  @include breakpoint(max-width $screen-xs-max)
-    .media-object
-      margin-bottom: 15px
+      font-size: 20px
+      line-height: 1.5
+      color: $bg-green
+  .slick-dots
+    bottom: auto
+    width: 90%
+    li
+      margin: 0
+      @include breakpoint($bp-mi)
+        margin: 0 5px

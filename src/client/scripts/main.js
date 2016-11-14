@@ -87,4 +87,15 @@ $(document).ready(function() {
   xhr.send();
   // END: Lazy loading the Google font for headings
 
+  // BEGIN: Testimonial slider
+  $('.testimonials .container').slick({
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 10000,
+    fade: true,
+    adaptiveHeight: true,
+    cssEase: 'linear',
+    infinite: true
+  });
+  // END: Testimonial slider
 });

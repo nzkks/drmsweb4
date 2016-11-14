@@ -1,3 +1,6 @@
+/* BEGIN: Config Sass */
+@import "config"
+/* END: Config Sass */
 /* BEGIN: Bootstrap Sass */
 $icon-font-path: "/vendor/bootstrap/assets/fonts/bootstrap/"
 @import "<%= bootstrapSassMain %>"
@@ -13,9 +16,13 @@ $fancybox-image-url: "/vendor/fancybox/img/"
 /* BEGIN: Breakpoint Sass */
 @import "<%= breakpointSassMain %>"
 /* END: Breakpoint Sass */
-/* BEGIN: Config Sass */
-@import "config"
-/* END: Config Sass */
+/* BEGIN: Slick Carousel Sass */
+@import "<%= slickScssMain %>"
+$slick-font-path: "/vendor/slick-carousel/fonts/"
+$slick-loader-path: "/vendor/slick-carousel/"
+$slick-arrow-color: $bg-blue
+@import "<%= slickThemeScss %>"
+/* END: Slick Carousel Sass */
 /* BEGIN: Susy Sass */
 @import "susy"
 /* END: Susy Sass */
