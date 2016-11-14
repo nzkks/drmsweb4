@@ -1,27 +1,61 @@
 .specialities
   @include full
-  padding: 20px 0
+  padding: 0 5px
   background: rgba(50,200,222,0.7)
-  @include breakpoint(max-width $screen-sm-max)
-    padding: 10px 0
-  @include breakpoint(max-width $screen-xs-max)
-    padding: 10px 0
-  .speciality-item
-    padding: 15px 0
-    margin: 10px auto
-    max-width: 400px
-    border: 2px solid #fff
-    border-radius: 2px
-    background: #fff
-    box-shadow: inset 0px 0px 40px rgba(0,0,0,0.15), 0px 0px 40px rgba(0,0,0,0.15)
-    text-align: center
-    .fa
-      font-size: 40px
-    .one
-      color: #ff5722
-    .two
-      color: #4caf50
-    .three
-      color: #2196f3
-    .four
-      color: #e91e1e
+  @include breakpoint($bp-mi)
+    padding: 0 10px
+  @include breakpoint($bp-md)
+    padding: 0 20px
+  .container
+    padding: 0
+    @include container
+    .col1,
+    .col2,
+    .col3,
+    .col4
+      padding: 10px
+      margin: 5px auto
+      max-width: 400px
+      border: 2px solid #fff
+      border-radius: 2px
+      background: #fff
+      box-shadow: inset 0px 0px 40px rgba(0,0,0,0.15), 0px 0px 40px rgba(0,0,0,0.15)
+      text-align: center
+      @include breakpoint($bp-mi)
+        margin: 10px auto
+      @include breakpoint($bp-mi2)
+        margin: 15px auto
+      .fa
+        font-size: 40px
+    .col1
+      @include breakpoint($bp-sm)
+        @include span(6 of 12)
+      @include breakpoint($bp-sm3)
+        @include span(3 of 12)
+      i
+        color: $bg-orange
+    .col2
+      @include breakpoint($bp-sm)
+        @include span(6 at 7 of 12)
+      @include breakpoint($bp-sm3)
+        @include span(3 at 4 of 12)
+      i
+        color: $bg-green
+    .col3
+      @include breakpoint($bp-sm)
+        @include span(6 of 12)
+        margin-top: 0
+      @include breakpoint($bp-sm3)
+        @include span(3 at 7 of 12)
+        margin-top: 15px
+      i
+        color: $bg-blue
+    .col4
+      @include breakpoint($bp-sm)
+        @include span(6 at 7 of 12)
+        margin-top: 0
+      @include breakpoint($bp-sm3)
+        @include span(3 at 10 of 12)
+        margin-top: 15px
+      i
+        color: $bg-red
