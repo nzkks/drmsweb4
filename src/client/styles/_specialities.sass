@@ -1,7 +1,7 @@
 .specialities
   @include full
   padding: 0 5px
-  background: rgba(50,200,222,0.7)
+  background: $bg-lblue
   @include breakpoint($bp-mi)
     padding: 0 10px
   @include breakpoint($bp-md)
@@ -16,9 +16,9 @@
       padding: 10px
       margin: 5px auto
       max-width: 400px
-      border: 2px solid #fff
+      border: 2px solid $bg-white
       border-radius: 2px
-      background: #fff
+      background: $bg-white
       box-shadow: inset 0px 0px 40px rgba(0,0,0,0.15), 0px 0px 40px rgba(0,0,0,0.15)
       text-align: center
       @include breakpoint($bp-mi)
@@ -33,7 +33,7 @@
       @include breakpoint($bp-sm3)
         @include span(3 of 12)
       i
-        color: $bg-orange
+        color: $bg-borange
     .col2
       @include breakpoint($bp-sm)
         @include span(6 at 7 of 12)

@@ -1,20 +1,32 @@
-#webGallery:before, #printGallery:before
-  display: block
-  content: " "
-  margin-top: -75px
-  height: 75px
-  visibility: hidden
+.portfolio
+  @include full
+  .container
+    @include container
 
-.portfolio .web-gallery, .portfolio .print-gallery
-  margin-bottom: 50px
-  display: flex
-  flex-wrap: wrap
-  align-content: flex-start
-  .item
-    flex: 0 1 150px
-    height: 150px
-    margin: 10px
-    &:empty
-      height: 0
-    img
-      width: 150px
+    #webGallery:before,
+    #printGallery:before
+      display: block
+      content: " "
+      margin-top: -75px
+      height: 75px
+      visibility: hidden
+
+  .web-gallery,
+  .print-gallery
+    margin-bottom: 50px
+    display: flex
+    flex-wrap: wrap
+    align-content: flex-start
+    .item
+      flex: 0 1 125px
+      height: 125px
+      margin: 10px
+      @include breakpoint($bp-mi)
+        flex: 0 1 150px
+        height: 150px
+      &:empty
+        height: 0
+      img
+        width: 125px
+        @include breakpoint($bp-mi)
+          width: 150px
