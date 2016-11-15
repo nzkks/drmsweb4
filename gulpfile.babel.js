@@ -109,6 +109,13 @@ gulp.task('build-client-pages', () =>
     .pipe(builder.sync.reloadClient())
 );
 
+gulp.task('build-client-fonts', () =>
+  gulp.src([gp.ALL], {cwd: `${builder.dirs.src.client}/fonts`})
+    .pipe(builder.plumber())
+    .pipe(gulp.dest(`${builder.dirs.tgt.client}/fonts`))
+    .pipe(builder.sync.reloadClient())
+);
+
 gulp.task('build-client-styles', function() {
   let templateConfig = {};
   let includePaths = [];
@@ -275,6 +282,7 @@ gulp.task('build-client-assets', done =>
     'build-client-images',
     'build-client-styles',
     'build-client-pages',
+    'build-client-fonts',
     'build-client-vendor-assets'
   ], done)
 );
@@ -333,6 +341,7 @@ gulp.task('watch-client-assets', () => {
   gulp.watch([`${builder.dirs.src.client}/styles/${gp.ALL}`], ['build-client-styles']);
   gulp.watch([`${builder.dirs.src.client}/images/${gp.ALL}`], ['build-client-images']);
   gulp.watch([`${builder.dirs.src.client}/pages/${gp.ALL}`], ['build-client-pages']);
+  gulp.watch([`${builder.dirs.src.client}/fonts/${gp.ALL}`], ['build-client-fonts']);
 });
 
 gulp.task('watch-test-server-scripts', () =>

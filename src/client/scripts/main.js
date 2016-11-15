@@ -73,18 +73,18 @@ $(document).ready(function() {
   // END: Scroll to top
 
   // BEGIN: Lazy loading the Google font for headings
-  var xhr = new XMLHttpRequest();
-  var url = 'https://fonts.googleapis.com/css?family=Teko:400';
-
-  xhr.open('GET', url, true);
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      var style = document.createElement('style');
-      style.innerHTML = xhr.responseText;
-      document.head.appendChild(style);
-    }
-  };
-  xhr.send();
+  // var xhr = new XMLHttpRequest();
+  // var url = 'https://fonts.googleapis.com/css?family=Teko:400';
+  //
+  // xhr.open('GET', url, true);
+  // xhr.onreadystatechange = function () {
+  //   if (xhr.readyState == 4 && xhr.status == 200) {
+  //     var style = document.createElement('style');
+  //     style.innerHTML = xhr.responseText;
+  //     document.head.appendChild(style);
+  //   }
+  // };
+  // xhr.send();
   // END: Lazy loading the Google font for headings
 
   // BEGIN: Testimonial slider
