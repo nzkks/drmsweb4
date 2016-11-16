@@ -2,7 +2,14 @@
   @include full
   margin: 50px auto
   .container
-    margin: 0 30px
+    @include container
+    width: 85%
+    .slick-prev,.slick-next
+      +size(30px, 150px)
+    .slick-prev
+      left: -15px
+    .slick-next
+      right: -15px
     .item
       padding: 5px
       border-radius: 5px
