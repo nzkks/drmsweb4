@@ -11,6 +11,22 @@ body
 .main
   @include full
 
+.to-top
+  position: fixed
+  bottom: 10px
+  right: 10px
+  z-index: 10500
+  a
+    color: $bg-white
+    i
+      display: block
+      +size(30px, 30px)
+      font-size: 20px
+      line-height: 30px
+      text-align: center
+      border-radius: $border-radius-base
+      background-color: $bg-blue
+
 .cta-style
   @include full
   float: none
