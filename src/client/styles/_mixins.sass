@@ -1,0 +1,19 @@
+// Font Size
+@function calculateRem($size)
+  $remSize: $size / 16px
+  @return $remSize * 1rem
+
+=font-size($size)
+  font-size: $size
+  font-size: calculateRem($size)
+
+// transition
+=transition($transition-property, $transition-time, $method)
+  -webkit-transition: $transition-property $transition-time $method
+  -moz-transition: $transition-property $transition-time $method
+  transition: $transition-property $transition-time $method
+
+// Size
+=size($width, $height)
+  width: $width
+  height: $height

@@ -1,81 +1,86 @@
 .skills
+  @include full
   margin: 50px 0
-  .panel
-    border: none
-    .panel-heading
-      padding: 10px 0
-      background-color: inherit
-    .panel-body
-      padding: 0
+  .container
+    @include container
+    padding-left: 5px
+    padding-right: 5px
+    @include breakpoint($bp-mi2)
+      padding-left: 10px
+      padding-right: 10px
+    @include breakpoint($bp-sm4)
+      padding-left: 15px
+      padding-right: 15px
+    .item1
+      background-color: $bg-blue
+      @include breakpoint($bp-sm2)
+        @include span(6 of 12 first)
+      @include breakpoint($bp-sm4)
+        @include span(4 of 12 first)
+    .item2
+      background-color: $bg-red
+      @include breakpoint($bp-sm2)
+        @include span(6 at 7 of 12)
+      @include breakpoint($bp-sm4)
+        @include span(4 at 5 of 12)
+    .item3
+      background-color: $bg-green
+      @include breakpoint($bp-sm2)
+        @include span(6 of 12 last)
+      @include breakpoint($bp-sm4)
+        @include span(4 at 10 of 12 last)
 .skills-item
   margin: 20px auto
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1), inset 0px 0px 15px rgba(0,0,0,0.1)
   .skills-heading
-    float: left
-    @include breakpoint(max-width $screen-xs-min)
-      width: 100%
-      float: none
-      padding: 10px
+    width: 100%
+    padding: 10px
+    @include breakpoint($bp-sm4)
+      float: left
+      padding: 0
+      width: auto
     h2
-      transform: rotate(270deg)
       margin: 0
       font-size: 20px
       font-weight: 600
       text-transform: uppercase
-      @include breakpoint(max-width $screen-xs-min)
-        transform: none
-        text-align: left
+      text-align: left
+      @include breakpoint($bp-sm4)
+        transform: rotate(270deg)
       a
         color: #fff
         position: relative
         span
-          position: absolute
-          right: 17px
-          top: 12px
-          min-width: 200px
           text-align: right
-          @include breakpoint(max-width $screen-xs-min)
-            position: static
-            min-width: inherit
+          @include breakpoint($bp-sm4)
+            position: absolute
+            right: 17px
+            top: 12px
+            min-width: 200px
   .skills-content
-    margin-left: 42px
     padding: 10px
-    border: 1px solid #ddd
-    border-left: 0
+    width: 100%
+    margin-left: 0
+    border-top: 0
+    border-left: 1px solid #ddd
     background: #fff
-    @include breakpoint(max-width $screen-xs-min)
-      width: 100%
-      margin-left: 0
-      border-top: 0
-      border-left: 1px solid #ddd
+    @include breakpoint($bp-sm4)
+      margin-left: 42px
+      border: 1px solid #ddd
+      border-left: 0
+      width: auto
     h3
       font-size: 22px
-      line-height: 32px
+      line-height: 1.5
       font-weight: 400
       padding-bottom: 10px
       margin-top: 0
       margin-bottom: 5px
       border-bottom: solid 1px #eee
-    .skill-category-item
-      width: 100%
-      float: none
-      margin: 10px auto 8px
-
     h4
       font-size: 18px
       line-height: 25px
       text-transform: uppercase
-      &:before
-        content: "\f105"
-        font-family: "FontAwesome"
-        display: inline-block
-        width: 23px
-        height: 23px
-        line-height: 21px
-        text-align: center
-        border: 1px solid #32c8de
-        border-radius: 100%
-        margin-right: 5px
     .skill-progress
       margin: 15px 0
       padding: 0 5px
@@ -91,3 +96,42 @@
         height: 3px
         margin-bottom: 8px
         box-shadow: none
+.skills-accordion
+  margin: 0 auto 100px
+  padding: 0
+  outline: none
+  max-width: 560px
+  li
+    list-style: none
+    border-bottom: $border
+    position: relative
+    .skill-category-content
+      display: none
+      padding: 10px 5px
+    &:last-child
+      border-bottom: none
+  a
+    color: $bg-black
+    width: 100%
+    display: block
+    cursor: pointer
+    font-weight: 600
+    line-height: 3
+    +font-size(14px)
+    text-indent: 15px
+    user-select: none
+
+    &:after
+      +size (8px, 8px)
+      border-right: 1px solid $bg-black
+      border-bottom: 1px solid $bg-black
+      position: absolute
+      right: 10px
+      content: " "
+      top: 7px
+      transform: rotate(-45deg)
+      +transition(all, 0.2s, ease-in-out)
+
+  a.active:after
+    transform: rotate(45deg)
+    +transition(all, 0.2s, ease-in-out)

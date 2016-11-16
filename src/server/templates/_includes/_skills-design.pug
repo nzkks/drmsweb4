@@ -1,44 +1,37 @@
 h3
   a(href='#')
     | Web & Graphic Design
-#designAccordion.panel-group(role='tablist', aria-multiselectable='true')
-  .panel.panel-default
-    #designHeading1.panel-heading.skill-category-item(role='tab')
-      h4.panel-title
-        a(role='button', data-toggle='collapse', data-parent='#designAccordion', href='#designCollapse1', aria-expanded='true', aria-controls='designToolsCollapse1')
-          | Design Tools
-    #designCollapse1.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='designHeading1')
-      .panel-body
-        .skill-progress.clearfix
-          p Adobe Photoshop
-            span 100%
-          .progress
-            .progress-bar.bg-red(style='width: 100%;')
-        .skill-progress.clearfix
-          p Adobe Illustrator
-            span 95%
-          .progress
-            .progress-bar.bg-green(style='width: 95%;')
-        .skill-progress.clearfix
-          p Adobe InDesign
-            span 90%
-          .progress
-            .progress-bar.bg-lblue(style='width: 90%;')
-
-  .panel.panel-default
-    #designHeading2.panel-heading.skill-category-item(role='tab')
-      h4.panel-title
-        a(role='button', data-toggle='collapse', data-parent='#designAccordion', href='#designCollapse2', aria-expanded='true', aria-controls='designCollapse2')
-          | Multimedia Tools
-    #designCollapse2.panel-collapse.collapse(role='tabpanel', aria-labelledby='designHeading2')
-      .panel-body
-        .skill-progress.clearfix
-          p Adobe Premiere
-            span 80%
-          .progress
-            .progress-bar.bg-orange(style='width: 80%;')
-        .skill-progress.clearfix
-          p Adobe Audition
-            span 75%
-          .progress
-            .progress-bar.bg-purple(style='width: 75%;')
+ul.skills-accordion
+  li
+    a(href='#')
+      h4 Design Tools
+    .skill-category-content
+      .skill-progress.clearfix
+        p Adobe Photoshop
+          span 100%
+        .progress
+          .progress-bar.bg-red(style='width: 100%;')
+      .skill-progress.clearfix
+        p Adobe Illustrator
+          span 95%
+        .progress
+          .progress-bar.bg-green(style='width: 95%;')
+      .skill-progress.clearfix
+        p Adobe InDesign
+          span 90%
+        .progress
+          .progress-bar.bg-lblue(style='width: 90%;')
+  li
+    a(href='#')
+      h4 Multimedia Tools
+    .skill-category-content
+      .skill-progress.clearfix
+        p Adobe Premiere
+          span 80%
+        .progress
+          .progress-bar.bg-orange(style='width: 80%;')
+      .skill-progress.clearfix
+        p Adobe Audition
+          span 75%
+        .progress
+          .progress-bar.bg-purple(style='width: 75%;')

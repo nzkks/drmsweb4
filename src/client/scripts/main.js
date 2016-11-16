@@ -48,6 +48,22 @@ $(document).ready(function() {
 
   // END: Show / hide top contact panel
 
+  // BEGIN: Skills Accordion
+  $('.skills-accordion > li:eq(0) a').addClass('active').next().slideDown();
+  $('.skills-accordion a').click(function(j) {
+    var dropDown = $(this).closest('li').find('.skill-category-content');
+    $(this).closest('.skills-accordion').find('.skill-category-content').not(dropDown).slideUp();
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+    } else {
+      $(this).closest('.skills-accordion').find('a.active').removeClass('active');
+      $(this).addClass('active');
+    }
+    dropDown.stop(false, true).slideToggle();
+    j.preventDefault();
+  });
+  // END: Skills Accordion
+
   // BEGIN: Fancybox for portfolio
   $('.fancybox').fancybox({
     openEffect: 'none',

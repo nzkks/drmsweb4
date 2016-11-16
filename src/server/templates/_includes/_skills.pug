@@ -1,35 +1,31 @@
-.container
-  .skills
-    .row
-      .col-md-4.col-sm-12.col-xs-12
-        .skills-item.bg-blue
-          .skills-heading
-            h2
-              a(href='#')
-                span Design
-          .skills-content.clearfix
-            // BEGIN: Skills - Design Sub-Section
-            include _skills-design.pug
-            // END: Skills - Design Sub-Section
+.skills
+  .container
+    .skills-item.item1
+      .skills-heading
+        h2
+          a(href='#')
+            span Design
+      .skills-content
+        // BEGIN: Skills - Design Sub-Section
+        include _skills-design.pug
+        // END: Skills - Design Sub-Section
 
-      .col-md-4.col-sm-12.col-xs-12
-        .skills-item.bg-red
-          .skills-heading
-            h2
-              a(href='#')
-                span Develop
-          .skills-content.clearfix
-            // BEGIN: Skills - Develop Sub-Section
-            include _skills-develop.pug
-            // END: Skills - Develop Sub-Section
+    .skills-item.item2
+      .skills-heading
+        h2
+          a(href='#')
+            span Develop
+      .skills-content
+        // BEGIN: Skills - Develop Sub-Section
+        include _skills-develop.pug
+        // END: Skills - Develop Sub-Section
 
-      .col-md-4.col-sm-12.col-xs-12
-        .skills-item.bg-green
-          .skills-heading
-            h2
-              a(href='#')
-                span Support
-          .skills-content.clearfix
-            // BEGIN: Skills - Support Sub-Section
-            include _skills-support.pug
-            // END: Skills - Support Sub-Section
+    .skills-item.item3
+      .skills-heading
+        h2
+          a(href='#')
+            span Support
+      .skills-content
+        // BEGIN: Skills - Support Sub-Section
+        include _skills-support.pug
+        // END: Skills - Support Sub-Section
