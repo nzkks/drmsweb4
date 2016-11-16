@@ -1,11 +1,13 @@
 .testimonials
   @include full
-  margin: 50px auto
+  +mbot($section-bottom-margin)
   .container
     @include container
     width: 85%
     .slick-prev,.slick-next
-      +size(30px, 150px)
+      +size(30, 150)
+      &:hover
+        background-color: lighten($bg-blue, 36%)
     .slick-prev
       left: -15px
     .slick-next
@@ -26,7 +28,7 @@
       @include breakpoint($bp-sm3)
         @include span(10 at 3 of 12)
     i
-      font-size: 20px
+      +font-size(20)
       line-height: 1.5
       color: $bg-green
   .slick-dots
@@ -36,3 +38,5 @@
       margin: 0
       @include breakpoint($bp-mi)
         margin: 0 5px
+      &:hover
+        background-color: lighten($bg-blue, 36%)

@@ -1,32 +1,29 @@
 .portfolio
   @include full
+  +mbot($section-bottom-margin)
   .container
     @include container
 
-    #webGallery:before,
-    #printGallery:before
-      display: block
-      content: " "
-      margin-top: -75px
-      height: 75px
-      visibility: hidden
-
+  h3
+    @include full
   .web-gallery,
   .print-gallery
-    margin-bottom: 50px
-    display: flex
-    flex-wrap: wrap
-    align-content: flex-start
     .item
-      flex: 0 1 125px
+      @include gallery(6 of 12)
       height: 125px
       margin: 10px
-      @include breakpoint($bp-mi)
-        flex: 0 1 150px
+      @include breakpoint($bp-sm)
+        @include gallery(4 of 12)
         height: 150px
+      @include breakpoint($bp-sm3)
+        @include gallery(3 of 12)
+      @include breakpoint($bp-md)
+        @include gallery(2 of 12)
       &:empty
         height: 0
       img
         width: 125px
-        @include breakpoint($bp-mi)
+        @include breakpoint($bp-sm)
           width: 150px
+  .web-gallery
+    +mbot($section-bottom-margin)

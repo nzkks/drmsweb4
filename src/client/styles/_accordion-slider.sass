@@ -1,11 +1,12 @@
-.main-slider-container
-  padding-left: 0
-  padding-right: 0
+.main-slider
+  @include full
+  .container
+    @include container
+    padding: 0
 .accordion-slider
   margin: 1px auto
   height: auto
   width: 100%
-  max-width: 1140px
   overflow: hidden
   @include breakpoint($bp-sm2)
     margin: 10px auto
@@ -40,7 +41,7 @@
       -webkit-transition: all 400ms ease
       transition: all 400ms ease
     h2
-      font-size: 24px
+      +font-size(24)
       text-transform: uppercase
       margin-bottom: 2px
       transform: rotate(270deg)

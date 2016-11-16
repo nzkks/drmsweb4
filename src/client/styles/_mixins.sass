@@ -1,11 +1,11 @@
-// Font Size
-@function calculateRem($size)
-  $remSize: $size / 16px
+@function toRem($size)
+  $remSize: $size / $base-font-size
   @return $remSize * 1rem
 
-=font-size($size)
-  font-size: $size
-  font-size: calculateRem($size)
+// Font Size
+=font-size($sizeValue: 14)
+  font-size: $sizeValue * 1px
+  font-size: toRem($sizeValue)
 
 // transition
 =transition($transition-property, $transition-time, $method)
@@ -15,5 +15,10 @@
 
 // Size
 =size($width, $height)
-  width: $width
-  height: $height
+  width: $width * 1px
+  height: $height * 1px
+
+// margin-bottom
+=mbot($size)
+  margin-bottom: $size * 1px
+  margin-bottom: toRem($size)

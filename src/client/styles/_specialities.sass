@@ -1,5 +1,6 @@
 .specialities
   @include full
+  +mbot($section-bottom-margin)
   padding: 0 5px
   background: $bg-lblue
   @include breakpoint($bp-mi)
@@ -26,7 +27,7 @@
       @include breakpoint($bp-mi2)
         margin: 15px auto
       .fa
-        font-size: 40px
+        +font-size(40)
     .col1
       @include breakpoint($bp-sm)
         @include span(6 of 12)

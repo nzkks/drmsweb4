@@ -49,7 +49,7 @@ $(document).ready(function() {
   // END: Show / hide top contact panel
 
   // BEGIN: Skills Accordion
-  $('.skills-accordion > li:eq(0) a').addClass('active').next().slideDown();
+  /*$('.skills-accordion > li:eq(0) a').addClass('active').next().slideDown();*/
   $('.skills-accordion a').click(function(j) {
     var dropDown = $(this).closest('li').find('.skill-category-content');
     $(this).closest('.skills-accordion').find('.skill-category-content').not(dropDown).slideUp();

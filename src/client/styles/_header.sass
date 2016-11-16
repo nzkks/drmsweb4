@@ -10,7 +10,7 @@
       color: #2C3E50
       position: relative
       .short-txt
-        font-size: 40px
+        +font-size(40)
       .full-txt
         position: absolute !important
         top: 0 !important
@@ -31,7 +31,7 @@
           display: block
           width: 270px
           padding: 16px 0
-          font-size: 20px
+          +font-size(20)
           font-variant: small-caps
       @include breakpoint($bp-sm3)
         @include span(first 4)
@@ -50,7 +50,7 @@
     display: inline-flex
     a
       padding: 17px 20px
-      font-size: 18px
+      +font-size(18)
       font-weight: bold
       position: relative
       &:hover span
@@ -73,6 +73,8 @@
           opacity: 1
       .fa-caret-down
         margin-left: 10px
+    &:hover
+      background-color: lighten($bg-black, 60%)
   li.has-sub-menu
     position: relative
     ul
