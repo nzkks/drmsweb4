@@ -4,14 +4,19 @@
   .container
     .contact-form
       h3 Contact Form
-      form
-        input(type='name', placeholder='Your Full Name')
-        input(type='email', placeholder='Your Email Address')
-        input(type='phone', placeholder='Your Phone Number')
-        textarea(rows='5', placeholder='Your Message')
+      form#gform(method='POST', action='https://script.google.com/macros/s/AKfycbydWVCci72icBF_TzQKYRtH1unY0fpI1f2PqtZrrM1djM6JZ0c/exec')
+        input(name='name', type='name', placeholder='Your Full Name' required)
+        input(name='email', type='email', placeholder='Your Email Address' required)
+        input(name='phone', type='phone', placeholder='Your Phone Number')
+        textarea(name='message', rows='5', placeholder='Your Message' required)
         .button-group
-          button.btn(type='submit') Submit
+          button.btn(type='submit') Send
           button.btn(type='reset') Reset
+
+      #thankyou_message(style='display: none')
+        p
+          em Thanks
+          |  for contacting us! I will get back to you soon!
     .contact-details
       h3 Contact Details
       p
