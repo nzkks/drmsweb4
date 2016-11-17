@@ -7,22 +7,22 @@
   margin: 0 auto
   z-index: 2000
   display: none
-  background-color: $bg-lblue2
+  background-color: lighten($bg-lblue2, 20%)
   .contact-panel-close
     position: absolute
-    top: 0
-    right: 0
+    top: 20px
+    right: 10px
     display: inline-block
     +size(50, 50)
     text-align: center
-    color: #fff
+    color: $bg-red
     +font-size(30)
   .container
     @include container()
   h3
     margin-top: 0
     margin-bottom: 20px
-    color: #fff
+    color: darken($bg-black, 20%)
     text-align: center
   .contact-form
     max-width: none
@@ -35,24 +35,31 @@
       margin-bottom: 0
     input, textarea
       margin-bottom: 15px
-      padding: 20px
-      border: 0
+      padding: 5px
+      border: 1px solid transparent
       border-radius: 4px
       display: block
       width: 100%
-      height: 34px
       +font-size(14)
       line-height: 1.42857
-      color: #555555
-      background-color: #fff
+      background-color: $bg-white
       background-image: none
-      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
-      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
-      -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s
-      -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s
-      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s
+      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075)
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075)
+      -webkit-transition: border ease-in-out 0.15s, box-shadow ease-in-out 0.15s
+      -o-transition: border ease-in-out 0.15s, box-shadow ease-in-out 0.15s
+      transition: border ease-in-out 0.15s, box-shadow ease-in-out 0.15s
+      @include breakpoint($bp-sm3)
+        padding: 20px
+    input[type=name], input[type=email], input[type=phone]
+      height: 40px
+      @include breakpoint($bp-sm3)
+        height: 34px
     textarea
       height: auto
+    input[type=name]:focus, input[type=email]:focus, input[type=phone]:focus,textarea:focus
+      border: 1px solid $bg-blue
+      color: darken($bg-black, 20%)
     .button-group
       text-align: center
       @include breakpoint($bp-sm3)
@@ -60,8 +67,6 @@
       .btn
         padding: 10px 20px
         border-radius: 4px
-        background: #fff
-        color: #888
         display: inline-block
         margin-bottom: 0
         font-weight: normal
@@ -78,17 +83,25 @@
         -moz-user-select: none
         -ms-user-select: none
         user-select: none
+      button[type=submit]
+        background-color: $bg-borange
+        color: $bg-white
+      button[type=reset]
+        background-color: $bg-white
+        color: darken($bg-black, 20%)
   .contact-details
     padding: 10px
     text-align: center
     @include breakpoint($bp-sm3)
       @include span(6 at 7 of 12)
-    h4
-      line-height: 44px
+    p
+      line-height: 1.5
       font-weight: 300
       text-align: center
+      @include breakpoint($bp-sm3)
+        line-height: 3.5
       a
-        color: #fff
+        color: darken($bg-black, 20%)
     .social-container
       display: inline-block
       margin-top: 10px

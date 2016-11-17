@@ -1,7 +1,11 @@
 .header
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 10500
   @include full
   min-height: 60px
-  background: #fff
+  background: $bg-white
   .container
     @include container()
     .top-txt-logo
@@ -60,7 +64,9 @@
           margin-left: 10px
           opacity: 1
       i
-        color: #333
+        color: darken($bg-black, 20%)
+        @include breakpoint($bp-sm2)
+          color: lighten($bg-black, 30%)
       span
         position: absolute
         top: 0
@@ -84,7 +90,7 @@
       width: 280px
       opacity: 0
       text-align: center
-      background: #fff
+      background: $bg-white
       @include breakpoint($bp-sm2)
         right: auto !important
       li
