@@ -1,25 +1,24 @@
-mixin top-menu(main_sel)
-  .container
-    a.top-txt-logo(href='/')
-      span.short-txt SK
-      span.full-txt Shanthosh Krishnakumar
-    .nav-block
-      ul
-        li.has-sub-menu
-          a
-            i.fa.fa-briefcase
-            span Portfolio
-            i.fa.fa-caret-down
-          ul
-            li
-              a(href='#webGallery') Web Design / Development
-            li
-              a(href='#printGallery') Graphic Design
-        li
-          a(href='#about')
-            i.fa.fa-user
-            span About
-        li
-          a.main-contact-btn(href='#')
-            i.fa.fa-phone
-            span Contact
+.container
+  a.top-txt-logo(href='/', aria-label='Click to go Shanthosh portfolio website homepage')
+    span.short-txt(aria-hidden='true') SK
+    span.full-txt(aria-hidden='true') Shanthosh Krishnakumar
+  .nav-block
+    ul
+      li.has-sub-menu
+        a
+          i.fa.fa-briefcase(aria-hidden='true', title='View Portfolio')
+          span Portfolio
+          i.fa.fa-caret-down(aria-hidden='true')
+        ul
+          li
+            a(href='#webGallery', aria-label='View Web Design/Development portfolio') Web Design / Development
+          li
+            a(href='#printGallery', aria-label='View Graphic Design portfolio') Graphic Design
+      li
+        a(href='#about', aria-label='About')
+          i.fa.fa-user(aria-hidden='true', title='Read about Shanthosh')
+          span About
+      li
+        a.main-contact-btn(href='#', aria-label='Contact')
+          i.fa.fa-phone(aria-hidden='true', title='Contact Shanthosh')
+          span Contact

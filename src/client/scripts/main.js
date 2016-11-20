@@ -107,7 +107,7 @@ $(document).ready(function() {
   $('.testimonials .container').slick({
     dots: true,
     autoplay: true,
-    autoplaySpeed: 10000,
+    autoplaySpeed: 40000,
     fade: true,
     adaptiveHeight: true,
     cssEase: 'linear',

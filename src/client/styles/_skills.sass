@@ -20,13 +20,13 @@
     .item2
       background-color: $bg-red
       @include breakpoint($bp-sm2)
-        @include span(6 at 7 of 12)
+        @include span(6 at 7 of 12 last)
       @include breakpoint($bp-sm4)
         @include span(4 at 5 of 12)
     .item3
       background-color: $bg-green
       @include breakpoint($bp-sm2)
-        @include span(6 of 12 last)
+        @include span(6 of 12 first)
       @include breakpoint($bp-sm4)
         @include span(4 at 10 of 12 last)
 .skills-item
@@ -45,18 +45,17 @@
       font-weight: 600
       text-transform: uppercase
       text-align: left
+      color: $bg-white
+      position: relative
       @include breakpoint($bp-sm4)
         transform: rotate(270deg)
-      a
-        color: $bg-white
-        position: relative
-        span
-          text-align: right
-          @include breakpoint($bp-sm4)
-            position: absolute
-            right: 17px
-            top: 12px
-            min-width: 200px
+      span
+        text-align: right
+        @include breakpoint($bp-sm4)
+          position: absolute
+          right: 17px
+          top: 12px
+          min-width: 200px
   .skills-content
     padding: 10px
     width: 100%
