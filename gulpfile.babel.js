@@ -119,8 +119,8 @@ gulp.task('build-client-fonts', () =>
 gulp.task('build-client-styles', function() {
   let templateConfig = {};
   let includePaths = [];
-  templateConfig.bootstrapSassPath = 'node_modules/bootstrap-sass/assets/stylesheets';
-  templateConfig.bootstrapSassMain = templateConfig.bootstrapSassPath + '/' + '_bootstrap.scss';
+  templateConfig.normalizeScssPath = 'node_modules/node-normalize-scss';
+  templateConfig.normalizeScssMain = templateConfig.normalizeScssPath + '/' + '_normalize.scss';
   templateConfig.fontAwesomeSassPath = 'bower_components/font-awesome/scss';
   templateConfig.fontAwesomeSassMain = templateConfig.fontAwesomeSassPath + '/' + 'font-awesome.scss';
   templateConfig.susySassPath = 'node_modules/susy/sass';
@@ -153,11 +153,6 @@ gulp.task('build-client-vendor-modernizr', () =>
     .pipe(gulp.dest(`${builder.dirs.tgt.clientVendor}/modernizr`))
 );
 
-gulp.task('build-client-vendor-bootstrap-fonts', () =>
-  gulp.src(['**/*'], {cwd: 'node_modules/bootstrap-sass/assets/fonts'})
-    .pipe(gulp.dest(`${builder.dirs.tgt.clientVendor}/bootstrap/assets/fonts`))
-);
-
 gulp.task('build-client-vendor-fontawesome-fonts', () =>
   gulp.src(['**/*'], {cwd: 'bower_components/font-awesome/fonts'})
     .pipe(gulp.dest(`${builder.dirs.tgt.clientVendor}/font-awesome/fonts`))
@@ -183,7 +178,6 @@ gulp.task('nop', function() {});
 gulp.task('build-client-vendor-assets', done =>
   runSequence([
     'build-client-vendor-modernizr',
-    'build-client-vendor-bootstrap-fonts',
     'build-client-vendor-fontawesome-fonts',
     'build-client-vendor-slickcarousel-fonts',
     'build-client-vendor-slickcarousel-loader',

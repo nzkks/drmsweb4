@@ -18,7 +18,21 @@
   width: $width * 1px
   height: $height * 1px
 
+// margin left and right
+=marlr($left, $right)
+  margin-left: $left * 1px
+  margin-left: toRem($left)
+  margin-right: $right * 1px
+  margin-right: toRem($right)
+
 // margin-bottom
-=mbot($size)
+=botm($size)
   margin-bottom: $size * 1px
   margin-bottom: toRem($size)
+
+// padding left and right
+=padlr($left, $right)
+  padding-left: $left * 1px
+  padding-left: toRem($left)
+  padding-right: $right * 1px
+  padding-right: toRem($right)

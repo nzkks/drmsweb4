@@ -104,7 +104,7 @@ $(document).ready(function() {
   // END: Lazy loading the Google font for headings
 
   // BEGIN: Testimonial slider
-  $('.testimonials .container').slick({
+  $('.section--testimonials .items-block').slick({
     dots: true,
     autoplay: true,
     autoplaySpeed: 40000,

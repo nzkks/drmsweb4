@@ -6,15 +6,16 @@
   @include full
   min-height: 60px
   background: $bg-white
-  .container
-    @include container()
+  .__container
     .top-txt-logo
-      @include span(first 3)
+      @include span(3 of 12)
       font-weight: bold
       color: #2C3E50
       position: relative
+      padding: 9px 0
+      margin-right: 0
       .short-txt
-        +font-size(40)
+        +font-size(30)
       .full-txt
         position: absolute !important
         top: 0 !important
@@ -38,13 +39,13 @@
           +font-size(20)
           font-variant: small-caps
       @include breakpoint($bp-sm3)
-        @include span(first 4)
+        @include span(4 of 12)
 
     .nav-block
-      @include span(last 9)
+      @include span(9 at 4 of 12)
       text-align: right
       @include breakpoint($bp-sm3)
-        @include span(last 8)
+        @include span(8 at 5 of 12)
 
 .nav-block ul
   list-style-type: none
@@ -53,8 +54,8 @@
   li
     display: inline-flex
     a
-      padding: 17px 20px
-      +font-size(18)
+      padding: 19px 20px
+      +font-size(16)
       font-weight: bold
       position: relative
       &:hover span
@@ -65,8 +66,10 @@
           opacity: 1
       i
         color: darken($bg-black, 20%)
+        +font-size(18)
         @include breakpoint($bp-sm2)
           color: lighten($bg-black, 30%)
+          +font-size(14)
       span
         position: absolute
         top: 0

@@ -1,0 +1,32 @@
+.section--cta-style
+  padding-top: 5px
+  padding-bottom: 5px
+  background-color: transparent
+  background-repeat: no-repeat
+  background-size: cover
+  background-attachment: fixed
+  .__container
+    border: 1px solid rgba(255,255,255,0)
+    border-radius: 8px
+    text-align: center
+    background: rgba(0,0,0,0.1)
+    position: relative
+    padding-top: 0
+    padding-bottom: 15px
+    @include breakpoint($bp-md)
+      max-width: 1000px
+    h3
+      margin-top: 10px
+      color: $bg-white
+    .btn
+      background: $bg-orange
+      border: 1px solid rgba(255,255,255,0.4)
+      color: darken($bg-black, 20%)
+      -webkit-transition: all 0.4s ease-out
+      -moz-transition: all 0.4s ease-out
+      -o-transition: all 0.4s ease-out
+      -ms-transition: all 0.4s ease-out
+      transition: all 0.4s ease-out
+      &:hover
+        background: $bg-borange
+        color: $bg-white

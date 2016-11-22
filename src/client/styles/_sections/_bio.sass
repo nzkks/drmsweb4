@@ -1,17 +1,18 @@
 #about:target
-  padding-top: 100px 
+  padding-top: 100px
   margin-top: -100px
-.bio-info
-  @include full
-  +mbot($section-bottom-margin)
-  padding: 5px
-  .container
-    @include container
-    padding: 35px 0px 25px
+.section--bio-info
+  margin-top: 40px
+  .__container
+    padding-top: 35px
+    padding-bottom: 25px
     background: $bg-white
     border: 1px solid #ddd
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1), inset 0px 0px 15px rgba(0,0,0,0.1)
     position: relative
+    text-align: center
+    @include breakpoint($bp-sm3)
+      text-align: inherit
     .social-icons
       position: absolute
       top: -15px
@@ -22,20 +23,20 @@
         text-align: right
       a
         margin-right: 5px
-  img
-    float: none
-    margin: 0 auto
-    width: 100%
-    max-width: 200px
-    border-radius: 100%
-    border: 1px solid #eee
-    padding: 3px
-    box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.05)
-    @include breakpoint($bp-sm3)
-      float: left
-      margin-left: 23px
+    img
+      float: none
+      margin-left: auto
+      margin-right: auto
+      width: 100%
+      max-width: 200px
+      border-radius: 100%
+      border: 1px solid #eee
+      padding: 3px
+      box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.05)
+      @include breakpoint($bp-sm3)
+        float: left
+        margin-left: 23px
   .bio-details
-    @include container
     margin-left: 0px
     text-align: center
     @include breakpoint($bp-sm2)
@@ -44,7 +45,6 @@
       margin-left: 240px
     .bio-item
       margin: 0px auto 10px
-      padding: 7px 10px
       max-width: 90%
       text-align: center
     .item1

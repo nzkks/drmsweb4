@@ -1,19 +1,18 @@
 .cta-top
-  +mbot($section-bottom-margin)
   background-image:url(../images/cta_top_blur_bg-min.jpg)
   .col1
     margin-bottom: 2rem
     @include breakpoint($bp-sm)
       @include span(12)
     @include breakpoint($bp-sm2)
-      @include span(3 of 12)
+      @include span(3 of 12 first)
       margin-bottom: 0
     @include breakpoint($bp-sm3)
       @include span(4 of 12)
   .col2
     margin-bottom: 2rem
     @include breakpoint($bp-sm)
-      @include span(6 of 12)
+      @include span(6 of 12 first)
       margin-bottom: 0
       text-align: right
     @include breakpoint($bp-sm2)
@@ -25,10 +24,10 @@
       text-align: right
   .col3
     @include breakpoint($bp-sm)
-      @include span(6 at 7 of 12)
+      @include span(6 at 7 of 12 last)
       text-align: left
     @include breakpoint($bp-sm2)
-      @include span(4 at 9 of 12)
+      @include span(4 at 9 of 12 last)
       text-align: left
     @include breakpoint($bp-sm3)
       @include span(4 at 9 of 12)

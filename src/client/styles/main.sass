@@ -1,10 +1,12 @@
+/* BEGIN: normalize css */
+@import "<%= normalizeScssMain %>"
+/* END: normalize css */
 /* BEGIN: Config Sass */
-@import "config"
+@import "_settings/config"
 /* END: Config Sass */
-/* BEGIN: Bootstrap Sass */
-$icon-font-path: "/vendor/bootstrap/assets/fonts/bootstrap/"
-@import "<%= bootstrapSassMain %>"
-/* END: Bootstrap Sass */
+/* BEGIN: Typography Sass */
+@import "_settings/typography"
+/* END: Typography Sass */
 /* BEGIN: Font Awesome Sass */
 $fa-font-path: "/vendor/font-awesome/fonts/"
 @import "<%= fontAwesomeSassMain %>"
@@ -24,49 +26,52 @@ $slick-arrow-color: $bg-blue
 @import "<%= slickThemeScss %>"
 /* END: Slick Carousel Sass */
 /* BEGIN: Susy Sass */
-@import "susy"
+@import "_settings/susy"
 /* END: Susy Sass */
 /* BEGIN: Mixins Sass */
-@import "mixins"
+@import "_settings/mixins"
 /* END: Mixins Sass */
 /* BEGIN: common Sass */
-@import "common"
+@import "_settings/common"
 /* END: common Sass */
 /* BEGIN: social-icons Sass */
-@import "social-icons"
+@import "_sections/social-icons"
 /* END: social-icons Sass */
 /* BEGIN: contact Sass */
-@import "contact"
+@import "_sections/contact"
 /* END: contact Sass */
 /* BEGIN: header Sass */
-@import "header"
+@import "_sections/header"
 /* END: header Sass */
 /* BEGIN: accordion-slider Sass */
-@import "accordion-slider"
+@import "_sections/accordion-slider"
 /* END: accordion-slider Sass */
+/* BEGIN: cta-style Sass */
+@import "_sections/cta-style"
+/* END: cta-style Sass */
 /* BEGIN: cta-top Sass */
-@import "cta-top"
+@import "_sections/cta-top"
 /* END: cta-top Sass */
 /* BEGIN: bio Sass */
-@import "bio"
+@import "_sections/bio"
 /* END: bio Sass */
 /* BEGIN: specialities Sass */
-@import "specialities"
+@import "_sections/specialities"
 /* END: specialities Sass */
 /* BEGIN: skills Sass */
-@import "skills"
+@import "_sections/skills"
 /* END: skills Sass */
 /* BEGIN: portfolio Sass */
-@import "portfolio"
+@import "_sections/portfolio"
 /* END: portfolio Sass */
 /* BEGIN: cta-bottom Sass */
-@import "cta-bottom"
+@import "_sections/cta-bottom"
 /* END: cta-bottom Sass */
 /* BEGIN: testimonials Sass */
-@import "testimonials"
+@import "_sections/testimonials"
 /* END: testimonials Sass */
 /* BEGIN: footer Sass */
-@import "footer"
+@import "_sections/footer"
 /* END: footer Sass */
 
 a

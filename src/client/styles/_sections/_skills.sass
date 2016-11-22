@@ -1,23 +1,14 @@
-.skills
-  @include full
-  +mbot($section-bottom-margin)
-  .container
-    @include container
-    padding-left: 5px
-    padding-right: 5px
-    @include breakpoint($bp-mi2)
-      padding-left: 10px
-      padding-right: 10px
-    @include breakpoint($bp-sm4)
-      padding-left: 15px
-      padding-right: 15px
+.section--skills
+  .__container
     .item1
+      +botm(5)
       background-color: $bg-blue
       @include breakpoint($bp-sm2)
         @include span(6 of 12 first)
       @include breakpoint($bp-sm4)
         @include span(4 of 12 first)
     .item2
+      +botm(5)
       background-color: $bg-red
       @include breakpoint($bp-sm2)
         @include span(6 at 7 of 12 last)
@@ -30,7 +21,8 @@
       @include breakpoint($bp-sm4)
         @include span(4 at 10 of 12 last)
 .skills-item
-  margin: 20px auto
+  margin-left: auto
+  margin-right: auto
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1), inset 0px 0px 15px rgba(0,0,0,0.1)
   .skills-heading
     width: 100%
@@ -81,11 +73,10 @@
       line-height: 25px
       text-transform: uppercase
     .skill-progress
-      margin: 15px 0
       padding: 0 5px
       p
         +font-size(13)
-        line-height: 26px
+        line-height: 1.5
         text-transform: none
         &:before
           content: none
@@ -97,7 +88,8 @@
         margin-bottom: 8px
         box-shadow: none
 .skills-accordion
-  margin: 0 auto 100px
+  margin-left: auto
+  margin-right: auto
   padding: 0
   outline: none
   max-width: 560px

@@ -1,34 +1,23 @@
-.specialities
-  @include full
-  +mbot($section-bottom-margin)
-  padding: 0 5px
+.section--specialities
   background: lighten($bg-lblue, 20%)
-  @include breakpoint($bp-mi)
-    padding: 0 10px
-  @include breakpoint($bp-md)
-    padding: 0 20px
-  .container
-    padding: 0
-    @include container
+  .__container
     .col1,
     .col2,
     .col3,
     .col4
       padding: 10px
-      margin: 5px auto
+      margin-left: auto
+      margin-right: auto
       max-width: 400px
       border: 2px solid $bg-white
       border-radius: 2px
       background: $bg-white
       box-shadow: inset 0px 0px 40px rgba(0,0,0,0.15), 0px 0px 40px rgba(0,0,0,0.15)
       text-align: center
-      @include breakpoint($bp-mi)
-        margin: 10px auto
-      @include breakpoint($bp-mi2)
-        margin: 15px auto
       .fa
         +font-size(40)
     .col1
+      +botm(5)
       @include breakpoint($bp-sm)
         @include span(6 of 12)
       @include breakpoint($bp-sm3)
@@ -36,6 +25,7 @@
       i
         color: $bg-borange
     .col2
+      +botm(5)
       @include breakpoint($bp-sm)
         @include span(6 at 7 of 12)
       @include breakpoint($bp-sm3)
@@ -43,6 +33,7 @@
       i
         color: $bg-green
     .col3
+      +botm(5)
       @include breakpoint($bp-sm)
         @include span(6 of 12)
         margin-top: 0

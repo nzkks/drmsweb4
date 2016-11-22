@@ -1,9 +1,4 @@
-.portfolio
-  @include full
-  +mbot($section-bottom-margin)
-  .container
-    @include container
-
+.section--portfolio
   h3
     @include full
   .web-gallery,
@@ -26,4 +21,7 @@
         @include breakpoint($bp-sm)
           width: 150px
   .web-gallery
-    +mbot($section-bottom-margin)
+  #webGallery:target,
+  #printGallery:target
+    padding-top: 100px
+    margin-top: -100px

@@ -1,23 +1,25 @@
-.testimonials
-  @include full
-  +mbot($section-bottom-margin)
-  .container
-    @include container
-    width: 85%
+.section--testimonials
+  .items-block
+    width: 80%
+    margin-left: auto
+    margin-right: auto
     .slick-prev,.slick-next
       +size(30, 150)
       &:hover
         background-color: lighten($bg-black, 55%)
     .slick-prev
-      left: -15px
+      left: -30px
     .slick-next
-      right: -15px
+      right: -30px
     .item
       padding: 5px
       border-radius: 5px
       background: $bg-white
   figure
-    @include container
+    margin-top: 5px
+    margin-right: 5px
+    margin-bottom: 5px
+    margin-left: 5px
     img
       border-radius: 4px
       margin: 0 auto 15px

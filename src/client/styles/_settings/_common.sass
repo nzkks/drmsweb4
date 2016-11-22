@@ -1,0 +1,158 @@
+*, :after, :before
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+html
+  font-size: 10px
+
+body
+  background: $brand-white
+  min-width: 320px
+  margin: 0
+  font-family: $font-family
+  font-size: 14px
+  line-height: 1.42857143
+
+ol, ul
+  margin-top: 0
+  margin-bottom: 10px
+
+ol
+  ol, ul
+    margin-bottom: 0
+
+ul
+  ol, ul
+    margin-bottom: 0
+
+.browsehappy
+  margin: 0.2em 0
+  padding: 0.2em 0
+  color: $gray-base
+
+.main
+  @include full
+  margin-top: 60px
+
+div[class^='section--']
+  @include full
+  float: none
+  padding-top: 5px
+  padding-bottom: 5px
+  margin-bottom: 0
+  @include breakpoint($bp-mi)
+    +botm(5)
+  @include breakpoint($bp-mi2)
+    +botm(5)
+  @include breakpoint($bp-sm)
+    +botm(15)
+  @include breakpoint($bp-sm2)
+    +botm(25)
+  @include breakpoint($bp-sm3)
+    +botm(30)
+  @include breakpoint($bp-sm4)
+    +botm(35)
+  @include breakpoint($bp-md)
+    +botm(40)
+  @include breakpoint($bp-md2)
+    +botm(50)
+  @include breakpoint($bp-lg)
+    +botm(50)
+
+.__container
+  max-width: 310px
+  margin-left: auto
+  margin-right: auto
+  @include breakpoint($bp-mi)
+    max-width: 366px
+  @include breakpoint($bp-mi2)
+    max-width: 404px
+  @include breakpoint($bp-sm)
+    max-width: 492px
+  @include breakpoint($bp-sm2)
+    max-width: 570px
+  @include breakpoint($bp-sm3)
+    max-width: 650px
+  @include breakpoint($bp-sm4)
+    max-width: 840px
+  @include breakpoint($bp-md)
+    max-width: 974px
+  @include breakpoint($bp-md2)
+    max-width: $max-width
+  @include breakpoint($bp-lg)
+    max-width: $max-width
+
+.btn
+  display: inline-block
+  padding: 6px 12px
+  margin-bottom: 0
+  font-weight: 400
+  text-align: center
+  white-space: nowrap
+  vertical-align: middle
+  -ms-touch-action: manipulation
+  touch-action: manipulation
+  cursor: pointer
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  background-image: none
+  border: 1px solid transparent
+  border-radius: 4px
+  &.active
+    &.focus, &:focus
+      outline: 5px auto -webkit-focus-ring-color
+      outline-offset: -2px
+
+  &.focus
+    outline: 5px auto -webkit-focus-ring-color
+    outline-offset: -2px
+
+  &:active
+    &.focus, &:focus
+      outline: 5px auto -webkit-focus-ring-color
+      outline-offset: -2px
+
+  &:focus
+    outline: 5px auto -webkit-focus-ring-color
+    outline-offset: -2px
+
+  &.focus, &:focus, &:hover
+    color: #333
+    text-decoration: none
+
+  &.active, &:active
+    background-image: none
+    outline: 0
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
+
+.hr-style1
+  @include full
+  margin-top: 25px
+  margin-bottom: 25px
+  border: 0
+  height: 1px
+  background-image: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(184,186,198,1) 50%,rgba(255,255,255,0) 100%)
+  background-image: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(184,186,198,1) 50%, rgba(255,255,255,0) 100%)
+  background-image: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(184,186,198,1) 50%,rgba(255,255,255,0) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 )
+
+.to-top
+  position: fixed
+  bottom: 10px
+  right: 10px
+  z-index: 10500
+  a
+    color: $bg-white
+    i
+      display: block
+      +size(30, 30)
+      +font-size(20)
+      line-height: 30px
+      text-align: center
+      border-radius: $border-radius-base
+      background-color: $bg-lblue2
+    &:hover i
+      background-color: $bg-blue
