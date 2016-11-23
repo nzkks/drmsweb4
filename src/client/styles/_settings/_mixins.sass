@@ -36,3 +36,8 @@
   padding-left: toRem($left)
   padding-right: $right * 1px
   padding-right: toRem($right)
+
+=radius($topleft, $topright: $topleft, $bottomright: $topleft, $bottomleft: $topright)
+  -moz-border-radius: $topleft $topright $bottomright $bottomleft
+  -webkit-border-radius: $topleft $topright $bottomright $bottomleft
+  border-radius: $topleft $topright $bottomright $bottomleft

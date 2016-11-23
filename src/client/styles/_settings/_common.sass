@@ -84,8 +84,9 @@ div[class^='section--']
 
 .btn
   display: inline-block
-  padding: 6px 12px
+  padding: 12px 16px
   margin-bottom: 0
+  font-size: 16px
   font-weight: 400
   text-align: center
   white-space: nowrap
@@ -99,7 +100,7 @@ div[class^='section--']
   user-select: none
   background-image: none
   border: 1px solid transparent
-  border-radius: 4px
+  +radius($radius-lg)
   &.active
     &.focus, &:focus
       outline: 5px auto -webkit-focus-ring-color
@@ -152,7 +153,7 @@ div[class^='section--']
       +font-size(20)
       line-height: 30px
       text-align: center
-      border-radius: $border-radius-base
+      +radius($radius-lg)
       background-color: $bg-lblue2
     &:hover i
       background-color: $bg-blue
