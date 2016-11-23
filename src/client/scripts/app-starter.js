@@ -12,7 +12,7 @@ class App {
   }
 
   initialize() {
-    this.title = 'Drmsweb4';
+    this.title = 'Shanthosh Krishnakumar';
   }
 
 

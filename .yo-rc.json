@@ -1,6 +1,6 @@
 {
   "generator-webpack-versatile": {
-    "appname": "drmsweb4",
+    "appname": "drmsweb",
     "dirs": {
       "bower": "bower_components",
       "src": "src",
