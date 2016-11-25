@@ -1,11 +1,18 @@
 .social-icons
-  a > i
-    width: 33px
-    height: 33px
-    line-height: 33px
-    color: $bg-white
-    text-align: center
+  a
+    +size(40, 40)
     border-radius: 50px
+    text-align: center
+    display: inline-block
+    margin-right: 10px
+    &:last-child
+      margin-right: 0
+      @include breakpoint($bp-sm5)
+        margin-right: 10px
+  a > i
+    font-size: 18px
+    line-height: 40px
+    color: $bg-white
   .email
     background: $bg-lblue
     &:hover

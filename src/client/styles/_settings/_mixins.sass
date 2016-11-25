@@ -19,23 +19,25 @@
   height: $height * 1px
 
 // margin left and right
-=marlr($left, $right)
-  margin-left: $left * 1px
-  margin-left: toRem($left)
-  margin-right: $right * 1px
-  margin-right: toRem($right)
+=marlr-auto()
+  margin-right: auto
+  margin-left: auto
 
 // margin-bottom
 =botm($size)
   margin-bottom: $size * 1px
   margin-bottom: toRem($size)
 
-// padding left and right
-=padlr($left, $right)
-  padding-left: $left * 1px
-  padding-left: toRem($left)
+// padding
+=pad($top, $right: $top, $bottom: $top, $left:$right)
+  padding-top: $top * 1px
+  padding-top: toRem($top)
   padding-right: $right * 1px
   padding-right: toRem($right)
+  padding-bottom: $bottom * 1px
+  padding-bottom: toRem($bottom)
+  padding-left: $left * 1px
+  padding-left: toRem($left)
 
 =radius($topleft, $topright: $topleft, $bottomright: $topleft, $bottomleft: $topright)
   -moz-border-radius: $topleft $topright $bottomright $bottomleft

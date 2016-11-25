@@ -6,18 +6,23 @@
   background-size: cover
   background-attachment: fixed
   .__container
-    border: 1px solid rgba(255,255,255,0)    
+    border: 1px solid rgba(255,255,255,0)
     +radius($radius-lg)
     text-align: center
     background: rgba(0,0,0,0.1)
     position: relative
     padding-top: 0
     padding-bottom: 15px
-    @include breakpoint($bp-md)
-      max-width: 1000px
+    @include breakpoint($bp-sm5)
+      display: flex
+      align-items: center
+      padding-bottom: 0
     h3
       margin-top: 10px
+      margin-bottom: 0
       color: $bg-white
+      @include breakpoint($bp-sm5)
+      margin-top: 0
     .btn
       background: $bg-orange
       border: 1px solid rgba(255,255,255,0.4)

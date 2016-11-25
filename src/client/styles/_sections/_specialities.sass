@@ -20,36 +20,40 @@
         +font-size(40)
     .col1
       +botm(5)
-      @include breakpoint($bp-sm)
-        @include span(6 of 12)
       @include breakpoint($bp-sm3)
-        @include span(3 of 12)
+        @include span(6 of 12)
+      @include breakpoint($bp-sm5)
+        @include span(3 of 12 first)
+        +botm(0)
       i
         color: $bg-borange
     .col2
       +botm(5)
-      @include breakpoint($bp-sm)
-        @include span(6 at 7 of 12)
       @include breakpoint($bp-sm3)
+        @include span(6 at 7 of 12)
+      @include breakpoint($bp-sm5)
         @include span(3 at 4 of 12)
+        +botm(0)
       i
         color: $bg-green
     .col3
       +botm(5)
-      @include breakpoint($bp-sm)
+      @include breakpoint($bp-sm3)
         @include span(6 of 12)
         margin-top: 0
-      @include breakpoint($bp-sm3)
+      @include breakpoint($bp-sm5)
         @include span(3 at 7 of 12)
-        margin-top: 15px
+        +botm(0)
       i
         color: $bg-blue
     .col4
-      @include breakpoint($bp-sm)
+      @include breakpoint($bp-sm3)
         @include span(6 at 7 of 12)
         margin-top: 0
-      @include breakpoint($bp-sm3)
-        @include span(3 at 10 of 12)
-        margin-top: 15px
+      @include breakpoint($bp-sm5)
+        @include span(3 at 10 of 12 last)
+        +botm(0)
       i
         color: $bg-red
+    @include breakpoint($bp-lg)
+      display: flex

@@ -4,21 +4,22 @@
   .web-gallery,
   .print-gallery
     .item
+      text-align: center
       @include gallery(6 of 12)
       height: 125px
       margin: 10px
-      @include breakpoint($bp-sm)
+      @include breakpoint($bp-sm4)
         @include gallery(4 of 12)
         height: 150px
-      @include breakpoint($bp-sm3)
+      @include breakpoint($bp-sm5)
         @include gallery(3 of 12)
-      @include breakpoint($bp-md)
+      @include breakpoint($bp-lg)
         @include gallery(2 of 12)
       &:empty
         height: 0
       img
         width: 125px
-        @include breakpoint($bp-sm)
+        @include breakpoint($bp-sm4)
           width: 150px
   .web-gallery
   #webGallery:target,

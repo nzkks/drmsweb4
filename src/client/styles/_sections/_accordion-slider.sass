@@ -5,15 +5,19 @@
   overflow: hidden
   +radius($radius-lg)
   @include breakpoint($bp-sm2)
-    margin: 10px auto
+    margin-top: 5px
   @include breakpoint($bp-sm3)
-    margin: 15px auto
+    margin-top: 10px
+  @include breakpoint($bp-sm4)
+    margin-top: 20px
+  @include breakpoint($bp-sm4)
+    margin-top: 30px
   @include breakpoint($bp-md)
-    margin: 25px auto
-  @include breakpoint($bp-md2)
-    margin: 35px auto
+    margin-top: 35px
   @include breakpoint($bp-lg)
-    margin: 50px auto
+    margin-top: 45px
+  @include breakpoint($bp-max)
+    margin-top: 60px
   a
     display: block
     height: 250px
@@ -43,15 +47,25 @@
       transform: rotate(270deg)
       top: 190px
       left: -10px
-      @include breakpoint($bp-sm2)
+      @include breakpoint($bp-sm4)
         top: 170px
         left: -25px
-      @include breakpoint($bp-sm3)
+      @include breakpoint($bp-sm5)
         top: 160px
         left: -40px
       @include breakpoint($bp-md)
         top: 150px
         left: -50px
+  li,
+  li:hover,
+  ul:hover li,
+  ul:hover li:hover
+    position: relative
+    display: table
+    table-layout: fixed
+    width: 100%
+    -webkit-transition: none
+    transition: none
   ul
     width: 100%
     display: table
@@ -98,21 +112,3 @@
           opacity: 1
           -webkit-transform: translateX(0)
           transform: translateX(0)
-
-//.accordion-slider ul:hover li:hover a
-//  background: rgba(0, 0, 0, 0.4)
-
-
-@include breakpoint(max-width 480px)
-  .accordion-slider
-    height: auto
-    li,
-    li:hover,
-    ul:hover li,
-    ul:hover li:hover
-      position: relative
-      display: table
-      table-layout: fixed
-      width: 100%
-      -webkit-transition: none
-      transition: none

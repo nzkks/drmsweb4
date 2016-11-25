@@ -4,37 +4,45 @@
   //background-attachment: fixed
   .col1
     margin-bottom: 2rem
-    @include breakpoint($bp-sm)
+    @include breakpoint($bp-sm3)
       @include span(12)
-    @include breakpoint($bp-sm2)
+    @include breakpoint($bp-sm5)
       @include span(4 of 12)
       margin-bottom: 0
-    @include breakpoint($bp-sm3)
-      @include span(4 of 12)
+    @include breakpoint($bp-md)
+      @include span(5 of 12)
+    @include breakpoint($bp-lg)
+      @include span(7 of 12)
   .col2
     margin-bottom: 2rem
-    @include breakpoint($bp-sm)
+    @include breakpoint($bp-sm3)
       @include span(6 of 12)
       text-align: right
       margin-bottom: 0
-    @include breakpoint($bp-sm2)
+    @include breakpoint($bp-sm5)
       @include span(4 at 5 of 12)
       margin-bottom: 0
       text-align: right
-    @include breakpoint($bp-sm3)
-      @include span(4 at 5 of 12)
+    @include breakpoint($bp-md)
+      @include span(3 at 6 of 12)
+      text-align: right
+    @include breakpoint($bp-lg)
+      @include span(2 at 8 of 12)
       text-align: right
   .col3
     position: relative
     text-align: center
-    @include breakpoint($bp-sm)
+    @include breakpoint($bp-sm3)
       @include span(6 at 7 of 12)
       text-align: left
-    @include breakpoint($bp-sm2)
+    @include breakpoint($bp-sm5)
       @include span(4 at 9 of 12)
       text-align: left
-    @include breakpoint($bp-sm3)
-      @include span(4 at 9 of 12)
+    @include breakpoint($bp-md)
+      @include span(4 at 8 of 12)
+      text-align: left
+    @include breakpoint($bp-lg)
+      @include span(3 at 9 of 12)
       text-align: left
 
   .download-files-container

@@ -25,6 +25,9 @@ ul
   ol, ul
     margin-bottom: 0
 
+button, input, optgroup, select, textarea
+  line-height: 1.42857143
+
 .browsehappy
   margin: 0.2em 0
   padding: 0.2em 0
@@ -39,48 +42,59 @@ div[class^='section--']
   float: none
   padding-top: 5px
   padding-bottom: 5px
-  margin-bottom: 0
-  @include breakpoint($bp-mi)
-    +botm(5)
-  @include breakpoint($bp-mi2)
-    +botm(5)
-  @include breakpoint($bp-sm)
-    +botm(15)
   @include breakpoint($bp-sm2)
-    +botm(25)
+    +botm(5)
   @include breakpoint($bp-sm3)
-    +botm(30)
+    +botm(10)
   @include breakpoint($bp-sm4)
-    +botm(35)
+    +botm(20)
+  @include breakpoint($bp-sm4)
+    +botm(30)
   @include breakpoint($bp-md)
-    +botm(40)
-  @include breakpoint($bp-md2)
-    +botm(50)
+    +botm(35)
   @include breakpoint($bp-lg)
-    +botm(50)
+    +botm(45)
+  @include breakpoint($bp-max)
+    +botm(60)
 
 .__container
-  max-width: 310px
   margin-left: auto
   margin-right: auto
-  @include breakpoint($bp-mi)
-    max-width: 366px
-  @include breakpoint($bp-mi2)
-    max-width: 404px
   @include breakpoint($bp-sm)
-    max-width: 492px
+    /* $bp-sm - 10px */
+    max-width: 310px
   @include breakpoint($bp-sm2)
-    max-width: 570px
+    /* $bp-sm4 - 10px */
+    max-width: 365px
   @include breakpoint($bp-sm3)
-    max-width: 650px
+    /* $bp-sm - 20px */
+    max-width: 405px
   @include breakpoint($bp-sm4)
-    max-width: 840px
+    /* $bp-sm4 - 20px */
+    max-width: 460px
+  @include breakpoint($bp-sm5)
+    /* $bp-sm5 - 30px */
+    max-width: 650px
   @include breakpoint($bp-md)
-    max-width: 974px
-  @include breakpoint($bp-md2)
-    max-width: $max-width
+    /* $bp-md - 30px */
+    max-width: 738px
   @include breakpoint($bp-lg)
+    /* $bp-lg - 40px */
+    max-width: 984px
+  @include breakpoint($bp-max)
+    /* $bp-max - 50px */
+    max-width: 1120px
+  @include breakpoint($bp-xl)
     max-width: $max-width
+  @include breakpoint($bp-fhd)
+    max-width: $max-width
+  @include breakpoint($bp-4k)
+    max-width: $max-width
+  &::before, &::after
+    display: table
+    content: ""
+  &::after
+    clear: both
 
 .btn
   display: inline-block

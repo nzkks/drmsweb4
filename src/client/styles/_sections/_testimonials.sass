@@ -23,11 +23,11 @@
     img
       border-radius: 4px
       margin: 0 auto 15px
-      @include breakpoint($bp-sm3)
+      @include breakpoint($bp-sm5)
         @include span(2 of 12)
         margin: auto
     figcaption
-      @include breakpoint($bp-sm3)
+      @include breakpoint($bp-sm5)
         @include span(10 at 3 of 12)
     i
       +font-size(20)
@@ -38,7 +38,7 @@
     width: 90%
     li
       margin: 0
-      @include breakpoint($bp-mi)
+      @include breakpoint($bp-sm2)
         margin: 0 5px
       &:hover
         background-color: lighten($bg-black, 55%)

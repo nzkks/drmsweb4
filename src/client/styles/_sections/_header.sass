@@ -6,46 +6,45 @@
   @include full
   min-height: 60px
   background: $bg-white
-  .__container
-    .top-txt-logo
-      @include span(3 of 12)
-      font-weight: bold
-      color: #2C3E50
-      position: relative
-      padding: 9px 0
-      margin-right: 0
-      .short-txt
-        +font-size(30)
-      .full-txt
+  .top-txt-logo
+    @include span(3 of 12)
+    font-weight: bold
+    color: #2C3E50
+    position: relative
+    padding: 9px 0
+    margin-right: 0
+    .short-txt
+      +font-size(30)
+    .full-txt
+      position: absolute !important
+      top: 0 !important
+      left: -500px !important
+      opacity: 0
+    &:hover .short-txt
+      @include breakpoint($bp-sm3)
         position: absolute !important
         top: 0 !important
         left: -500px !important
         opacity: 0
-      &:hover .short-txt
-        @include breakpoint($bp-sm3)
-          position: absolute !important
-          top: 0 !important
-          left: -500px !important
-          opacity: 0
-      &:hover .full-txt
-        @include breakpoint($bp-sm3)
-          position: absolute !important
-          top: 0 !important
-          left: 0 !important
-          opacity: 1
-          display: block
-          width: 270px
-          padding: 16px 0
-          +font-size(20)
-          font-variant: small-caps
+    &:hover .full-txt
       @include breakpoint($bp-sm3)
-        @include span(4 of 12)
+        position: absolute !important
+        top: 0 !important
+        left: 0 !important
+        opacity: 1
+        display: block
+        width: 270px
+        padding: 16px 0
+        +font-size(20)
+        font-variant: small-caps
+    @include breakpoint($bp-sm5)
+      @include span(4 of 12)
 
-    .nav-block
-      @include span(9 at 4 of 12)
-      text-align: right
-      @include breakpoint($bp-sm3)
-        @include span(8 at 5 of 12)
+  .nav-block
+    @include span(9 at 4 of 12)
+    text-align: right
+    @include breakpoint($bp-sm5)
+      @include span(8 at 5 of 12)
 
 .nav-block ul
   list-style-type: none
@@ -59,7 +58,7 @@
       font-weight: bold
       position: relative
       &:hover span
-        @include breakpoint($bp-sm $bp-sm2)
+        @include breakpoint($bp-sm3)
           position: static
           display: inline-block
           margin-left: 10px
@@ -67,7 +66,7 @@
       i
         color: darken($bg-black, 20%)
         +font-size(18)
-        @include breakpoint($bp-sm2)
+        @include breakpoint($bp-sm5)
           color: lighten($bg-black, 30%)
           +font-size(14)
       span
@@ -75,7 +74,7 @@
         top: 0
         left: -9999px
         opacity: 0
-        @include breakpoint($bp-sm2)
+        @include breakpoint($bp-sm5)
           position: static
           display: inline-block
           margin-left: 10px
@@ -94,7 +93,7 @@
       opacity: 0
       text-align: center
       background: $bg-white
-      @include breakpoint($bp-sm2)
+      @include breakpoint($bp-sm5)
         right: auto !important
       li
         display: block
@@ -107,4 +106,3 @@
       display: block
       opacity: 1
       left: -90px !important
-      @include breakpoint($bp-sm2)

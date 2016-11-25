@@ -26,7 +26,7 @@
     max-width: none
     width: 100%
     margin-bottom: 30px
-    @include breakpoint($bp-sm3)
+    @include breakpoint($bp-sm5)
       @include span(6 of 12)
       padding: 10px
       max-width: 400px
@@ -47,11 +47,11 @@
       -webkit-transition: border ease-in-out 0.15s, box-shadow ease-in-out 0.15s
       -o-transition: border ease-in-out 0.15s, box-shadow ease-in-out 0.15s
       transition: border ease-in-out 0.15s, box-shadow ease-in-out 0.15s
-      @include breakpoint($bp-sm3)
+      @include breakpoint($bp-sm5)
         padding: 20px
     input[type=name], input[type=email], input[type=phone]
       height: 40px
-      @include breakpoint($bp-sm3)
+      @include breakpoint($bp-sm5)
         height: 34px
     textarea
       height: auto
@@ -60,7 +60,7 @@
       color: darken($bg-black, 20%)
     .button-group
       text-align: center
-      @include breakpoint($bp-sm3)
+      @include breakpoint($bp-sm5)
         text-align: left
       .btn
         padding: 10px 20px
@@ -90,13 +90,13 @@
   .contact-details
     padding: 10px
     text-align: center
-    @include breakpoint($bp-sm3)
+    @include breakpoint($bp-sm5)
       @include span(6 at 7 of 12)
     p
       line-height: 1.5
       font-weight: 300
       text-align: center
-      @include breakpoint($bp-sm3)
+      @include breakpoint($bp-sm5)
         line-height: 3.5
       a
         color: darken($bg-black, 20%)
