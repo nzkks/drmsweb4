@@ -27,10 +27,12 @@
   .skills-heading
     width: 100%
     padding: 10px
+    +radius($radius-lg, $radius-lg, 0, 0)
     @include breakpoint($bp-lg)
       float: left
       padding: 0
       width: auto
+      +radius(0, 0, $radius-lg, $radius-lg)
     h2
       margin: 0
       +font-size(20)
@@ -52,13 +54,10 @@
     padding: 10px
     width: 100%
     margin-left: 0
-    border-top: 0
     +radius(0, 0, $radius-lg, $radius-lg)
     background: $bg-white
     @include breakpoint($bp-lg)
       margin-left: 42px
-      border: 1px solid #ddd
-      border-left: 0
       +radius(0, $radius-lg, $radius-lg, 0)
       width: auto
     h3
@@ -91,8 +90,7 @@
         margin-bottom: 8px
         box-shadow: none
 .skills-accordion
-  margin-left: auto
-  margin-right: auto
+  +marlr-auto()
   padding: 0
   outline: none
   max-width: 560px

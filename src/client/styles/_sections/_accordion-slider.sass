@@ -4,20 +4,6 @@
   width: 100%
   overflow: hidden
   +radius($radius-lg)
-  @include breakpoint($bp-sm2)
-    margin-top: 5px
-  @include breakpoint($bp-sm3)
-    margin-top: 10px
-  @include breakpoint($bp-sm4)
-    margin-top: 20px
-  @include breakpoint($bp-sm4)
-    margin-top: 30px
-  @include breakpoint($bp-md)
-    margin-top: 35px
-  @include breakpoint($bp-lg)
-    margin-top: 45px
-  @include breakpoint($bp-max)
-    margin-top: 60px
   ul
     margin: 0
     padding: 0
@@ -62,7 +48,7 @@
           bottom: 70px
         p
           left: 10px
-          bottom: 30px
+          bottom: 45px
       @include breakpoint($bp-sm5)
         float: left
         height: 100%
@@ -84,12 +70,13 @@
         bottom: 5px
         left: 10px
         color: #fff
+        +font-size(24)
         @include breakpoint($bp-sm5)
-          height: 40px
+          +size(250, 40)
           position: absolute
           left: -100px
           bottom: 120px
-          width: 250px
+          +font-size(30)
           transform: rotate(270deg)
 
       span

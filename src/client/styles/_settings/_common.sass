@@ -6,7 +6,7 @@ html
   font-size: 10px
 
 body
-  background: $brand-white
+  background: $bg-owhite
   min-width: 320px
   margin: 0
   font-family: $font-family
@@ -28,6 +28,10 @@ ul
 button, input, optgroup, select, textarea
   line-height: 1.42857143
 
+a
+  &:visited
+    color: $bg-dblue
+
 .browsehappy
   margin: 0.2em 0
   padding: 0.2em 0
@@ -40,56 +44,16 @@ button, input, optgroup, select, textarea
 div[class^='section--']
   @include full
   float: none
-  padding-top: 5px
-  padding-bottom: 5px
-  @include breakpoint($bp-sm2)
-    +botm(5)
-  @include breakpoint($bp-sm3)
-    +botm(10)
-  @include breakpoint($bp-sm4)
-    +botm(20)
-  @include breakpoint($bp-sm4)
-    +botm(30)
-  @include breakpoint($bp-md)
-    +botm(35)
-  @include breakpoint($bp-lg)
-    +botm(45)
-  @include breakpoint($bp-max)
-    +botm(60)
-
+  padding-top: 1.5%
+  padding-bottom: 1.5%
+  margin-top: 1.5%
+  margin-bottom: 1.5%
 .__container
-  margin-left: auto
-  margin-right: auto
-  @include breakpoint($bp-sm)
-    /* $bp-sm - 10px */
-    max-width: 310px
-  @include breakpoint($bp-sm2)
-    /* $bp-sm4 - 10px */
-    max-width: 365px
-  @include breakpoint($bp-sm3)
-    /* $bp-sm - 20px */
-    max-width: 405px
-  @include breakpoint($bp-sm4)
-    /* $bp-sm4 - 20px */
-    max-width: 460px
-  @include breakpoint($bp-sm5)
-    /* $bp-sm5 - 30px */
-    max-width: 650px
-  @include breakpoint($bp-md)
-    /* $bp-md - 30px */
-    max-width: 738px
-  @include breakpoint($bp-lg)
-    /* $bp-lg - 40px */
-    max-width: 984px
-  @include breakpoint($bp-max)
-    /* $bp-max - 50px */
-    max-width: 1120px
-  @include breakpoint($bp-xl)
-    max-width: 1120px
-  @include breakpoint($bp-fhd)
-    max-width: 1120px
-  @include breakpoint($bp-4k)
-    max-width: 1120px
+  +marlr-auto()
+  padding-top: 1.5%
+  padding-bottom: 1.5%
+  width: 97%
+  max-width: $max-width - 30px
   &::before, &::after
     display: table
     content: ""
@@ -100,7 +64,7 @@ div[class^='section--']
   display: inline-block
   padding: 12px 16px
   margin-bottom: 0
-  font-size: 16px
+  +font-size(16)
   font-weight: 400
   text-align: center
   white-space: nowrap

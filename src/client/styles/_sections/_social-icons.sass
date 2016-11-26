@@ -1,7 +1,7 @@
 .social-icons
   a
     +size(40, 40)
-    border-radius: 50px
+    +radius(50px)
     text-align: center
     display: inline-block
     margin-right: 10px
@@ -10,7 +10,7 @@
       @include breakpoint($bp-sm5)
         margin-right: 10px
   a > i
-    font-size: 18px
+    +font-size(18)
     line-height: 40px
     color: $bg-white
   .email

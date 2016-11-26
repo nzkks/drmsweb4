@@ -3,14 +3,16 @@
     @include full
   .web-gallery,
   .print-gallery
+    @include bleed(gutter(12))
+    margin-bottom: 0
+    padding-bottom: 0
     .item
+      margin-bottom: gutter(12)
       text-align: center
+      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1)
       @include gallery(6 of 12)
-      height: 125px
-      margin: 10px
       @include breakpoint($bp-sm4)
         @include gallery(4 of 12)
-        height: 150px
       @include breakpoint($bp-sm5)
         @include gallery(3 of 12)
       @include breakpoint($bp-lg)
@@ -19,8 +21,19 @@
         height: 0
       img
         width: 125px
+        height: 125px
         @include breakpoint($bp-sm4)
           width: 150px
+          height: 150px
+    &::before,
+    &::before,
+    &::after,
+    &::after
+      display: table
+      content: ''
+    &::after,
+    &::after
+      clear: both
   .web-gallery
   #webGallery:target,
   #printGallery:target
