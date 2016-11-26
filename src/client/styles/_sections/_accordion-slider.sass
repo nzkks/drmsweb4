@@ -18,97 +18,88 @@
     margin-top: 45px
   @include breakpoint($bp-max)
     margin-top: 60px
-  a
-    display: block
-    height: 250px
-    width: 100%
-    position: relative
-    z-index: 3
-    vertical-align: bottom
-    padding: 15px 20px
-    box-sizing: border-box
-    color: $bg-white
-    text-decoration: none
-    transition: all 200ms ease
-    *
-      margin: 0
-      width: 100%
-      position: relative
-      z-index: 5
-      white-space: nowrap
-      -webkit-transform: translateX(-20px)
-      transform: translateX(-20px)
-      -webkit-transition: all 400ms ease
-      transition: all 400ms ease
-    h2
-      +font-size(24)
-      text-transform: uppercase
-      margin-bottom: 2px
-      transform: rotate(270deg)
-      top: 190px
-      left: -10px
-      @include breakpoint($bp-sm4)
-        top: 170px
-        left: -25px
-      @include breakpoint($bp-sm5)
-        top: 160px
-        left: -40px
-      @include breakpoint($bp-md)
-        top: 150px
-        left: -50px
-  li,
-  li:hover,
-  ul:hover li,
-  ul:hover li:hover
-    position: relative
-    display: table
-    table-layout: fixed
-    width: 100%
-    -webkit-transition: none
-    transition: none
   ul
-    width: 100%
-    display: table
-    table-layout: fixed
     margin: 0
     padding: 0
+    height: 100%
+    list-style: none
+    @include breakpoint($bp-sm5)
+      width: 100%
+      height: 250px
+      &:hover li
+        width: 8%
+        height: 100%
+        &:hover
+          width: 60%
+          h2
+            transform: rotate(0deg)
+            left: 30px
+          p
+            left: 30px
     li
-      display: table-cell
-      vertical-align: bottom
+      height: 60px
       position: relative
-      width: 16.666%
-      height: auto
       background-repeat: no-repeat
       background-position: center center
-      transition: all 500ms ease
-      div
-        display: block
-        overflow: hidden
-        width: 100%
-    li:nth-child(1)
-      background-image: url("../images/drms_slider1-min.jpg")
-    li:nth-child(2)
-      background-image: url("../images/drms_slider2-min.jpg")
-    li:nth-child(3)
-      background-image: url("../images/drms_slider3-min.jpg")
-    li:nth-child(4)
-      background-image: url("../images/drms_slider4-min.jpg")
-    li:nth-child(5)
-      background-image: url("../images/drms_slider5-min.jpg")
-    li:nth-child(6)
-      background-image: url("../images/drms_slider6-min.jpg")
-
-    &:hover li
-      width: 8%
-      h2
-        top: 190px
-        left: -5px
+      &:nth-child(1)
+        background-image: url("../images/drms_slider1-min.jpg")
+      &:nth-child(2)
+        background-image: url("../images/drms_slider2-min.jpg")
+      &:nth-child(3)
+        background-image: url("../images/drms_slider3-min.jpg")
+      &:nth-child(4)
+        background-image: url("../images/drms_slider4-min.jpg")
+      &:nth-child(5)
+        background-image: url("../images/drms_slider5-min.jpg")
+      &:nth-child(6)
+        background-image: url("../images/drms_slider6-min.jpg")
       &:hover
-        width: 60%
+        height: 200px
+        @include breakpoint($bp-sm5)
+          height: 100%
         h2
-          left: 0
-          transform: rotate(0deg)
-        a *
-          opacity: 1
-          -webkit-transform: translateX(0)
-          transform: translateX(0)
+          left: 10px
+          bottom: 70px
+        p
+          left: 10px
+          bottom: 30px
+      @include breakpoint($bp-sm5)
+        float: left
+        height: 100%
+        position: relative
+        width: 16.666%
+
+      a
+        display: block
+        text-decoration: none
+        @include breakpoint($bp-sm5)
+          float: left
+          height: 250px
+          width: 100%
+          position: relative
+      h2
+        margin-top: 0
+        margin-bottom: 0
+        position: absolute
+        bottom: 5px
+        left: 10px
+        color: #fff
+        @include breakpoint($bp-sm5)
+          height: 40px
+          position: absolute
+          left: -100px
+          bottom: 120px
+          width: 250px
+          transform: rotate(270deg)
+
+      span
+        @include breakpoint($bp-sm5)
+          display: block
+      p
+        margin-top: 0
+        margin-bottom: 0
+        width: 90%
+        position: absolute
+        bottom: 0
+        left: -9999px
+        color: #ccc
