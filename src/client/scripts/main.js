@@ -34,19 +34,31 @@ $(document).ready(function() {
 
   // BEGIN: Show / hide top contact panel
 
-  $('.main-contact-btn, .contact-btn').on('click',function(e) {
+  $('.contact-btn').on('click',function(e) {
     e.preventDefault();
-    $('.contact-panel').slideDown(400);
-    $('.contact-panel').addClass('open');
+    $('.contact-panel').slideDown(400).addClass('open');
   });
 
-  $('.contact-panel-close').on('click', function(e){
+  $('.contact-panel .panel-close').on('click', function(e){
     e.preventDefault();
-    $('.contact-panel').removeClass('open');
-    $('.contact-panel').slideUp(400);
+    $('.contact-panel').slideUp(400).removeClass('open');
   });
 
   // END: Show / hide top contact panel
+
+  // BEGIN: Show / hide footer tech panel
+
+  $('.footer-tech-btn').on('click',function(e) {
+    e.preventDefault();
+    $('.footer-tech-panel').slideDown(400).addClass('open');
+  });
+
+  $('.footer-tech-panel .panel-close').on('click', function(e){
+    e.preventDefault();
+    $('.footer-tech-panel').slideUp(400).removeClass('open');
+  });
+
+  // END: Show / hide footer tech panel
 
   // BEGIN: Skills Accordion
   /*$('.skills-accordion > li:eq(0) a').addClass('active').next().slideDown();*/

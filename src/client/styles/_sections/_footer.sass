@@ -3,9 +3,23 @@
   background-color: $bg-black
   color: $bg-white
   .__container
-    text-align: center
-    padding-top: 0
-    padding-bottom: 0
+    padding-top: 10px
+    padding-bottom: 10px
+    .copywrite
+      text-align: center
+      @include breakpoint($bp-sm4)
+        @include span(6 of 12)
+    .interaction
+      text-align: center
+      @include breakpoint($bp-sm4)
+        @include span(6 at 7 of 12)
+
+    .btn
+      background: $bg-lblue2
+      color: $bg-white
+      &:hover
+        background: $bg-blue
+
     span
       display: block
       @include breakpoint($bp-sm4)

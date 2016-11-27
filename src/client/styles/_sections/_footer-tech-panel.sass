@@ -1,0 +1,13 @@
+.footer-tech-panel
+  bottom: 0
+  background-color: lighten($bg-lblue2, 20%)
+  -webkit-box-shadow: 0px -10px 15px -5px rgba(176,176,176,1)
+  -moz-box-shadow: 0px -10px 15px -5px rgba(176,176,176,1)
+  box-shadow: 0px -10px 15px -5px rgba(176,176,176,1)
+  .tech-box
+    .item
+      @include gallery(4 of 12)
+      @include breakpoint($bp-sm5)
+        @include gallery(3 of 12)
+      @include breakpoint($bp-lg)
+        @include gallery(2 of 12)
