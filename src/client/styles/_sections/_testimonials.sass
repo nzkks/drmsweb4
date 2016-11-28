@@ -1,15 +1,7 @@
 .section--testimonials
   .items-block
-    width: 80%
     +marlr-auto()
-    .slick-prev,.slick-next
-      +size(30, 150)
-      &:hover
-        background-color: lighten($bg-black, 55%)
-    .slick-prev
-      left: -30px
-    .slick-next
-      right: -30px
+    position: relative
     .item
       padding: 5px
       +radius(5px)
@@ -41,3 +33,25 @@
         margin: 0 5px
       &:hover
         background-color: lighten($bg-black, 55%)
+  .slick-arrow
+    position: absolute
+    top: calc(50% - 25px)
+    cursor: pointer
+    z-index: 999
+    +font-size(20)
+    i
+      display: block
+      +size(30, 30)
+      +radius($radius-lg)
+      padding-top: 4px
+      text-align: center
+      background-color: $bg-lblue2
+      color: $bg-white
+      opacity: 0.5
+      &:hover
+        opacity: 1
+        background-color: $bg-blue
+  .arrow-prev
+    left: 0
+  .arrow-next
+    right: 0

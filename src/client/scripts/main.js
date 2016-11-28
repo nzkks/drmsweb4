@@ -117,6 +117,8 @@ $(document).ready(function() {
 
   // BEGIN: Testimonial slider
   $('.section--testimonials .items-block').slick({
+    prevArrow: '<span class="arrow-prev slick-arrow" title="Previous"><i class="fa fa-angle-left" aria-hidden="true"></i></span>',
+    nextArrow: '<span class="arrow-next slick-arrow" title="Next"><i class="fa fa-angle-right" aria-hidden="true"></i></span>',
     dots: true,
     autoplay: true,
     autoplaySpeed: 40000,
