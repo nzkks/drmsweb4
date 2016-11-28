@@ -27,6 +27,11 @@
       position: relative
       background-repeat: no-repeat
       background-position: center center
+      -webkit-transition: all 0.3s ease-out
+      -moz-transition: all 0.3s ease-out
+      -o-transition: all 0.3s ease-out
+      -ms-transition: all 0.3s ease-out
+      transition: all 0.3s ease-out
       &:nth-child(1)
         background-image: url("../images/drms_slider1-min.jpg")
       &:nth-child(2)
@@ -40,15 +45,15 @@
       &:nth-child(6)
         background-image: url("../images/drms_slider6-min.jpg")
       &:hover
-        height: 200px
+        height: 248px
         @include breakpoint($bp-sm5)
           height: 100%
         h2
           left: 10px
-          top: 120px
+          top: 80px
         p
           left: 10px
-          top: 160px
+          top: 120px
       @include breakpoint($bp-sm5)
         float: left
         height: 100%

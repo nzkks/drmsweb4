@@ -16,21 +16,27 @@
       #thankyou_message(style='display: none')
         p
           em Thanks
-          |  for contacting us! I will get back to you soon!
+          |  for contacting me! I will get back to you soon!
+
+    hr.hr-style1
+
     .contact-details
       h3 Contact Details
       p
         a(href='mailto:kkshanthosh@gmail.com')
           i.fa.fa-envelope(aria-hidden='true')
-          |    kkshanthosh@gmail.com
+          span(itemprop='email')
+          |  kkshanthosh@gmail.com
       p
-        a(href='#')
+        a(href='tel:+642102495970')
           i.fa.fa-phone(aria-hidden='true')
-          |    +64 21 024 95 970
+          span(itemprop='telephone')
+          |  +64 21 024 95 970
       p
-        a(href='http://drmsweb.com')
+        a(href='http://www.drmsweb.com')
           i.fa.fa-globe(aria-hidden='true')
-          |    www.drmsweb.com
+          span(itemprop='url')
+          |  www.drmsweb.com
       .social-container
         // BEGIN: Social Sub-Section in contact
         include _social-icons.pug

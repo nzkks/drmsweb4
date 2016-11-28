@@ -12,7 +12,6 @@
   .contact-form
     max-width: none
     width: 100%
-    margin-bottom: 30px
     @include breakpoint($bp-sm5)
       @include span(6 of 12)
       padding: 10px
@@ -74,6 +73,9 @@
       button[type=reset]
         background-color: $bg-white
         color: darken($bg-black, 20%)
+  hr
+    @include breakpoint($bp-sm5)
+      display: none
   .contact-details
     padding: 10px
     text-align: center
@@ -93,13 +95,8 @@
       padding: 5px
       background: rgba(255, 255, 255, 0.6)
       +radius(5px)
-      .social-icons
-        a
-          margin-right: 20px
-        a:last-child
-          margin-right: 0
-      .email-link
-          display: none
+      .email
+        display: none
   #thankyou_message
     p
       color: $bg-dblue

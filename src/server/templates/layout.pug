@@ -1,9 +1,9 @@
 doctype html
-html(lang='en', itemscope itemtype='http://schema.org/Person')
+html(lang='en', itemscope, itemprop='person' itemtype='http://schema.org/Person')
   block vars
-  head
+  head(prefix='og: http://ogp.me/ns#')
     include _includes/_head.pug
-  body#top
+  body
     include _includes/_browse-happy.pug
     // BEGIN: Header Section
     header.header
@@ -26,6 +26,5 @@ html(lang='en', itemscope itemtype='http://schema.org/Person')
     // BEGIN: Footer Scripts
     include _includes/_foot-scripts.pug
     // END: Footer Scripts
-    span.to-top
-      a(href='#top' title='Go to top' aria-label='Click to go to top of the webpage')
-        i.fa.fa-angle-up(aria-hidden='true')
+    span.to-top(role='button', title='Go to top', aria-label='Click to go to top of the webpage')
+      i.fa.fa-angle-up(aria-hidden='true')

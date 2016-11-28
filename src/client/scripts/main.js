@@ -92,7 +92,7 @@ $(document).ready(function() {
       $('.to-top').fadeOut();
     }
   });
-  $('.to-top a').click(function(e) {
+  $('.to-top').click(function(e) {
     e.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, 'slow');
     return false;
