@@ -1,7 +1,8 @@
 .__container
-  a.top-txt-logo(href='/', aria-label='Click to go Shanthosh portfolio website homepage')
-    span.short-txt(aria-hidden='true') SK
-    span.full-txt(aria-hidden='true') Shanthosh Krishnakumar
+  .logo-block
+    a.top-txt-logo(href='/', aria-label='Click to go Shanthosh portfolio website homepage')
+      span.short-txt(aria-hidden='true') SK
+      span.full-txt(aria-hidden='true') Shanthosh Krishnakumar
   .nav-block
     ul
       li.has-sub-menu
@@ -11,11 +12,11 @@
           i.fa.fa-caret-down(aria-hidden='true')
         ul
           li
-            a(href='#webGallery', aria-label='View Web Design/Development portfolio') Web Design / Development
+            a.web-gallery-btn(href='#webGallery', aria-label='View Web Design/Development portfolio') Web Design / Development
           li
-            a(href='#printGallery', aria-label='View Graphic Design portfolio') Graphic Design
+            a.print-gallery-btn(href='#printGallery', aria-label='View Graphic Design portfolio') Graphic Design
       li
-        a(href='#about', aria-label='About')
+        a.about-page-link(href='#about', aria-label='About')
           i.fa.fa-user(aria-hidden='true', title='Read about Shanthosh')
           span About
       li

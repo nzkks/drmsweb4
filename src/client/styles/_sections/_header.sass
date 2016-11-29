@@ -12,37 +12,34 @@
   .__container
     padding-top: 0
     padding-bottom: 0
-  .top-txt-logo
+  .logo-block
     @include span(3 of 12)
-    font-weight: bold
-    color: $bg-dblue
-    position: relative
     padding: 9px 0
     margin-right: 0
-    .short-txt
-      +font-size(30)
-    .full-txt
-      position: absolute !important
-      top: 0 !important
-      left: -500px !important
-      opacity: 0
-    &:hover .short-txt
-      @include breakpoint($bp-sm3)
-        position: absolute !important
-        top: 0 !important
-        left: -500px !important
-        opacity: 0
-    &:hover .full-txt
-      @include breakpoint($bp-sm3)
-        position: absolute !important
-        top: 0 !important
-        left: 0 !important
-        opacity: 1
+    .top-txt-logo
+      font-weight: bold
+      color: $bg-dblue
+      position: relative
+      .short-txt
+        +font-size(30)
+      .full-txt
         display: block
         width: 270px
-        padding: 16px 0
         +font-size(20)
         font-variant: small-caps
+        position: absolute !important
+        top: -150px !important
+        opacity: 0
+      &:hover .short-txt
+        @include breakpoint($bp-sm3)
+          position: absolute !important
+          top: -150px !important
+          opacity: 0
+      &:hover .full-txt
+        @include breakpoint($bp-sm3)
+          position: absolute !important
+          top: 11px !important
+          opacity: 1
     @include breakpoint($bp-sm5)
       @include span(4 of 12)
 
@@ -92,13 +89,17 @@
   li.has-sub-menu
     position: relative
     ul
+      visibility: hidden
+      opacity: 0
       position: absolute !important
       top: 58px !important
-      left: -9999px !important
+      left: -90px !important
       width: 280px
-      opacity: 0
       text-align: center
       background: $bg-white
+      transform: translateY(-2em)
+      z-index: -1
+      transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s
       @include breakpoint($bp-sm5)
         right: auto !important
       li
@@ -108,7 +109,8 @@
         padding: 15px
 
     &:hover ul
-      z-index: 99
-      display: block
+      visibility: visible
       opacity: 1
-      left: -90px !important
+      z-index: 1
+      transform: translateY(0%)
+      transition-delay: 0s, 0s, 0.3s

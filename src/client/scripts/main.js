@@ -8,11 +8,37 @@ $(function() {
 
 $(document).ready(function() {
 
+  // BEGIN: Local page links
+
+  $.easing.elasout = function(x, t, b, c, d) {
+    var s=1.70158;var p=0;var a=c;
+    if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+    if (a < Math.abs(c)) { a=c; s=p/4; }
+    else s = p/(2*Math.PI) * Math.asin (c/a);
+    return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+  };
+
+  $.scrollTo(0); // reset the screen to (0,0)
+
+  $('.web-gallery-btn').click(function() {
+    $.scrollTo(this.hash, 1500, {offset:{top:-70}, easing:'elasout'});
+    return false;
+  });
+  $('.print-gallery-btn').click(function() {
+    $.scrollTo(this.hash, 1500, {offset:{top:-70}, easing:'elasout'});
+    return false;
+  });
+  $('.about-page-link').click(function() {
+    $.scrollTo(this.hash, 1500, {offset:{top:-80}, easing:'elasout'});
+    return false;
+  });
+
+  // END: Local page links
 
   // BEGIN: Show download menu
 
   var hidden = true;
-  $('.download-btn').click(function(e) {
+  $('.download-btn').hover(function(e) {
     e.preventDefault();
     if (hidden){
       $(this).next('.download-files-container').fadeToggle(200, function(){hidden = false;});

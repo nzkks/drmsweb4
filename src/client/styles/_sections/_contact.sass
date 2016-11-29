@@ -34,7 +34,7 @@
       -o-transition: border ease-in-out 0.15s, box-shadow ease-in-out 0.15s
       transition: border ease-in-out 0.15s, box-shadow ease-in-out 0.15s
       @include breakpoint($bp-sm5)
-        padding: 20px
+        padding: 10px
     input[type=name], input[type=email], input[type=phone]
       height: 40px
       @include breakpoint($bp-sm5)
@@ -48,25 +48,6 @@
       text-align: center
       @include breakpoint($bp-sm5)
         text-align: left
-      .btn
-        padding: 10px 20px
-        +radius(4px)
-        display: inline-block
-        margin-bottom: 0
-        font-weight: normal
-        text-align: center
-        vertical-align: middle
-        touch-action: manipulation
-        cursor: pointer
-        background-image: none
-        border: 1px solid transparent
-        white-space: nowrap
-        +font-size(14)
-        line-height: 1.42857
-        -webkit-user-select: none
-        -moz-user-select: none
-        -ms-user-select: none
-        user-select: none
       button[type=submit]
         background-color: $bg-borange
         color: $bg-white
@@ -95,6 +76,9 @@
       padding: 5px
       background: rgba(255, 255, 255, 0.6)
       +radius(5px)
+      .social-icons
+        a:last-child
+          margin-right: 0
       .email
         display: none
   #thankyou_message

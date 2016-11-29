@@ -4,6 +4,7 @@
   .web-gallery,
   .print-gallery
     .item
+      +radius($radius-lg)
       @include gallery(6 of 12)
       @include breakpoint($bp-sm4)
         @include gallery(4 of 12)
@@ -15,7 +16,9 @@
         height: 0
       &:hover
         box-shadow: 1px 0 45px rgba(0,0,0,0.2)
+
       img
+        +radius($radius-lg)
         width: 125px
         height: 125px
         @include breakpoint($bp-sm4)
@@ -26,3 +29,36 @@
   #printGallery:target
     padding-top: 100px
     margin-top: -100px
+
+  .item
+    a
+      position: relative
+      display: block
+      i
+        position: absolute
+        top: 62px
+        left: 62px
+        width: 40px
+        height: 40px
+        text-align: center
+        color: $bg-blue
+        +font-size(40)
+        z-index: 2
+        opacity: 0
+      span
+        position: absolute
+        top: 0
+        left: 0
+        display: block
+        width: 100%
+        height: 100%
+        background-color: lighten($bg-black, 60%)
+        +radius($radius-lg)
+        z-index: 1
+        opacity: 0
+      &:hover i
+        opacity: 1
+      &:hover span
+        opacity: 0.5
+      &:hover img
+        filter: blur(5px)
