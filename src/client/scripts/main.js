@@ -8,6 +8,10 @@ $(function() {
 
 $(document).ready(function() {
 
+  // BEGIN: Fall Png images to Svg images
+  // if(!Modernizr.svg){var i=document.getElementsByTagName('img'),j,y;for(j=i.length;j--;){y=i[j].src;if(y.match(/svg$/)){i[j].src=y.slice(0,-3)+'png';}}}
+  // END: Fall Png images to Svg images
+
   // BEGIN: Local page links
 
   $.easing.elasout = function(x, t, b, c, d) {
