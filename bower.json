@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "dependencies": {},
   "devDependencies": {
-    "breakpoint-sass": "^2.7.0",
-    "font-awesome": "^4.7.0"
+    "breakpoint-sass": "^2.7.0"
   }
 }

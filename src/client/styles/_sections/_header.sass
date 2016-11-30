@@ -60,19 +60,19 @@
       +font-size(16)
       font-weight: bold
       position: relative
-      &:hover span
+      &:hover span.menu-name
         @include breakpoint($bp-sm3)
           position: static
           display: inline-block
           margin-left: 10px
           opacity: 1
-      i
+      span.fa
         color: darken($bg-black, 20%)
         +font-size(18)
         @include breakpoint($bp-sm5)
           color: lighten($bg-black, 30%)
           +font-size(14)
-      span
+      span.menu-name
         position: absolute
         top: 0
         left: -9999px

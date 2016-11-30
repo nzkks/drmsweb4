@@ -57,11 +57,11 @@
       left: -10px
     .col4
       @include span(6 of 12)
-      span
+      span.format-name
         background-color: $bg-lred
     .col5
       @include span(6 at 7 of 12)
-      span
+      span.format-name
         background-color: $bg-blue
     .download-item
       padding: 10px 5px
@@ -80,17 +80,16 @@
         height: 0
         width: 0
         position: absolute
-        pointer-events: none
       &:before
         border-color: transparent
         border-width: 10px
         border-bottom-color: rgba(255, 255, 255, 0.9)
-      i
+      span.fa
         margin-left: -25px
         +font-size(30)
         position: relative
         color: $bg-black
-      span
+      span.format-name
         display: block
         position: absolute
         padding: 0 5px

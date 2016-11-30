@@ -10,24 +10,9 @@
 /* BEGIN: Typography Sass */
 @import "_settings/typography"
 /* END: Typography Sass */
-/* BEGIN: Font Awesome Sass */
-$fa-font-path: "/vendor/font-awesome/fonts/"
-@import "<%= fontAwesomeSassMain %>"
-/* END: Font Awesome Sass */
-/* BEGIN: Fancybox Sass */
-$fancybox-image-url: "/vendor/fancybox/img/"
-@import "<%= fancyboxScssMain %>"
-/* END: Fancybox Sass */
 /* BEGIN: Breakpoint Sass */
 @import "<%= breakpointSassMain %>"
 /* END: Breakpoint Sass */
-/* BEGIN: Slick Carousel Sass */
-@import "<%= slickScssMain %>"
-$slick-font-path: "/vendor/slick-carousel/fonts/"
-$slick-loader-path: "/vendor/slick-carousel/"
-$slick-arrow-color: $bg-blue
-@import "<%= slickThemeScss %>"
-/* END: Slick Carousel Sass */
 /* BEGIN: Susy Sass */
 @import "_settings/susy"
 /* END: Susy Sass */
@@ -61,12 +46,23 @@ $slick-arrow-color: $bg-blue
 /* BEGIN: skills Sass */
 @import "_sections/skills"
 /* END: skills Sass */
+/* BEGIN: Fancybox Sass */
+$fancybox-image-url: "/vendor/fancybox/img/"
+@import "<%= fancyboxScssMain %>"
+/* END: Fancybox Sass */
 /* BEGIN: portfolio Sass */
 @import "_sections/portfolio"
 /* END: portfolio Sass */
 /* BEGIN: cta-bottom Sass */
 @import "_sections/cta-bottom"
 /* END: cta-bottom Sass */
+/* BEGIN: Slick Carousel Sass */
+@import "<%= slickScssMain %>"
+$slick-font-path: "/vendor/slick-carousel/fonts/"
+$slick-loader-path: "/vendor/slick-carousel/"
+$slick-arrow-color: $bg-blue
+@import "<%= slickThemeScss %>"
+/* END: Slick Carousel Sass */
 /* BEGIN: testimonials Sass */
 @import "_sections/testimonials"
 /* END: testimonials Sass */

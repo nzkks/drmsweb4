@@ -128,8 +128,6 @@ gulp.task('build-client-styles', function() {
   let includePaths = [];
   templateConfig.normalizeScssPath = 'node_modules/node-normalize-scss';
   templateConfig.normalizeScssMain = templateConfig.normalizeScssPath + '/' + '_normalize.scss';
-  templateConfig.fontAwesomeSassPath = 'bower_components/font-awesome/scss';
-  templateConfig.fontAwesomeSassMain = templateConfig.fontAwesomeSassPath + '/' + 'font-awesome.scss';
   templateConfig.susySassPath = 'node_modules/susy/sass';
   templateConfig.susySassMain = templateConfig.susySassPath + '/' + '_susy.scss';
   templateConfig.breakpointSassPath = 'bower_components/breakpoint-sass/stylesheets';
@@ -160,11 +158,6 @@ gulp.task('build-client-vendor-modernizr', () =>
     .pipe(gulp.dest(`${builder.dirs.tgt.clientVendor}/modernizr`))
 );
 
-gulp.task('build-client-vendor-fontawesome-fonts', () =>
-  gulp.src(['**/*'], {cwd: 'bower_components/font-awesome/fonts'})
-    .pipe(gulp.dest(`${builder.dirs.tgt.clientVendor}/font-awesome/fonts`))
-);
-
 gulp.task('build-client-vendor-slickcarousel-fonts', () =>
   gulp.src(['**/*'], {cwd: 'node_modules/slick-carousel/slick/fonts'})
     .pipe(gulp.dest(`${builder.dirs.tgt.clientVendor}/slick-carousel/fonts`))
@@ -185,7 +178,6 @@ gulp.task('nop', function() {});
 gulp.task('build-client-vendor-assets', done =>
   runSequence([
     'build-client-vendor-modernizr',
-    'build-client-vendor-fontawesome-fonts',
     'build-client-vendor-slickcarousel-fonts',
     'build-client-vendor-slickcarousel-loader',
     'build-client-vendor-fancybox-assets',

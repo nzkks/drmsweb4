@@ -70,13 +70,7 @@ div[class^='section--']
   text-align: center
   white-space: nowrap
   vertical-align: middle
-  -ms-touch-action: manipulation
-  touch-action: manipulation
   cursor: pointer
-  -webkit-user-select: none
-  -moz-user-select: none
-  -ms-user-select: none
-  user-select: none
   background-image: none
   +radius($radius-lg)
   border: 1px solid rgba(255,255,255,0.4)
@@ -122,7 +116,6 @@ div[class^='section--']
   background-image: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(184,186,198,1) 50%,rgba(255,255,255,0) 100%)
   background-image: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(184,186,198,1) 50%, rgba(255,255,255,0) 100%)
   background-image: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(184,186,198,1) 50%,rgba(255,255,255,0) 100%)
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 )
 
 .to-top
   position: fixed
@@ -134,7 +127,7 @@ div[class^='section--']
     opacity: 1
   &:hover
     opacity: 1
-  i
+  span
     display: block
     +size(30, 30)
     +font-size(20)
