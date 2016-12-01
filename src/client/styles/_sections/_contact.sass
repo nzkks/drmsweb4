@@ -35,13 +35,13 @@
       transition: border ease-in-out 0.15s, box-shadow ease-in-out 0.15s
       @include breakpoint($bp-sm5)
         padding: 10px
-    input[type=name], input[type=email], input[type=phone]
+    input[type=text], input[type=email], input[type=tel]
       height: 40px
       @include breakpoint($bp-sm5)
         height: 34px
     textarea
       height: auto
-    input[type=name]:focus, input[type=email]:focus, input[type=phone]:focus,textarea:focus
+    input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus,textarea:focus
       border: 1px solid $bg-blue
       color: darken($bg-black, 20%)
     .button-group

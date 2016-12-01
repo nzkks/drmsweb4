@@ -17,7 +17,7 @@
         height: 100%
         &:hover
           width: 60%
-          h2
+          .title
             transform: rotate(0deg)
             left: 30px
           p
@@ -48,7 +48,7 @@
         height: 248px
         @include breakpoint($bp-sm5)
           height: 100%
-        h2
+        .title
           left: 10px
           top: 80px
         p
@@ -68,7 +68,7 @@
           height: 250px
           width: 100%
           position: relative
-      h2
+      .title
         margin-top: 0
         margin-bottom: 0
         position: absolute
@@ -76,12 +76,16 @@
         left: 10px
         color: #fff
         +font-size(24)
+        line-height: 34.2857px
+        font-family: $header-font-family
+        letter-spacing: 1px
         @include breakpoint($bp-sm5)
           +size(250, 40)
           position: absolute
           left: -100px
           bottom: 120px
           +font-size(30)
+          line-height: 42.8571px
           transform: rotate(270deg)
 
       span

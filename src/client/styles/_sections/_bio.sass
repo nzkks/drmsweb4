@@ -45,8 +45,12 @@
       margin: 0px auto 10px
       max-width: 90%
       text-align: center
-      h3
+      .title
         margin-bottom: 0
+        +font-size(24)
+        line-height: 34.2857px
+        font-family: $header-font-family
+        letter-spacing: 1px
     .item1
       @include breakpoint($bp-sm4)
         @include span(6 of 12)
