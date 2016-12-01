@@ -146,7 +146,7 @@ $(document).ready(function() {
   // END: Lazy loading the Google font for headings
 
   // BEGIN: Testimonial slider
-  $('.section--testimonials .items-block').slick({
+  var slickOptions = {
     prevArrow: '<span class="arrow-prev slick-arrow" title="Previous"><span class="fa fa-angle-left" aria-hidden="true"></span></span>',
     nextArrow: '<span class="arrow-next slick-arrow" title="Next"><span class="fa fa-angle-right" aria-hidden="true"></span></span>',
     dots: true,
@@ -156,7 +156,32 @@ $(document).ready(function() {
     adaptiveHeight: true,
     cssEase: 'linear',
     infinite: true
-  });
+  };
+
+  var divToSlick1 = $('.section--testimonials .items-block');
+  divToSlick1.slick(slickOptions);
+
+  var beforePrint = function() {
+    divToSlick1.slick('unslick');
+  };
+  var afterPrint = function() {
+    divToSlick1.slick(slickOptions);
+  };
+
+  if (window.matchMedia) {
+    var mediaQueryList = window.matchMedia('print');
+    mediaQueryList.addListener(function(mql) {
+      if (mql.matches) {
+        beforePrint();
+      } else {
+        afterPrint();
+      }
+    });
+  }
+
+  window.onbeforeprint = beforePrint;
+  window.onafterprint = afterPrint;
+
   // END: Testimonial slider
 
 });

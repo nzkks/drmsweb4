@@ -30,6 +30,14 @@ button, input, optgroup, select, textarea
 
 a
   color: $bg-dblue
+  text-decoration: none
+  &:hover,
+  &:active,
+  &:focus
+    outline: 0
+    text-decoration: none
+  &::-moz-focus-inner
+    border: 0
   &:visited
     color: $bg-dblue
 

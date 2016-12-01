@@ -1,0 +1,109 @@
+@media print
+  *
+    box-shadow: none !important
+    background: none !important
+    color: #000 !important
+    padding: inherit !important
+    line-height: 1.5 !important
+  body
+    background: #fff
+
+  .header
+    position: static
+    float: none
+    .short-txt
+      display: none
+    .full-txt
+      position: absolute !important
+      top: 11px !important
+      opacity: 1 !important
+    .nav-block ul
+      display: none
+  .main
+    float: none
+    margin-top: 0
+  .accordion-slider
+    ul
+      list-style: inherit
+      width: auto
+      height: auto
+      &:hover li
+        width: auto
+        &:hover
+          width: auto
+      li
+        width: auto
+        height: auto
+        a
+          float: none
+          height: auto
+          h2
+            position: static
+            width: auto
+            height: auto
+            transform: none
+            span
+              display: inherit
+        p
+          position: static
+          width: auto
+  .section--cta-style
+    display: none
+  .section--bio-info
+    .__container
+      border: none
+    .social-icons
+      display: none
+    img
+      float: none !important
+    .bio-details
+      margin-left: 0
+      .bio-item
+    .txt-row
+      columns: initial
+  .section--specialities
+    display: none
+  .section--skills
+    .skills-item
+      width: 49.15254%
+      float: left
+      margin-right: 1.69492%
+    .skills-heading
+      display: none
+    .skills-content
+      margin-left: 0
+      h3
+        border: none
+    .skills-accordion
+      max-width: none
+      li
+        border: none
+      a::after
+        display: none
+      h4
+        text-indent: 0
+      .skill-category-content
+        display: block
+      .skill-progress
+        display: inline
+        p
+          display: inline
+          &:after
+            content: ', '
+        .progress
+          display: none
+
+  .section--testimonials
+    .item
+      margin-bottom: 20px
+      &::before, &::after
+        display: table
+        content: ''
+      &::after
+        clear: both
+
+  .footer
+    display: none
+
+  .to-top
+    display: none !important
