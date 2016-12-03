@@ -1,4 +1,3 @@
-
 import path from 'path';
 import del from 'del';
 import glob from 'glob';
@@ -153,11 +152,6 @@ gulp.task('build-client-styles', function() {
     .pipe(builder.sync.reloadClient());
 });
 
-gulp.task('build-client-vendor-modernizr', () =>
-  builder.modernizr(builder.config.modernizr)
-    .pipe(gulp.dest(`${builder.dirs.tgt.clientVendor}/modernizr`))
-);
-
 gulp.task('build-client-vendor-slickcarousel-fonts', () =>
   gulp.src(['**/*'], {cwd: 'node_modules/slick-carousel/slick/fonts'})
     .pipe(gulp.dest(`${builder.dirs.tgt.clientVendor}/slick-carousel/fonts`))
@@ -177,7 +171,6 @@ gulp.task('nop', function() {});
 
 gulp.task('build-client-vendor-assets', done =>
   runSequence([
-    'build-client-vendor-modernizr',
     'build-client-vendor-slickcarousel-fonts',
     'build-client-vendor-slickcarousel-loader',
     'build-client-vendor-fancybox-assets',

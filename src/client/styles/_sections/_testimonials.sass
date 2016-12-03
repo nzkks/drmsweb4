@@ -25,12 +25,20 @@
       line-height: 1.5
       color: $bg-black
   .slick-dots
-    bottom: auto
-    width: 90%
+    display: none
+    @include breakpoint($bp-sm5)
+      display: block
+      bottom: -50px
     li
-      margin: 0
-      @include breakpoint($bp-sm2)
-        margin: 0 5px
+      @include breakpoint($bp-sm5)
+        margin: 0 20px
+        +size(30,30)
+      button
+        +size(30,30)
+        &:before
+          +size(30,30)
+          font-size: 8px
+          line-height: 30px
       &:hover
         background-color: lighten($bg-black, 55%)
   .slick-arrow

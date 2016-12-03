@@ -3,12 +3,16 @@
     span.fa.fa-times-circle(aria-hidden='true')
   .__container
     .contact-form
+      .toggle-form
+        span.fa.fa-angle-down(aria-hidden='true')
+        span.txt Collapse
       h3 Contact Form
       form#gform(method='POST', action='https://script.google.com/macros/s/AKfycbydWVCci72icBF_TzQKYRtH1unY0fpI1f2PqtZrrM1djM6JZ0c/exec')
         input(name='name', type='text', placeholder='Your Full Name' required)
         input(name='email', type='email', placeholder='Your Email Address' required)
         input(name='phone', type='tel', placeholder='Your Phone Number')
         textarea(name='message', rows='5', placeholder='Your Message' required)
+        #recaptcha.g-recaptcha(required)
         .button-group
           button.btn(type='submit') Send
           button.btn(type='reset') Reset

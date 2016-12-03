@@ -76,6 +76,18 @@ $(document).ready(function() {
 
   // END: Show / hide top contact panel
 
+  // BEGIN: Show / hide the contact form
+
+  $('.toggle-form').on('click', function () {
+    $('.toggle-form .txt').text(function(i, v){
+      return v === 'Collapse' ? 'Reveal' : 'Collapse';
+    });
+    $('.toggle-form .fa').toggleClass('fa-angle-right fa-angle-down');
+    $('#gform').toggle();
+  });
+
+  // END: Show / hide the contact form
+
   // BEGIN: Show / hide footer tech panel
 
   $('.footer-tech-btn').on('click',function(e) {
@@ -191,6 +203,17 @@ function validEmail(email) { // see:
   var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
   return re.test(email);
 }
+
+function isRecapchaValid()
+{
+  var result = grecaptcha.getResponse(gresponse);
+  if (result == "" || result == undefined || result.length == 0)
+  {
+    return false;
+  }
+  return true;
+}
+
 // get all data in form and return object
 function getFormData() {
   var elements = document.getElementById('gform').elements; // all form elements
@@ -228,7 +251,11 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
   if( !validEmail(data.email) ) {   // if email is not valid show error
     //document.getElementById('email-invalid').style.display = 'block';
     return false;
-  } else {
+  }
+  else if (!isRecapchaValid) {
+    return false;
+  }
+  else {
     var url = event.target.action;
     var xhr = new XMLHttpRequest();
     xhr.open('POST', url);

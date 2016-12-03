@@ -1,2 +1,26 @@
+script(type='text/javascript').
+  (function() {
+    var css = document.createElement('link');
+    css.href = 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+    css.rel = 'stylesheet';
+    css.type = 'text/css';
+    document.getElementsByTagName('head')[0].appendChild(css);
+  })();
+
+script(type='text/javascript').
+  var gresponse = '';
+  var onloadCallback = function() {
+    gresponse = grecaptcha.render('recaptcha', {
+      // live
+      //'sitekey' : '6Leytw0UAAAAAHyUbssLQygJ2nEMqmA3YSizPApG',
+      // localhost
+      'sitekey': '6LeIuw0UAAAAAF5DBsYy2i1Ellobjn35-eKAKmid'
+      //,
+      //callback: function(response){
+      //  console.log('response');
+      //}
+    });
+  };
+script(src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit', async, defer)
 script(type='text/javascript', src='<%= builder.getBundleUrl() %>/vendor.bundle.js')
 script(type='text/javascript', src='<%= builder.getBundleUrl() %>/app.bundle.js')
