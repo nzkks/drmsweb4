@@ -93,7 +93,7 @@
       opacity: 0
       position: absolute !important
       top: 58px !important
-      left: -90px !important
+      right: -90px !important
       width: 280px
       text-align: center
       background: $bg-white
@@ -107,7 +107,12 @@
       li > a
         display: block
         padding: 15px
-
+    &:hover span.menu-name
+      @include breakpoint($bp-sm3)
+        position: static
+        display: inline-block
+        margin-left: 10px
+        opacity: 1
     &:hover ul
       visibility: visible
       opacity: 1

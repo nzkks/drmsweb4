@@ -17,6 +17,14 @@
       padding: 10px
       max-width: 400px
       margin-bottom: 0
+    .toggle-form
+      text-align: left
+      margin: 20px auto
+      @include breakpoint($bp-sm5)
+        display: none
+      .fa
+        font-size: 30px
+        margin: 0 10px
     input, textarea
       margin-bottom: 15px
       padding: 5px
@@ -51,6 +59,7 @@
       button[type=submit]
         background-color: $bg-borange
         color: $bg-white
+        margin-right: 15px
       button[type=reset]
         background-color: $bg-white
         color: darken($bg-black, 20%)

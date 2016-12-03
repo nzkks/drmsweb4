@@ -8,10 +8,12 @@
   font-size: toRem($sizeValue)
 
 // transition
-=transition($transition-property, $transition-time, $method)
-  -webkit-transition: $transition-property $transition-time $method
-  -moz-transition: $transition-property $transition-time $method
-  transition: $transition-property $transition-time $method
+=transition($t-property, $t-time, $t-ease)
+  -webkit-transition: $t-property $t-time $t-ease
+  -moz-transition: $t-property $t-time $t-ease
+  -ms-transition: $t-property $t-time $t-ease
+  -o-transition: $t-property $t-time $t-ease
+  transition: $t-property $t-time $t-ease
 
 // Size
 =size($width, $height)

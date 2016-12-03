@@ -88,4 +88,3 @@ builder.bundler = BundlerFactory(builder);
 builder.modernizr = modernizrFactory(builder);
 
 export default builder;
-

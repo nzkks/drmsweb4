@@ -76,6 +76,18 @@ $(document).ready(function() {
 
   // END: Show / hide top contact panel
 
+  // BEGIN: Show / hide the contact form
+
+  $('.toggle-form').on('click', function () {
+    $('.toggle-form .txt').text(function(i, v){
+      return v === 'Collapse Form' ? 'Reveal Form' : 'Collapse Form';
+    });
+    $('.toggle-form .fa').toggleClass('fa-angle-right fa-angle-down');
+    $('#gform').toggle();
+  });
+
+  // END: Show / hide the contact form
+
   // BEGIN: Show / hide footer tech panel
 
   $('.footer-tech-btn').on('click',function(e) {

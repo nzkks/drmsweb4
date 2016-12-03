@@ -7,10 +7,7 @@
       +radius(5px)
       background: $bg-white
   figure
-    margin-top: 5px
-    margin-right: 5px
-    margin-bottom: 5px
-    margin-left: 5px
+    margin: 5px
     img
       +radius(4px)
       margin: 0 auto 15px
@@ -22,15 +19,26 @@
         @include span(10 at 3 of 12)
     span.fa
       +font-size(20)
-      line-height: 1.5
       color: $bg-black
   .slick-dots
-    bottom: auto
-    width: 90%
+    display: none
+    @include breakpoint($bp-sm5)
+      display: block
+      bottom: -50px
     li
-      margin: 0
-      @include breakpoint($bp-sm2)
-        margin: 0 5px
+      @include breakpoint($bp-sm5)
+        margin: 0 20px
+        +size(30,30)
+      button
+        +size(30,30)
+        &:before
+          +size(8,8)
+          background: darken($bg-black, 20%)
+          border-radius: 50%
+          font-family: inherit
+          content: inherit
+          top: 11px
+          left: 11px
       &:hover
         background-color: lighten($bg-black, 55%)
   .slick-arrow
