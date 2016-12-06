@@ -19,7 +19,7 @@
       .fa
         +font-size(40)
     .col1
-      +botm(5)
+      margin-bottom: gutter(12)
       @include breakpoint($bp-sm3)
         @include span(6 of 12)
       @include breakpoint($bp-sm5)
@@ -28,7 +28,7 @@
       span
         color: $bg-borange
     .col2
-      +botm(5)
+      margin-bottom: gutter(12)
       @include breakpoint($bp-sm3)
         @include span(6 at 7 of 12)
       @include breakpoint($bp-sm5)
@@ -37,10 +37,11 @@
       span
         color: $bg-green
     .col3
-      +botm(5)
+      margin-bottom: gutter(12)
       @include breakpoint($bp-sm3)
         @include span(6 of 12)
         margin-top: 0
+        +botm(0)
       @include breakpoint($bp-sm5)
         @include span(3 at 7 of 12)
         +botm(0)

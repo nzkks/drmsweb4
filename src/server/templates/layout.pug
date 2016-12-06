@@ -2,29 +2,29 @@ doctype html
 html(lang='en', itemscope, itemtype='http://schema.org/Person')
   block vars
   head(prefix='og: http://ogp.me/ns#')
-    include _includes/_head.pug
+    include includes/head.pug
   body
-    include _includes/_browse-happy.pug
+    include includes/browse-happy.pug
     // BEGIN: Header Section
     header.header
-      include _includes/_header.pug
+      include includes/header.pug
     // END: Header Section
     // BEGIN: Main Section
     main.main
       block content
     // END: Main Section
     // BEGIN: Contact Panel
-    include _includes/_contact.pug
+    include includes/contact.pug
     // END: Contact Panel
     // BEGIN: Footer tech panel Panel
-    include _includes/_footer-tech-panel.pug
+    include includes/footer-tech-panel.pug
     // END: Footer tech panel Panel
     // BEGIN: Footer Section
     footer.footer
-      include _includes/_footer.pug
+      include includes/footer.pug
     // END: Footer Section
     // BEGIN: Footer Scripts
-    include _includes/_foot-scripts.pug
+    include includes/foot-scripts.pug
     // END: Footer Scripts
     span.to-top(role='button', title='Go to top', aria-label='Click to go to top of the webpage')
       span.fa.fa-angle-up(aria-hidden='true')

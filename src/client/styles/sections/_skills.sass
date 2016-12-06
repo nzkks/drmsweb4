@@ -1,17 +1,19 @@
 .section--skills
   .__container
     .item1
-      +botm(5)
+      margin-bottom: gutter(12)
       background-color: $bg-blue
       @include breakpoint($bp-sm3)
         @include span(6 of 12 first)
       @include breakpoint($bp-sm5)
         @include span(4 of 12 first)
+        +botm(0)
     .item2
-      +botm(5)
+      margin-bottom: gutter(12)
       background-color: $bg-red
       @include breakpoint($bp-sm3)
         @include span(6 at 7 of 12 last)
+        +botm(0)
       @include breakpoint($bp-sm5)
         @include span(4 at 5 of 12)
     .item3
