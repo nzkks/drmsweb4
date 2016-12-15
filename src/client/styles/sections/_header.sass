@@ -13,7 +13,7 @@
     padding-top: 0
     padding-bottom: 0
   .logo-block
-    @include span(3 of 12)
+    @include span(2 of 12)
     padding: 9px 0
     margin-right: 0
     .top-txt-logo
@@ -22,32 +22,10 @@
       position: relative
       .short-txt
         +font-size(30)
-      .full-txt
-        display: block
-        width: 270px
-        +font-size(20)
-        font-variant: small-caps
-        position: absolute
-        top: -150px
-        opacity: 0
-      &:hover .short-txt
-        @include breakpoint($bp-sm3)
-          position: absolute
-          top: -150px
-          opacity: 0
-      &:hover .full-txt
-        @include breakpoint($bp-sm3)
-          position: absolute
-          top: 11px
-          opacity: 1
-    @include breakpoint($bp-sm5)
-      @include span(4 of 12)
 
   .nav-block
-    @include span(9 at 4 of 12)
+    @include span(10 at 3 of 12)
     text-align: right
-    @include breakpoint($bp-sm5)
-      @include span(8 at 5 of 12)
 
 .nav-block ul
   list-style-type: none
@@ -56,34 +34,26 @@
   li
     display: inline-flex
     a
-      padding: 19px 20px
+      padding: 19px 9px
       +font-size(16)
       font-weight: bold
       position: relative
-      &:hover span.menu-name
-        @include breakpoint($bp-sm3)
-          position: static
-          display: inline-block
-          margin-left: 10px
-          opacity: 1
+      @include breakpoint($bp-sm2)
+        padding: 19px 15px
+      @include breakpoint($bp-sm3)
+        padding: 19px 20px
       span.fa
-        color: darken($bg-black, 20%)
+        color: lighten($bg-black, 30%)
         +font-size(18)
-        @include breakpoint($bp-sm5)
-          color: lighten($bg-black, 30%)
+        @include breakpoint($bp-sm4)
           +font-size(14)
-      span.menu-name
-        position: absolute
-        top: 0
-        left: -9999px
-        opacity: 0
-        @include breakpoint($bp-sm5)
-          position: static
-          display: inline-block
-          margin-left: 10px
-          opacity: 1
       .fa-caret-down
         margin-left: 10px
+      .fa-briefcase, .fa-user, .fa-phone
+        display: none
+        @include breakpoint($bp-sm4)
+          display: inline-block
+          margin-right: 10px
     &:hover
       background-color: lighten($bg-black, 60%)
   li.has-sub-menu
@@ -105,12 +75,6 @@
       li > a
         display: block
         padding: 15px
-    &:hover span.menu-name
-      @include breakpoint($bp-sm3)
-        position: static
-        display: inline-block
-        margin-left: 10px
-        opacity: 1
     &:hover ul
       visibility: visible
       opacity: 1
