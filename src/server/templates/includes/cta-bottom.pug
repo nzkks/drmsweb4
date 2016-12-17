@@ -7,15 +7,15 @@
         span.fa.fa-hand-o-up(aria-hidden='true')
         |  Contact Now
     .col3
-      a.btn.download-btn(href='/app/files/ShanthoshK_CV_28112016.doc', target='_blank')
+      button.btn.download-btn(aria-label='Download my CV in Word or PDF document')
         span.fa.fa-download(aria-hidden='true')
         |  Download my CV
       .download-files-container
         .col4
-          a.download-item(href='/app/files/ShanthoshK_CV_28112016.doc', target='_blank')
+          a.download-item(href='/app/files/ShanthoshK_CV_28112016.doc', target='_blank', aria-label='Download my CV in Word document')
             span.fa.fa-file-word-o(aria-hidden='true')
             span.format-name doc
         .col5
-          a.download-item(href='/app/files/ShanthoshK_CV_28112016.pdf', target='_blank')
+          a.download-item(href='/app/files/ShanthoshK_CV_28112016.pdf', target='_blank', aria-label='View / download my CV in PDF document')
             span.fa.fa-file-pdf-o(aria-hidden='true')
             span.format-name pdf
