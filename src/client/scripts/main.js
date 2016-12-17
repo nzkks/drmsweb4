@@ -1,10 +1,39 @@
 import $ from 'jquery';
 import appStarter from './app-starter';
 
-
 $(function() {
   appStarter();
 });
+
+// BEGIN: Font Awesome
+
+(function() {
+  var css = document.createElement('link');
+  css.href = 'https://use.fontawesome.com/0350acee1c.css';
+  css.rel = 'stylesheet';
+  css.type = 'text/css';
+  document.getElementsByTagName('head')[0].appendChild(css);
+})();
+
+// END: Font Awesome
+
+// BEGIN: Google Analytics
+var gaAnalytics = gaAnalytics || function(){};
+gaAnalytics('create', 'UA-10657263-10', 'auto');
+gaAnalytics('send', 'pageview');
+(function() {
+  var gaScript = document.createElement('script');
+  gaScript.src = 'https://www.google-analytics.com/analytics.js';
+  gaScript.async = 1;
+  gaScript.type = 'text/javascript';
+  document.getElementsByTagName('head')[0].appendChild(gaScript);
+})('gaAnalytics');
+// (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+// (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+// })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+// END: Google Analytics
 
 $(document).ready(function() {
 

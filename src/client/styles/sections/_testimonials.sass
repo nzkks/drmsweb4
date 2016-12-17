@@ -3,12 +3,16 @@
     position: relative
     .linkedin-txt
       position: absolute
-      right: 10px
-      bottom: 50px
-      z-index: 1000
+      right: 5px
+      bottom: 60px
+      z-index: 3
       width: 50px
       height: 50px
+      +radius(5px)
       text-align: center
+      background-color: lighten($bg-black, 60%)
+      &:hover
+        background-color: lighten($bg-black, 55%)
       span.fa
         padding: 5px
         +font-size(18)
@@ -19,6 +23,8 @@
       padding: 5px
       +radius(5px)
       background: $bg-white
+  .slick-slide
+    z-index: 2 !important
   figure
     margin: 5px
     .fa-thumbs-o-up
