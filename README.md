@@ -18,8 +18,4 @@ I have used following web technologies to create this website.
 
 _Still this website is in 'Beta' stage. I feel many things could be improved. Lot of checks needed._
 
-#### TODO: (to myself)
-- Still there are two _Content Security Policy_ issues shows in Chrome browser. _style-src - jQuery_
-- Remove mousehover effects in mobile phone or small screen.
-- Add Captcha control in the Contact form.
-- Try to come out of the dilemma to add section title for the skillset and the testimonials.
+- Check Issues section in GitHub to see few prominent issues.
