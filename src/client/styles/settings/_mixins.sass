@@ -9,10 +9,6 @@
 
 // transition
 =transition($t-property, $t-time, $t-ease)
-  -webkit-transition: $t-property $t-time $t-ease
-  -moz-transition: $t-property $t-time $t-ease
-  -ms-transition: $t-property $t-time $t-ease
-  -o-transition: $t-property $t-time $t-ease
   transition: $t-property $t-time $t-ease
 
 // Size
@@ -42,6 +38,4 @@
   padding-left: toRem($left)
 
 =radius($topleft, $topright: $topleft, $bottomright: $topleft, $bottomleft: $topright)
-  -moz-border-radius: $topleft $topright $bottomright $bottomleft
-  -webkit-border-radius: $topleft $topright $bottomright $bottomleft
   border-radius: $topleft $topright $bottomright $bottomleft

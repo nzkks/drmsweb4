@@ -4,6 +4,8 @@ import del from 'del';
 import glob from 'glob';
 import gulp from 'gulp';
 import gutil from 'gulp-util';
+import sourcemaps from 'gulp-sourcemaps';
+import autoprefixer from 'gulp-autoprefixer';
 import pluginsFactory from 'gulp-load-plugins';
 import runSequence from 'run-sequence';
 import lazypipe from 'lazypipe';
@@ -20,6 +22,10 @@ function exitAfter(done) {
 
 const plugins = pluginsFactory();
 const gp = builder.globPatterns;
+
+var autoprefixerOptions = {
+  browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+}
 
 function mapScript(p) {
   return  gutil.replaceExtension(p, '.js');
@@ -141,13 +147,16 @@ gulp.task('build-client-styles', function() {
   let scssFilter = plugins.filter([gp.SCSS], {restore: true});
   return gulp.src([gp.CSS, gp.SASS, gp.SCSS], {cwd: `${builder.dirs.src.client}/styles`})
     .pipe(builder.plumber())
+    .pipe(sourcemaps.init())
     .pipe(plugins.ejs(templateConfig))
     .pipe(sassFilter)
-    .pipe(plugins.sass({includePaths, indentedSyntax: true}))
+    .pipe(plugins.sass({includePaths, outputStyle: 'compressed'}))
     .pipe(sassFilter.restore)
     .pipe(scssFilter)
-    .pipe(plugins.sass({includePaths}))
+    .pipe(plugins.sass({includePaths, outputStyle: 'compressed'}))
     .pipe(scssFilter.restore)
+    .pipe(autoprefixer(autoprefixerOptions))
+    .pipe(sourcemaps.write('./'))
     .pipe(builder.crusher.pusher())
     .pipe(gulp.dest(`${builder.dirs.tgt.client}/styles`))
     .pipe(builder.sync.reloadClient());
