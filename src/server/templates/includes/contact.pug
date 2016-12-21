@@ -2,12 +2,9 @@
   a.panel-close(href='#', title='Close this panel') x
   .__container
     .contact-form
-      .toggle-form
-        span.fa.fa-angle-down(aria-hidden='true')
-        span.txt Collapse Form
       h3 Contact Form
       form#gform(method='POST', action='https://script.google.com/macros/s/AKfycbydWVCci72icBF_TzQKYRtH1unY0fpI1f2PqtZrrM1djM6JZ0c/exec')
-        input(name='name', type='text', placeholder='Your Full Name' required, title='Enter your full name')
+        input#gform-name(name='name', type='text', placeholder='Your Full Name' required, title='Enter your full name')
         input(name='email', type='email', placeholder='Your Email Address' required, title='Enter your email address')
         input(name='phone', type='tel', placeholder='Your Phone Number', title='Enter your phone number')
         textarea(name='message', rows='5', placeholder='Your Message' required, title='Enter the message')
@@ -20,7 +17,7 @@
           em Thanks
           |  for contacting me! I will get back to you soon!
 
-    hr.hr-style1
+      hr.hr-style1
 
     .contact-details
       h3 Contact Details
