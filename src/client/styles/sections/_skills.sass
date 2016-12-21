@@ -70,53 +70,53 @@
       margin-top: 0
       margin-bottom: 5px
       border-bottom: solid 1px #eee
-    h4
-      +font-size(18)
-      line-height: 1.4
-      margin-top: 14px
-      margin-bottom: 10px
-    .skill-progress
-      padding: 0 5px
-      p
-        +font-size(13)
-        line-height: 1.5
-        text-transform: none
-        &:before
-          content: none
 .skills-accordion
   +marlr-auto()
   padding: 0
   outline: none
   max-width: 560px
+  margin-bottom: 0
   li
     list-style: none
     border-bottom: $border
     position: relative
+    h4
+      +font-size(18)
+      line-height: 1.4
+      margin-top: 0
+      margin-bottom: 0
     .skill-category-content
       display: none
       padding: 10px 5px
     &:last-child
       border-bottom: none
-  a
-    width: 100%
-    display: block
-    cursor: pointer
-    font-weight: 600
-    line-height: 3
-    +font-size(14)
-    text-indent: 15px
+    .skill-progress
+      padding: 0 5px
+    p
+      +font-size(13)
+      line-height: 1.5
+      text-transform: none
+      &:before
+        content: none
+    a
+      width: 100%
+      display: block
+      cursor: pointer
+      text-indent: 15px
+      padding-top: 14px
+      padding-bottom: 10px
 
-    &:after
-      +size (8, 8)
-      border-right: 1px solid $bg-black
-      border-bottom: 1px solid $bg-black
-      position: absolute
-      right: 10px
-      content: " "
-      top: 7px
-      transform: rotate(-45deg)
+      &:after
+        +size (8, 8)
+        border-right: 1px solid $bg-black
+        border-bottom: 1px solid $bg-black
+        position: absolute
+        right: 10px
+        content: " "
+        top: 20px
+        transform: rotate(-45deg)
+        +transition(all, 0.2s, ease-in-out)
+
+    a.active:after
+      transform: rotate(45deg)
       +transition(all, 0.2s, ease-in-out)
-
-  a.active:after
-    transform: rotate(45deg)
-    +transition(all, 0.2s, ease-in-out)
