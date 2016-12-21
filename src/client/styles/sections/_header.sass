@@ -5,7 +5,7 @@
   z-index: 3
   @include full
   min-height: 60px
-  background: $bg-white
+  background: $c-white
   box-shadow: 0px 10px 15px -5px rgba(176,176,176,1)
   .__container
     padding-top: 0
@@ -16,7 +16,7 @@
     margin-right: 0
     .top-txt-logo
       font-weight: bold
-      color: $bg-dblue
+      color: $c-dblue
       position: relative
       .short-txt
         +font-size(30)
@@ -42,7 +42,7 @@
       @include breakpoint($bp-sm3)
         padding: 19px 20px
       span.fa
-        color: lighten($bg-black, 30%)
+        color: lighten($c-grey, 30%)
         @include breakpoint($bp-sm5)
           +font-size(14)
       .fa-caret-down
@@ -53,7 +53,7 @@
           display: inline-block
           margin-right: 10px
     &:hover
-      background-color: lighten($bg-black, 60%)
+      background-color: lighten($c-grey, 60%)
   li.has-sub-menu
     position: relative
     ul
@@ -64,7 +64,7 @@
       right: -90px
       width: 280px
       text-align: center
-      background: $bg-white
+      background: $c-white
       transform: translateY(-2em)
       z-index: -1
       transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s

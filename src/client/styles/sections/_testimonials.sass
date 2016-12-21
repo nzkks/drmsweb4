@@ -10,9 +10,9 @@
       height: 50px
       +radius($radius-lg)
       text-align: center
-      background-color: lighten($bg-black, 60%)
+      background-color: lighten($c-grey, 60%)
       &:hover
-        background-color: lighten($bg-black, 55%)
+        background-color: lighten($c-grey, 55%)
       span.fa
         padding: 5px
         +font-size(18)
@@ -22,7 +22,7 @@
     .item
       padding: 5px
       +radius($radius-lg)
-      background: $bg-white
+      background: $c-white
   .slick-slide
     z-index: 2 !important
   figure
@@ -45,7 +45,7 @@
         margin-bottom: 5px
     span.fa
       +font-size(20)
-      color: $bg-black
+      color: $c-grey
   .slick-dots
     display: none
     @include breakpoint($bp-sm5)
@@ -59,7 +59,7 @@
         +size(30,30)
         &:before
           +size(8,8)
-          background: darken($bg-black, 20%)
+          background: $c-black
           border-radius: 50%
           font-family: inherit
           content: inherit
@@ -67,7 +67,7 @@
           left: 11px
           content: '•'
       &:hover
-        background-color: lighten($bg-black, 55%)
+        background-color: lighten($c-grey, 55%)
   .slick-arrow
     position: absolute
     top: calc(50% - 25px)
@@ -80,12 +80,12 @@
       +radius($radius-lg)
       padding-top: 4px
       text-align: center
-      background-color: $bg-lblue2
-      color: $bg-white
+      background-color: $c-lblue2
+      color: $c-white
       opacity: 0.5
       &:hover
         opacity: 1
-        background-color: $bg-blue
+        background-color: $c-blue
   .arrow-prev
     left: 0
   .arrow-next

@@ -2,7 +2,7 @@
   .__container
     .item1
       margin-bottom: gutter(12)
-      background-color: $bg-blue
+      background-color: $c-blue
       @include breakpoint($bp-sm3)
         @include span(6 of 12 first)
       @include breakpoint($bp-sm5)
@@ -10,14 +10,14 @@
         +botm(0)
     .item2
       margin-bottom: gutter(12)
-      background-color: $bg-red
+      background-color: $c-red
       @include breakpoint($bp-sm3)
         @include span(6 at 7 of 12 last)
         +botm(0)
       @include breakpoint($bp-sm5)
         @include span(4 at 5 of 12)
     .item3
-      background-color: $bg-green
+      background-color: $c-green
       @include breakpoint($bp-sm3)
         @include span(6 of 12 first)
       @include breakpoint($bp-sm5)
@@ -41,7 +41,7 @@
       font-weight: 600
       text-transform: uppercase
       text-align: left
-      color: $bg-white
+      color: $c-white
       position: relative
       @include breakpoint($bp-lg)
         transform: rotate(270deg)
@@ -57,7 +57,7 @@
     width: 100%
     margin-left: 0
     +radius(0, 0, $radius-lg, $radius-lg)
-    background: $bg-white
+    background: $c-white
     @include breakpoint($bp-lg)
       margin-left: 42px
       +radius(0, $radius-lg, $radius-lg, 0)
@@ -108,8 +108,8 @@
 
       &:after
         +size (8, 8)
-        border-right: 1px solid $bg-black
-        border-bottom: 1px solid $bg-black
+        border-right: 1px solid $c-grey
+        border-bottom: 1px solid $c-grey
         position: absolute
         right: 10px
         content: " "

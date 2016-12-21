@@ -1,13 +1,13 @@
 .section--specialities
-  background: lighten($bg-lblue, 20%)
+  background: lighten($c-lblue, 20%)
   .__container
     .col1, .col2, .col3, .col4
       padding: 10px
       +marlr-auto()
       max-width: 400px
-      border: 1px solid $bg-white
+      border: 1px solid $c-white
       +radius($radius-lg)
-      background: $bg-white
+      background: $c-white
       box-shadow: inset 0px 0px 40px rgba(0,0,0,0.15), 0px 0px 40px rgba(0,0,0,0.15)
       text-align: center
       h2
@@ -23,7 +23,7 @@
         @include span(3 of 12 first)
         +botm(0)
       span
-        color: $bg-borange
+        color: $c-borange
     .col2
       margin-bottom: gutter(12)
       @include breakpoint($bp-sm3)
@@ -32,7 +32,7 @@
         @include span(3 at 4 of 12)
         +botm(0)
       span
-        color: $bg-green
+        color: $c-green
     .col3
       margin-bottom: gutter(12)
       @include breakpoint($bp-sm3)
@@ -43,7 +43,7 @@
         @include span(3 at 7 of 12)
         +botm(0)
       span
-        color: $bg-blue
+        color: $c-blue
     .col4
       @include breakpoint($bp-sm3)
         @include span(6 at 7 of 12)
@@ -52,6 +52,6 @@
         @include span(3 at 10 of 12 last)
         +botm(0)
       span
-        color: $bg-red
+        color: $c-red
     @include breakpoint($bp-lg)
       display: flex

@@ -4,7 +4,7 @@ html
   font-size: 10px
 
 body
-  background: $bg-owhite
+  background: $c-owhite
   min-width: 320px
   margin: 0
   font-family: $font-family
@@ -28,7 +28,7 @@ button, input, optgroup, select, textarea
   line-height: 1.42857143
 
 a
-  color: darken($bg-black, 20%)
+  color: $c-black
   text-decoration: none
   &:hover,
   &:active,
@@ -36,12 +36,12 @@ a
     outline: 0
     text-decoration: none
   &:visited
-    color: darken($bg-black, 20%)
+    color: $c-black
 
 .browsehappy
   margin: 0.2em 0
   padding: 0.2em 0
-  color: $gray-base
+  color: $c-black
 
 .main
   @include full
@@ -99,7 +99,7 @@ div[class^='section--']
     outline-offset: -2px
 
   &.focus, &:focus, &:hover
-    color: #333
+    color: $c-dgrey
     text-decoration: none
 
   &.active, &:active
@@ -133,10 +133,10 @@ div[class^='section--']
     line-height: 30px
     text-align: center
     +radius($radius-lg)
-    color: $bg-white
-    background-color: $bg-lblue2
+    color: $c-white
+    background-color: $c-lblue2
     &:hover
-      background-color: $bg-blue
+      background-color: $c-blue
 
 .fixed-panel
   padding: 35px 0
@@ -154,9 +154,9 @@ div[class^='section--']
     text-align: center
     +font-size(20)
     +radius($radius-lg)
-    color: $bg-white
+    color: $c-white
     &:hover
-      color: darken($bg-black, 20%)
+      color: $c-black
 
 .gallery
   @include bleed(gutter(12))
