@@ -1,99 +1,93 @@
 .accordion-slider
   margin: 1px auto
-  height: auto
   width: 100%
+  height: 360px
+  display: flex
+  flex-direction: column
   overflow: hidden
   +radius($radius-lg)
-  ul
-    margin: 0
-    padding: 0
-    height: 100%
-    list-style: none
+  @include breakpoint($bp-sm5)
+    height: 250px
+    flex-direction: row
+    justify-content: flex-start
+
+  .accordion__slide
+    display: flex
+    flex: 1
+    overflow: hidden
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    transition: all 0.5s ease
     @include breakpoint($bp-sm5)
-      background-image: url("../images/drms_slider6-min.jpg")
-      background-position: right
-      width: 100%
-      height: 250px
-      &:hover li
-        width: 8%
-        height: 100%
-        &:hover
-          width: 60%
-          .title
-            transform: rotate(0deg)
-            left: 30px
-          p
-            left: 30px
-    li
-      height: 60px
-      position: relative
-      background-repeat: no-repeat
-      background-position: center center
-      +transition(height, 1s, ease-out)
-      &:nth-child(1)
-        background-image: url("../images/drms_slider1-min.jpg")
-      &:nth-child(2)
-        background-image: url("../images/drms_slider2-min.jpg")
-      &:nth-child(3)
-        background-image: url("../images/drms_slider3-min.jpg")
-      &:nth-child(4)
-        background-image: url("../images/drms_slider4-min.jpg")
-      &:nth-child(5)
-        background-image: url("../images/drms_slider5-min.jpg")
-      &:nth-child(6)
-        background-image: url("../images/drms_slider6-min.jpg")
-      &:hover
-        height: 248px
-        @include breakpoint($bp-sm5)
-          height: 100%
-        .title
-          left: 10px
-          top: 80px
-        p
-          left: 10px
-          top: 120px
+      background-size: cover
+
+  .slide1
+    background-image: url("/app/images/drms_slider1-min.jpg")
+  .slide2
+    background-image: url("/app/images/drms_slider2-min.jpg")
+  .slide3
+    background-image: url("/app/images/drms_slider3-min.jpg")
+  .slide4
+    background-image: url("/app/images/drms_slider4-min.jpg")
+  .slide5
+    background-image: url("/app/images/drms_slider5-min.jpg")
+  .slide6
+    background-image: url("/app/images/drms_slider6-min.jpg")
+
+  .accordion__inner
+    margin: 0
+    padding: 0.5em
+    flex: 1
+    position: relative
+
+    .title
+      margin: 0
+      padding: 0
+      position: absolute
+      left: 20px
+      color: #fff
+      +font-size(24)
+      line-height: 34.2857px
+      font-family: $header-font-family
+      letter-spacing: 1px
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+      transition: all 0.5s ease
       @include breakpoint($bp-sm5)
-        float: left
-        height: 100%
-        position: relative
-        width: 16.666%
+        width: 250px
+        height: 1.5em
+        transform-origin: 0 0
+        transform: rotate(-90deg)
+        top: 250px
+        left: 0.5em
+        text-indent: 10px
+        +font-size(30)
+        line-height: 42.8571px
 
-      a
-        display: block
-        text-decoration: none
-        @include breakpoint($bp-sm5)
-          float: left
-          height: 250px
-          width: 100%
-          position: relative
-      .title
-        margin-top: 0
-        margin-bottom: 0
-        position: absolute
-        bottom: 5px
-        left: 10px
-        color: #fff
-        +font-size(24)
-        line-height: 34.2857px
-        font-family: $header-font-family
-        letter-spacing: 1px
-        @include breakpoint($bp-sm5)
-          +size(250, 40)
-          position: absolute
-          left: -100px
-          bottom: 120px
-          +font-size(30)
-          line-height: 42.8571px
-          transform: rotate(270deg)
+    .details
+      position: absolute
+      left: -9999px
+      opacity: 0
+      transition: opacity 1s ease
 
-      span
-        @include breakpoint($bp-sm5)
-          display: block
-      p
-        margin-top: 0
-        margin-bottom: 0
-        width: 90%
-        position: absolute
-        top: 0
-        left: -9999px
-        color: #ccc
+  .accordion__slide
+    &:hover, &:focus
+      flex: 4
+      @include breakpoint($bp-sm5)
+        flex: 5
+    &:hover .title, &:focus .title
+      top: 7px
+      left: 20px
+      @include breakpoint($bp-sm5)
+        transform: rotate(0deg)
+        top: 80px
+        text-indent: unset
+    &:hover .details, &:focus .details
+      display: block
+      top: 25px
+      left: 20px
+      max-width: 90%
+      color: #fff
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+      opacity: 1
+      @include breakpoint($bp-sm5)
+        top: 120px
