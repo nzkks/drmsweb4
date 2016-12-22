@@ -1,18 +1,18 @@
 .social-icons
   a
-    +size(40, 40)
     +radius(50px)
     text-align: center
     display: inline-block
     margin-right: 10px
+    color: $c-white
     &:last-child
       margin-right: 0
       @include breakpoint($bp-sm5)
         margin-right: 10px
-  a > span
+  .fa
+    +size(40, 40)
     +font-size(18)
     line-height: 40px
-    color: $c-white
   .email
     background: $c-lblue
     &:hover
@@ -21,15 +21,20 @@
     background: #729fda
     &:hover
       background: #3069b6
+  .behance, .pinterest, .facebook
+    display: none
   .behance
+    display: inline-block
     background: #0057ff
     &:hover
       background: darken(#0057ff, 20%)
   .facebook
+    display: inline-block
     background: #3280e7
     &:hover
       background: #134fa0
   .pinterest
+    display: inline-block
     background: #ed5441
     &:hover
       background: #b72411
@@ -37,3 +42,6 @@
     background: #666666
     &:hover
       background: #333333
+  .icon-alt-name
+    padding-left: 10px
+    padding-right: 10px

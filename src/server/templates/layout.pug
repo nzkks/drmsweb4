@@ -3,7 +3,7 @@ html(lang='en', itemscope, itemtype='http://schema.org/Person')
   block vars
   head(prefix='og: http://ogp.me/ns#')
     include includes/head.pug
-  body
+  body#top
     include includes/browse-happy.pug
     // BEGIN: Header Section
     header.header
@@ -16,9 +16,6 @@ html(lang='en', itemscope, itemtype='http://schema.org/Person')
     // BEGIN: Contact Panel
     include includes/contact.pug
     // END: Contact Panel
-    // BEGIN: Footer tech panel Panel
-    include includes/footer-tech-panel.pug
-    // END: Footer tech panel Panel
     // BEGIN: Footer Section
     footer.footer
       include includes/footer.pug
@@ -26,5 +23,6 @@ html(lang='en', itemscope, itemtype='http://schema.org/Person')
     // BEGIN: Footer Scripts
     include includes/foot-scripts.pug
     // END: Footer Scripts
-    span.to-top(role='button', title='Go to top', aria-label='Click to go to top of the webpage')
+    a.to-top(href='#top', aria-label='Click to go to top of the webpage')
       span.fa.fa-angle-up(aria-hidden='true')
+      span.to-top-txt To Top

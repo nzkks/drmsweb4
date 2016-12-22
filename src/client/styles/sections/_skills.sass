@@ -86,7 +86,6 @@
       margin-top: 0
       margin-bottom: 0
     .skill-category-content
-      display: none
       padding: 10px 5px
     &:last-child
       border-bottom: none
@@ -96,17 +95,19 @@
       +font-size(13)
       line-height: 1.5
       text-transform: none
+      margin-top: 0
+      margin-bottom: 0
       &:before
         content: none
     a
       width: 100%
       display: block
       cursor: pointer
-      text-indent: 15px
+      text-indent: 10px
       padding-top: 14px
       padding-bottom: 10px
 
-      &:after
+      &.needPsuedo:after
         +size (8, 8)
         border-right: 1px solid $c-grey
         border-bottom: 1px solid $c-grey
@@ -117,6 +118,6 @@
         transform: rotate(-45deg)
         +transition(all, 0.2s, ease-in-out)
 
-    a.active:after
+    a.needPsuedo.active:after
       transform: rotate(45deg)
       +transition(all, 0.2s, ease-in-out)

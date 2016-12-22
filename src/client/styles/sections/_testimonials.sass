@@ -19,10 +19,12 @@
   .items-block
     +marlr-auto()
     position: relative
-    .item
-      padding: 5px
-      +radius($radius-lg)
-      background: $c-white
+  .item
+    padding: 5px
+    +radius($radius-lg)
+    background: $c-white
+    margin-bottom: 10px
+    @extend %clearfix
   .slick-slide
     z-index: 2 !important
   figure

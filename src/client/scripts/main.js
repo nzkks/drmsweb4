@@ -117,7 +117,7 @@ $(document).ready(function() {
   // END: Local page links
 
   // BEGIN: Show download menu
-
+  $('.download-files-container').hide();
   var hidden = true;
   $('.download-btn').hover(function(e) {
     e.preventDefault();
@@ -139,6 +139,16 @@ $(document).ready(function() {
 
   // END: Show download menu
 
+  // Hide Social icon names
+  $('.icon-alt-name').hide();
+  // Show few social icons only when javascript is enabled
+  $('.behance, .pinterest, .facebook').show();
+  // Hide Contact details in Bio section
+  $('.bio-details .item1, .bio-details .item2').hide();
+  // Show both Contact buttons only when JavaScript enabled
+  $('.contact-btn').show();
+
+
   // BEGIN: Show / hide top contact panel
 
   $('.contact-btn').on('click',function(e) {
@@ -153,21 +163,18 @@ $(document).ready(function() {
   });
 
   // BEGIN: Show / hide footer tech panel
-
+  $('.footer .footer-tech-btn').show();
+  $('.footer .extended').hide();
   $('.footer-tech-btn').on('click',function(e) {
+    $('.footer .extended').toggle();
     e.preventDefault();
-    $('.footer-tech-panel').slideDown(400).addClass('open');
-  });
-
-  $('.footer-tech-panel .panel-close').on('click', function(e){
-    e.preventDefault();
-    $('.footer-tech-panel').slideUp(400).removeClass('open');
   });
 
   // END: Show / hide footer tech panel
 
   // BEGIN: Skills Accordion
-  /*$('.skills-accordion > li:eq(0) a').addClass('active').next().slideDown();*/
+  $('.skills-accordion .skill-category-content').hide();
+  $('.skills-accordion li h4 a').addClass('needPsuedo');
   $('.skills-accordion a').click(function(j) {
     var dropDown = $(this).closest('li').find('.skill-category-content');
     $(this).closest('.skills-accordion').find('.skill-category-content').not(dropDown).slideUp();

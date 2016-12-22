@@ -43,13 +43,15 @@
       @include span(3 at 9 of 12)
       text-align: left
 
+  .contact-btn
+    display: none
+
   .download-files-container
     @include container
     position: absolute
     top: 55px
     left: calc(50% - 90px)
     z-index: 2
-    display: none
     min-width: 180px
     @include breakpoint($bp-md)
       left: -10px
@@ -78,8 +80,6 @@
         height: 0
         width: 0
         position: absolute
-      &:before
-        border-color: transparent
         border-width: 10px
         border-bottom-color: rgba(255, 255, 255, 0.9)
       span.fa

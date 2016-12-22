@@ -5,6 +5,29 @@
   .__container
     padding-top: 10px
     padding-bottom: 10px
+    position: relative
+  .extended
+    transition: 0.5s ease
+    @extend %clearfix
+  .beta-txt
+    text-align: center
+    color: $c-yellow
+    a
+      margin: 0 5px
+      padding: 0 5px
+      background-color: $c-white
+      font-weight: bold
+
+  .tech-box
+    .item
+      box-shadow: none
+      @include gallery(4 of 12)
+      @include breakpoint($bp-sm5)
+        @include gallery(3 of 12)
+      @include breakpoint($bp-lg)
+        @include gallery(2 of 12)
+  .footer-box
+    @extend %clearfix
     .copyright
       text-align: center
       @include breakpoint($bp-sm4)
@@ -15,6 +38,7 @@
         @include span(6 at 7 of 12)
 
     .btn
+      display: none
       background: $c-lblue2
       color: $c-white
       &:hover

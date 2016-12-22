@@ -54,17 +54,22 @@ div[class^='section--']
   padding-bottom: 1.5%
   margin-top: 1.5%
   margin-bottom: 1.5%
+
+%clearfix
+  &::before,
+  &::after
+    display: table
+    content: ''
+  &::after
+    clear: both
+
 .__container
   +marlr-auto()
   padding-top: 1.5%
   padding-bottom: 1.5%
   width: 97%
   max-width: $max-width - 30px
-  &::before, &::after
-    display: table
-    content: ""
-  &::after
-    clear: both
+  @extend %clearfix
 
 .btn
   display: inline-block
@@ -80,32 +85,19 @@ div[class^='section--']
   +radius($radius-lg)
   border: 1px solid rgba(255,255,255,0.4)
   transition: all 0.4s ease-out
-  &.active
-    &.focus, &:focus
-      outline: 5px auto
-      outline-offset: -2px
-
-  &.focus
-    outline: 5px auto
-    outline-offset: -2px
-
-  &:active
-    &.focus, &:focus
-      outline: 5px auto
-      outline-offset: -2px
-
-  &:focus
-    outline: 5px auto
-    outline-offset: -2px
-
-  &.focus, &:focus, &:hover
-    color: $c-dgrey
-    text-decoration: none
-
   &.active, &:active
     background-image: none
     outline: 0
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
+    &.focus, &:focus
+      outline: 5px auto
+      outline-offset: -2px
+  &.focus, &:focus
+    outline: 5px auto
+    outline-offset: -2px
+  &.focus, &:focus, &:hover
+    color: $c-dgrey
+    text-decoration: none
 
 .hr-style1
   @include full
@@ -115,28 +107,37 @@ div[class^='section--']
   height: 1px
   background-image: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(184,186,198,1) 50%,rgba(255,255,255,0) 100%)
 
+.hr-style2
+  @include full
+  margin-top: 25px
+  margin-bottom: 25px
+  border-top: 1px solid $c-dgrey2
+  border-bottom: 1px solid $c-lgrey
+
 .to-top
   position: fixed
   bottom: 10px
   right: 10px
+  padding: 6px 10px
   z-index: 5
   cursor: pointer
+  background-color: $c-lblue2
+  +radius($radius-lg)
   opacity: 0.5
   @include breakpoint($bp-max)
     opacity: 1
   &:hover
     opacity: 1
-  span
-    display: block
-    +size(30, 30)
+    background-color: $c-blue
+  span.fa
+    display: inline-block
     +font-size(20)
-    line-height: 30px
     text-align: center
-    +radius($radius-lg)
+    margin-right: 10px
     color: $c-white
-    background-color: $c-lblue2
-    &:hover
-      background-color: $c-blue
+  span.to-top-txt
+    +font-size(14)
+    color: $c-white
 
 .fixed-panel
   padding: 35px 0
@@ -145,18 +146,21 @@ div[class^='section--']
   margin: 0 auto
   z-index: 4
   display: none
-  .panel-close
-    position: absolute
-    top: 20px
-    right: 10px
-    display: inline-block
-    +size(30, 30)
-    text-align: center
-    +font-size(20)
-    +radius($radius-lg)
+  position: relative
+.panel-close
+  position: absolute
+  top: 20px
+  right: 10px
+  display: inline-block
+  +size(30, 30)
+  text-align: center
+  +font-size(20)
+  +radius($radius-lg)
+  color: $c-white
+  &:hover
+    color: $c-black
+  &:visited
     color: $c-white
-    &:hover
-      color: $c-black
 
 .gallery
   @include bleed(gutter(12))
@@ -166,12 +170,10 @@ div[class^='section--']
     margin-bottom: gutter(12)
     text-align: center
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1)
-  &::before,
-  &::after
-    display: table
-    content: ''
-  &::after
-    clear: both
+  @extend %clearfix
 
 .lazy
+  display: none
+
+.contact-btn
   display: none
