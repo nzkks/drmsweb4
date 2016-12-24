@@ -146,14 +146,14 @@ $(document).ready(function() {
   // Hide Contact details in Bio section
   $('.bio-details .item1, .bio-details .item2').hide();
   // Show both Contact buttons only when JavaScript enabled
-  $('.contact-btn').show();
-
+  $('.contact-btn').show().css('display', 'inline-block');
 
   // BEGIN: Show / hide top contact panel
 
   $('.contact-btn').on('click',function(e) {
     e.preventDefault();
     $('.contact-panel').slideDown(400).addClass('open');
+    $('html, body').animate({ scrollTop: 0 }, 'slow');
     $('#gform-name').focus();
   });
 
