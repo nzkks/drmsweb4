@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import appStarter from './app-starter';
+import './fancybox/jquery.fancybox.js';
 
 $(function() {
   appStarter();
@@ -191,8 +192,10 @@ $(document).ready(function() {
 
   // BEGIN: Fancybox for portfolio
   $('.fancybox').fancybox({
+    padding: 0,
     openEffect: 'none',
-    closeEffect: 'none'
+    closeEffect: 'none',
+    margin: [20, 40, 20, 40]
   });
   // END: Fancybox for portfolio
 

@@ -1,7 +1,6 @@
 // global window */
 import $ from 'jquery';
 window.jQuery = $;
-window.fancybox = require('fancybox')($);
 require('slick-carousel');
 require('jquery.scrollto');
 

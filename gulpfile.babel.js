@@ -138,8 +138,6 @@ gulp.task('build-client-styles', function() {
   templateConfig.susySassMain = templateConfig.susySassPath + '/' + '_susy.scss';
   templateConfig.breakpointSassPath = 'bower_components/breakpoint-sass/stylesheets';
   templateConfig.breakpointSassMain = templateConfig.breakpointSassPath + '/' + '_breakpoint.scss';
-  templateConfig.fancyboxScssPath = 'node_modules/fancybox/dist/scss';
-  templateConfig.fancyboxScssMain = templateConfig.fancyboxScssPath + '/' + 'jquery.fancybox.scss';
   templateConfig.slickScssPath = 'node_modules/slick-carousel/slick';
   templateConfig.slickScssMain = templateConfig.slickScssPath + '/' + 'slick.scss';
   templateConfig.slickThemeScss = templateConfig.slickScssPath + '/' + 'slick-theme.scss';
@@ -177,11 +175,6 @@ gulp.task('build-client-vendor-slickcarousel-loader', () =>
     .pipe(gulp.dest(`${builder.dirs.tgt.clientVendor}/slick-carousel/`))
 );
 
-gulp.task('build-client-vendor-fancybox-assets', () =>
-  gulp.src(['**/*.{jpg,png,svg,gif,webp,ico}'], {cwd: 'node_modules/fancybox/dist/img'})
-    .pipe(gulp.dest(`${builder.dirs.tgt.clientVendor}/fancybox/img`))
-);
-
 gulp.task('nop', function() {});
 
 gulp.task('build-client-vendor-assets', done =>
@@ -189,7 +182,6 @@ gulp.task('build-client-vendor-assets', done =>
     'build-client-vendor-modernizr',
     'build-client-vendor-slickcarousel-fonts',
     'build-client-vendor-slickcarousel-loader',
-    'build-client-vendor-fancybox-assets',
     'nop'
   ], done)
 );
