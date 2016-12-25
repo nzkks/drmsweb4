@@ -14,5 +14,8 @@ export default function(options) {
   app.use('/app', express.static(options.clientDir));
   app.use('/vendor', express.static(options.vendorDir));
   app.use('/', routes);
+  app.use(function(req, res){
+    res.status(404).render('404.pug', {title: 'Sorry, page not found'});
+  });
   return app;
 }
