@@ -6,6 +6,31 @@ $(function() {
   appStarter();
 });
 
+// BEGIN: When a Print command detected, the page address gets a query parameter and page reloaded
+
+var reloadForPrint = function() {
+  if(location.search.indexOf('print') == -1) {
+    var url = window.location.href;
+    if (url.indexOf('?') != -1){
+      url += '&print';
+    } else {
+      url += '?print';
+    }
+    window.location.href = url;
+  }
+};
+window.onbeforeprint = reloadForPrint;
+if (window.matchMedia) {
+  var mediaQueryList = window.matchMedia('print');
+  mediaQueryList.addListener(function(mql) {
+    if (mql.matches) {
+      reloadForPrint();
+    }
+  });
+}
+
+// END: When a Print command detected, the page address gets a query parameter and page reloaded
+
 // BEGIN: Font Awesome
 
 (function() {
@@ -36,59 +61,59 @@ gaAnalytics('send', 'pageview');
 
 // END: Google Analytics
 
+// BEGIN: Lazy load images
+
+// This line is nothing to do with lazyload.
+// By default .lazy class style set to display: none.
+// Only when JavaScript is present then we are showing the elements.
+$('.lazy').show();
+
+var lazy = [];
+registerListener('load', setLazy);
+registerListener('load', lazyLoad);
+registerListener('scroll', lazyLoad);
+registerListener('resize', lazyLoad);
+function setLazy(){
+  lazy = document.getElementsByClassName('lazy');
+}
+function lazyLoad(){
+  for(var i=0; i<lazy.length; i++){
+    if(isInViewport(lazy[i])){
+      if (lazy[i].getAttribute('data-src')){
+        lazy[i].src = lazy[i].getAttribute('data-src');
+        lazy[i].removeAttribute('data-src');
+      }
+    }
+  }
+  cleanLazy();
+}
+function cleanLazy(){
+  lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
+}
+function isInViewport(el){
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.bottom >= 0 &&
+    rect.right >= 0 &&
+    rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+function registerListener(event, func) {
+  if (window.addEventListener) {
+    window.addEventListener(event, func);
+  } else {
+    window.attachEvent('on' + event, func);
+  }
+}
+
+// END: Lazy load images
+
 $(document).ready(function() {
 
   // BEGIN: Fall Png images to Svg images
   // if(!Modernizr.svg){var i=document.getElementsByTagName('img'),j,y;for(j=i.length;j--;){y=i[j].src;if(y.match(/svg$/)){i[j].src=y.slice(0,-3)+'png';}}}
   // END: Fall Png images to Svg images
-
-  // BEGIN: Lazy load images
-
-  // This line is nothing to do with lazyload.
-  // By default .lazy class style set to display: none.
-  // Only when JavaScript is present then we are showing the elements.
-  $('.lazy').show();
-
-  var lazy = [];
-  registerListener('load', setLazy);
-  registerListener('load', lazyLoad);
-  registerListener('scroll', lazyLoad);
-  registerListener('resize', lazyLoad);
-  function setLazy(){
-    lazy = document.getElementsByClassName('lazy');
-  }
-  function lazyLoad(){
-    for(var i=0; i<lazy.length; i++){
-      if(isInViewport(lazy[i])){
-        if (lazy[i].getAttribute('data-src')){
-          lazy[i].src = lazy[i].getAttribute('data-src');
-          lazy[i].removeAttribute('data-src');
-        }
-      }
-    }
-    cleanLazy();
-  }
-  function cleanLazy(){
-    lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
-  }
-  function isInViewport(el){
-    var rect = el.getBoundingClientRect();
-    return (
-      rect.bottom >= 0 &&
-      rect.right >= 0 &&
-      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.left <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
-  function registerListener(event, func) {
-    if (window.addEventListener) {
-      window.addEventListener(event, func);
-    } else {
-      window.attachEvent('on' + event, func);
-    }
-  }
-
-  // END: Lazy load images
 
   // BEGIN: Local page links
 
@@ -144,8 +169,7 @@ $(document).ready(function() {
   $('.icon-alt-name').hide();
   // Show few social icons only when javascript is enabled
   $('.behance, .pinterest, .facebook').show();
-  // Hide Contact details in Bio section
-  $('.bio-details .item1, .bio-details .item2').hide();
+
   // Show both Contact buttons only when JavaScript enabled
   $('.contact-btn').show().css('display', 'inline-block');
 
@@ -343,3 +367,19 @@ function loaded() {
 document.addEventListener('DOMContentLoaded', loaded, false);
 
 // END: Contact Form Script
+
+// BEGIN: When the page gets loaded, it reads the availability of 'print' query parameter. If there is then all the lazy class images are downloaded immediately and page get printed.
+
+lazy = document.getElementsByClassName('lazy');
+if(location.search.indexOf('print') > -1){
+  for(var i=0; i<lazy.length; i++){
+    if (lazy[i].getAttribute('data-src')){
+      lazy[i].src = lazy[i].getAttribute('data-src');
+      lazy[i].removeAttribute('data-src');
+    }
+  }
+  lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
+  window.print();
+}
+
+// END: When the page gets loaded, it reads the availability of 'print' query parameter. If there is then all the lazy class images are downloaded immediately and page get printed.

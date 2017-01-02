@@ -22,25 +22,36 @@
       @include breakpoint($bp-sm5)
         text-align: right
 
-    img
-      float: none
-      +marlr-auto()
-      width: 100%
-      max-width: 200px
-      +radius(100%)
-      border: 1px solid #eee
-      padding: 3px
-      box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.05)
-      @include breakpoint($bp-sm5)
-        float: left
-        margin-left: 23px
   .bio-details
     margin-left: 0px
     text-align: center
-    @include breakpoint($bp-sm4)
-      margin-left: 0px
-    @include breakpoint($bp-sm5)
-      margin-left: 240px
+    @extend %clearfix
+    .bio-photo
+      max-width: 200px
+      +marlr-auto()
+      @include breakpoint($bp-sm5)
+        @include span(5 of 12)
+        margin-left: 1%
+      @include breakpoint($bp-lg)
+        @include span(4 of 12)
+      img
+        width: 100%
+        +radius(100%)
+        border: 1px solid #eee
+        padding: 3px
+        box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.05)
+    h1
+      @include breakpoint($bp-sm5)
+        @include span(7 at 6 of 12)
+        padding-top: 40px
+        padding-bottom: 40px
+        margin-right: 1%
+      @include breakpoint($bp-lg)
+        @include span(8 at 5 of 12)
+        margin-right: 2%
+    .bio-items
+      @include breakpoint($bp-sm5)
+        clear: both
     .bio-item
       margin: 0px auto 10px
       max-width: 90%
@@ -57,6 +68,15 @@
     .item2, .item4, .item6
       @include breakpoint($bp-sm4)
         @include span(6 at 7 of 12)
+    .item1, .item4
+      @include breakpoint($bp-sm5)
+        @include span(4 of 12)
+    .item2, .item5
+      @include breakpoint($bp-sm5)
+        @include span(4 at 5 of 12)
+    .item3, .item6
+      @include breakpoint($bp-sm5)
+        @include span(4 at 9 of 12)
     .hr-style1
       margin-top: 10px
       margin-bottom: 10px

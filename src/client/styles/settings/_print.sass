@@ -1,73 +1,136 @@
 @media print
+  @page
+    size: A4
+    margin: 5mm 5mm 0mm 20mm
+  #BrowserPrintDefaults
+    display: none
   *
     box-shadow: none !important
-    background: none !important
+    text-shadow: none !important
+    transition: none !important
+    background: transparent !important
     color: $c-black !important
-    padding: inherit !important
-    line-height: 1.5 !important
+    border-radius: 0 !important
+  html
+    width: 210mm
   body
-    background: $c-white
-
-  .header
-    position: static
-    float: none
-    .short-txt
-      display: none
-    .full-txt
-      position: absolute !important
-      top: 11px !important
-      opacity: 1 !important
-    .nav-block ul
-      display: none
-  .main
-    float: none
     margin-top: 0
+    margin-bottom: 5mm
+    padding: 0 !important
+    max-width: 185mm
+    background: none
+  img
+    page-break-inside: avoid
+  body > *:not(main)
+    display: none
+
+  div[class^='section--'], .__container
+    margin: auto
+    padding: inherit
+  .__container
+    padding-top: 0mm !important
+    padding-bottom: 0mm !important
+    width: 100%
+    max-width: none
+  .main
+    margin-top: 0
+    float: none
+
+  .intro-block, .section--main-slider, .section--bio-info
+    transform: rotate(180deg)
+
+  .section--main-slider
+    h3
+      display: block
   .accordion-slider
-    ul
-      list-style: inherit
-      width: auto
-      height: auto
-      &:hover li
-        width: auto
-        &:hover
-          width: auto
-      li
+    display: flex
+    flex-wrap: wrap !important
+    height: auto
+    .accordion__slide
+      flex: 1 50% !important
+      background: none
+      overflow: visible
+      flex: none
+      &:hover
+        .title
+          top: auto
+          left: auto
+          transform: rotate(0deg)
+        .details
+          max-width: none
+    .accordion__inner
+      .title
+        position: static
         width: auto
         height: auto
-        a
-          float: none
-          height: auto
-          h2
-            position: static
-            width: auto
-            height: auto
-            transform: none
-            span
-              display: inherit
-        p
-          position: static
-          width: auto
+        text-indent: inherit
+        transform: rotate(0deg)
+        +font-size(22)
+        line-height: 1.5
+        font-weight: 400
+      .details
+        position: static
+        opacity: 1
+
   .section--cta-style
     display: none
+
   .section--bio-info
     .__container
       border: none
     .social-icons
       display: none
+    .bio-photo
+      margin-right: 1.69492%
+      margin-left: 1%
+      width: 40.67797%
+      float: left
     img
-      float: none !important
+      width: 100px !important
+      height: 100px !important
+    h1
+      margin-top: 0 !important
+      margin-bottom: 0 !important
+      padding-top: 0 !important
+      padding-bottom: 0 !important
+      width: 57.62712%
+      float: right
+    .bio-details, .bio-items
+      &::before,
+      &::after
+        display: table
+        content: ''
+      &::after
+        clear: both
     .bio-details
-      margin-left: 0
+      .bio-items
+        padding-top: 20px
+        clear: both
       .bio-item
+        margin: 0
+        max-width: none
+      .item1, .item4
+        @include span(4 of 12)
+      .item2, .item5
+        @include span(4 at 5 of 12)
+      .item3, .item6
+        @include span(4 at 9 of 12)
     .txt-row
+      padding: 0 !important
       columns: initial
+      text-align: left
+
   .section--specialities
     display: none
+
+  .section--skills, .section--portfolio, .section--testimonials
+    page-break-before: always
+
   .section--skills
     .skills-item
-      width: 49.15254%
-      float: left
       margin-right: 1.69492%
+      width: 48.15254%
+      float: left
     .skills-heading
       display: none
     .skills-content
@@ -77,28 +140,60 @@
     .skills-accordion
       max-width: none
       li
+        margin-bottom: 0
         border: none
-      a::after
-        display: none
+      a
+        text-indent: 0
+        &::after
+          display: none
       h4
         text-indent: 0
       .skill-category-content
-        display: block
-      .skill-progress
-        display: inline
-        p
-          display: inline
-          &:after
-            content: ', '
-        .progress
-          display: none
+        display: block !important
+
+  .section--portfolio
+    h3
+      page-break-after: avoid !important
+    .item
+      margin-bottom: 1.69492% !important
+      width: 23.72881% !important
+      float: left !important
+      text-align: center !important
+      &:nth-child(4n+1)
+        margin-left: 0 !important
+        margin-right: -100% !important
+        clear: both !important
+      &:nth-child(4n+2)
+        margin-left: 25.42373% !important
+        margin-right: -100% !important
+        clear: none !important
+      &:nth-child(4n+3)
+        margin-left: 50.84746% !important
+        margin-right: -100% !important
+        clear: none !important
+      &:nth-child(4n+4)
+        margin-left: 76.27119% !important
+        margin-right: -100% !important
+        clear: none !important
+      .lazy, span.fa, span.mask
+        display: none
+      a:hover img
+        filter: none
 
   .section--testimonials
+    .linkedin-txt, .slick-dots, .slick-arrow
+      display: none !important
     .item
-      margin-bottom: 20px
-
-  .footer
-    display: none
-
+      margin-bottom: 0.5cm
+    figure
+      img
+        width: 15.25424%
+        float: left
+        margin: auto
+        margin-right: 1.69492%
+      figcaption
+        width: 83.05085%
+        float: right
+        margin-right: 0
   .to-top
     display: none !important

@@ -1,3 +1,6 @@
+.section--main-slider
+  h3
+    display: none
 .accordion-slider
   margin: 1px auto
   width: 100%
@@ -10,7 +13,6 @@
     height: 250px
     flex-direction: row
     justify-content: flex-start
-
   .accordion__slide
     display: flex
     flex: 1
@@ -65,7 +67,8 @@
 
     .details
       position: absolute
-      left: -9999px
+      left: 20px
+      color: transparent
       opacity: 0
       transition: opacity 1s ease
 
@@ -84,7 +87,6 @@
     &:hover .details, &:focus .details
       display: block
       top: 25px
-      left: 20px
       max-width: 90%
       color: $c-white
       text-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
