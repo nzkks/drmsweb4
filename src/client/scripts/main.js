@@ -7,28 +7,30 @@ $(function() {
 });
 
 // BEGIN: When a Print command detected, the page address gets a query parameter and page reloaded
-
-var reloadForPrint = function() {
-  if(location.search.indexOf('print') == -1) {
-    var url = window.location.href;
-    if (url.indexOf('?') != -1){
-      url += '&print';
-    } else {
-      url += '?print';
+(function(window){
+  if(window.addEventListener){
+    var reloadForPrint = function() {
+      if(location.search.indexOf('print') == -1) {
+        var url = window.location.href;
+        if (url.indexOf('?') != -1){
+          url += '&print';
+        } else {
+          url += '?print';
+        }
+        window.location.href = url;
+      }
+    };
+    addEventListener('beforeprint', reloadForPrint, false);
+    if (window.matchMedia) {
+      var mediaQueryList = window.matchMedia('print');
+      mediaQueryList.addListener(function(mql) {
+        if (mql.matches) {
+          reloadForPrint();
+        }
+      });
     }
-    window.location.href = url;
   }
-};
-window.onbeforeprint = reloadForPrint;
-if (window.matchMedia) {
-  var mediaQueryList = window.matchMedia('print');
-  mediaQueryList.addListener(function(mql) {
-    if (mql.matches) {
-      reloadForPrint();
-    }
-  });
-}
-
+})(window);
 // END: When a Print command detected, the page address gets a query parameter and page reloaded
 
 // BEGIN: Font Awesome
