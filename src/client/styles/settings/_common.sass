@@ -129,15 +129,17 @@ div[class^='section--']
   &:hover
     opacity: 1
     background-color: $c-blue
-  span.fa
-    display: inline-block
-    +font-size(20)
-    text-align: center
-    margin-right: 10px
-    color: $c-white
   span.to-top-txt
     +font-size(14)
     color: $c-white
+    &::before
+      +size (8, 8)
+      border-top: 2px solid $c-white
+      border-right: 2px solid $c-white
+      content: " "
+      transform: rotate(-45deg)
+      margin-right: 10px
+      display: inline-block
 
 .fixed-panel
   padding: 35px 0

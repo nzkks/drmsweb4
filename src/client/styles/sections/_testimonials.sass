@@ -60,22 +60,29 @@
   .slick-arrow
     position: absolute
     top: calc(50% - 25px)
+    +size (30, 30)
+    padding-top: 5px
+    text-align: center
     cursor: pointer
     z-index: 1
-    +font-size(20)
-    span.fa
-      display: block
-      +size(30, 30)
-      +radius($radius-lg)
-      padding-top: 4px
-      text-align: center
-      background-color: $c-lblue2
-      color: $c-white
-      opacity: 0.5
-      &:hover
-        opacity: 1
-        background-color: $c-blue
+    background-color: $c-lblue2
+    color: $c-white
+    opacity: 0.5
+    &:hover
+      opacity: 1
+      background-color: $c-blue
+  .arrow-prev::before, .arrow-next::after
+    +size (12, 12)
+    border-top: 2px solid $c-white
+    content: " "
+    display: inline-block
   .arrow-prev
     left: 0
+    &::before
+      border-left: 2px solid $c-white
+      transform: rotate(-45deg)
   .arrow-next
     right: 0
+    &::after
+      border-right: 2px solid $c-white
+      transform: rotate(45deg)

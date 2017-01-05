@@ -10,9 +10,11 @@
       @include breakpoint($bp-sm5)
         margin-right: 10px
   .fa
-    +size(40, 40)
     +font-size(18)
     line-height: 40px
+  [class*="fa-"]:before
+    +size(40, 40)
+
   .email
     background: $c-lblue
     &:hover

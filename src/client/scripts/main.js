@@ -33,18 +33,6 @@ $(function() {
 })(window);
 // END: When a Print command detected, the page address gets a query parameter and page reloaded
 
-// BEGIN: Font Awesome
-
-(function() {
-  var css = document.createElement('link');
-  css.href = 'https://use.fontawesome.com/0350acee1c.css';
-  css.rel = 'stylesheet';
-  css.type = 'text/css';
-  document.getElementsByTagName('head')[0].appendChild(css);
-})();
-
-// END: Font Awesome
-
 // BEGIN: Google Analytics
 var gaAnalytics = gaAnalytics || function(){};
 gaAnalytics('create', 'UA-10657263-10', 'auto');
@@ -259,8 +247,8 @@ $(document).ready(function() {
 
   // BEGIN: Testimonial slider
   var slickOptions = {
-    prevArrow: '<span class="arrow-prev slick-arrow" title="Previous"><span class="fa fa-angle-left" aria-hidden="true"></span></span>',
-    nextArrow: '<span class="arrow-next slick-arrow" title="Next"><span class="fa fa-angle-right" aria-hidden="true"></span></span>',
+    prevArrow: '<span class="arrow-prev slick-arrow" title="Previous"></span>',
+    nextArrow: '<span class="arrow-next slick-arrow" title="Next"></span>',
     dots: true,
     autoplay: true,
     autoplaySpeed: 40000,
