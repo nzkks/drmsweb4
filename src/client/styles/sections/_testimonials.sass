@@ -6,9 +6,12 @@
         +font-size(18)
       span.separator
         display: none
-        margin-left: 20px
-        margin-right: 20px
-        color: $c-lgrey
+        opacity: 0
+        @include breakpoint($bp-sm3)
+          opacity: 1
+          margin-left: 20px
+          margin-right: 20px
+          color: $c-lgrey
       .btn--exp-col
         display: none
         +font-size(14)
@@ -19,6 +22,8 @@
         color: $c-blue
         &:hover
           color: $c-lred
+        &:visited
+          color: $c-blue
 
   .items-block
     +marlr-auto()
@@ -35,7 +40,7 @@
   figure
     margin: 5px
     img
-      +radius(4px)
+      @extend %circle-img
       margin: 0 auto 15px
       @include breakpoint($bp-sm5)
         @include span(2 of 12)

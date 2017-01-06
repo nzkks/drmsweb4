@@ -248,7 +248,19 @@ $(document).ready(function() {
 
   // BEGIN: Testimonial slider
   // Only show when JavaScript is available.
-  $('.section--testimonials .separator, .section--testimonials .btn--exp-col, .section--testimonials .lzy').show();
+  $('.section--testimonials .lzy').show();
+
+  var mqlTestimonial = window.matchMedia('(min-width: 425px)');
+  mqlTestimonial.addListener(expColTestimonials);
+  expColTestimonials(mqlTestimonial);
+
+  function expColTestimonials(mqlTestimonial){
+    if (mqlTestimonial.matches) {
+      $('.section--testimonials .separator, .section--testimonials .btn--exp-col').show().css('display', 'inline-block');
+    } else {
+      $('.section--testimonials .btn--exp-col').show().css({'display': 'block', 'text-align': 'right'});
+    }
+  }
 
   var flickityOptions = {
     cellAlign: 'left',

@@ -36,10 +36,7 @@
         @include span(4 of 12)
       img
         width: 100%
-        +radius(100%)
-        border: 1px solid #eee
-        padding: 3px
-        box-shadow: 2px 2px 0px 1px rgba(0,0,0,0.05)
+        @extend %circle-img
     h1
       @include breakpoint($bp-sm5)
         @include span(7 at 6 of 12)
