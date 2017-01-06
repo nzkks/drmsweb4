@@ -4,6 +4,22 @@
     h3
       span.fa
         +font-size(18)
+      span.separator
+        display: none
+        margin-left: 20px
+        margin-right: 20px
+        color: $c-lgrey
+      .btn--exp-col
+        display: none
+        +font-size(14)
+        font-family: $font-family
+        font-weight: bold
+        letter-spacing: normal
+        text-decoration: underline
+        color: $c-blue
+        &:hover
+          color: $c-lred
+
   .items-block
     +marlr-auto()
     position: relative
@@ -11,10 +27,11 @@
     padding: 5px
     +radius($radius-lg)
     background: $c-white
+    margin-right: 10px
     margin-bottom: 10px
+    width: 100%
+    height: auto
     @extend %clearfix
-  .slick-slide
-    z-index: 2 !important
   figure
     margin: 5px
     img
@@ -35,54 +52,25 @@
     span.fa
       +font-size(20)
       color: $c-grey
-  .slick-dots
-    display: none
-    @include breakpoint($bp-sm5)
-      display: block
-      bottom: -50px
-    li
-      @include breakpoint($bp-sm5)
-        margin: 0 20px
-        +size(30,30)
-      button
-        +size(30,30)
-        &:before
-          +size(8,8)
-          background: $c-black
-          border-radius: 50%
-          font-family: inherit
-          content: inherit
-          top: 11px
-          left: 11px
-          content: '•'
-      &:hover
-        background-color: lighten($c-grey, 55%)
-  .slick-arrow
-    position: absolute
-    top: calc(50% - 25px)
+  .flickity-prev-next-button
     +size (30, 30)
-    padding-top: 5px
-    text-align: center
-    cursor: pointer
-    z-index: 1
+    +radius($radius-lg)
     background-color: $c-lblue2
-    color: $c-white
     opacity: 0.5
     &:hover
       opacity: 1
       background-color: $c-blue
-  .arrow-prev::before, .arrow-next::after
-    +size (12, 12)
-    border-top: 2px solid $c-white
-    content: " "
-    display: inline-block
-  .arrow-prev
-    left: 0
-    &::before
-      border-left: 2px solid $c-white
-      transform: rotate(-45deg)
-  .arrow-next
-    right: 0
-    &::after
-      border-right: 2px solid $c-white
-      transform: rotate(45deg)
+    & .arrow
+      fill: $c-white
+    &.no-svg
+      color: $c-white
+    &.previous
+      left: 0
+    &.next
+      right: 0
+  .flickity-page-dots
+    display: none
+    @include breakpoint($bp-sm5)
+      display: block
+  .lzy
+    display: none

@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import appStarter from './app-starter';
 import './fancybox/jquery.fancybox.js';
+import './flickity/flickity.pkgd.js';
 
 $(function() {
   appStarter();
@@ -246,42 +247,69 @@ $(document).ready(function() {
   // END: Lazy loading the Google font for headings
 
   // BEGIN: Testimonial slider
-  var slickOptions = {
-    prevArrow: '<span class="arrow-prev slick-arrow" title="Previous"></span>',
-    nextArrow: '<span class="arrow-next slick-arrow" title="Next"></span>',
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 40000,
-    fade: true,
-    adaptiveHeight: true,
-    cssEase: 'linear',
-    infinite: true
+  // Only show when JavaScript is available.
+  $('.section--testimonials .separator, .section--testimonials .btn--exp-col, .section--testimonials .lzy').show();
+
+  var flickityOptions = {
+    cellAlign: 'left',
+    freeScroll: false,
+    wrapAround: true,
+    imagesLoaded: true,
+    lazyLoad: true,
+    autoPlay: 5000,
+    pauseAutoPlayOnHover: true
   };
 
-  var divToSlick1 = $('.section--testimonials .items-block');
-  divToSlick1.slick(slickOptions);
+  var $testimonialCarousel = $('.section--testimonials .items-block').flickity(flickityOptions);
+
+  var isFlickity = true;
+  // toggle Flickity on/off
+  $('.btn--exp-col').on( 'click', function(e) {
+    if ( isFlickity ) {
+      // destroy Flickity
+      $testimonialCarousel.flickity('destroy');
+      $testimonialCarousel.find('[data-flickity-lazyload]').each( function( i, elem  ) {
+        var $elem = $(elem);
+        $elem.attr( 'src', $elem.attr('data-flickity-lazyload') );
+        $elem.addClass('flickity-lazyloaded');
+        elem.removeAttribute('data-flickity-lazyload');
+      });
+    } else {
+      // init new Flickity
+      $testimonialCarousel.flickity();
+    }
+    isFlickity = !isFlickity;
+    e.preventDefault();
+  });
 
   var beforePrint = function() {
-    divToSlick1.slick('unslick');
+    $testimonialCarousel.flickity('destroy');
+    $testimonialCarousel.find('[data-flickity-lazyload]').each( function( i, elem  ) {
+      var $elem = $(elem);
+      $elem.attr( 'src', $elem.attr('data-flickity-lazyload') );
+      $elem.addClass('flickity-lazyloaded');
+      elem.removeAttribute('data-flickity-lazyload');
+    });
   };
   var afterPrint = function() {
-    divToSlick1.slick(slickOptions);
+    $testimonialCarousel.flickity();
   };
 
-  if (window.matchMedia) {
-    var mediaQueryList = window.matchMedia('print');
-    mediaQueryList.addListener(function(mql) {
-      if (mql.matches) {
-        beforePrint();
-      } else {
-        afterPrint();
-      }
-    });
-  }
+  (function(window){
+    if (window.matchMedia) {
+      var mediaQueryList = window.matchMedia('print');
+      mediaQueryList.addListener(function(mql) {
+        if (mql.matches) {
+          beforePrint();
+        } else {
+          afterPrint();
+        }
+      });
+    }
 
-  window.onbeforeprint = beforePrint;
-  window.onafterprint = afterPrint;
-
+    window.onbeforeprint = beforePrint;
+    window.onafterprint = afterPrint;
+  })(window);
   // END: Testimonial slider
 
 });
@@ -370,6 +398,7 @@ if(location.search.indexOf('print') > -1){
   }
   lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
   window.print();
+  setTimeout(function closePrintView(){document.location.href = '/';}, 3000);
 }
 
 // END: When the page gets loaded, it reads the availability of 'print' query parameter. If there is then all the lazy class images are downloaded immediately and page get printed.

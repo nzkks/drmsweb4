@@ -1,7 +1,6 @@
 // global window */
 import $ from 'jquery';
 window.jQuery = $;
-require('slick-carousel');
 require('jquery.scrollto');
 
 class App {
