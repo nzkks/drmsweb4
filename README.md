@@ -16,6 +16,6 @@ I have used following web technologies to create this website.
 
 ---
 
-_Still this website is in 'Beta' stage. I feel many things could be improved. Lot of checks needed._
+_This website is in 'Beta' stage. Few things could be improved. Working on it._
 
-- Check Issues section to see few prominent issues.
+- Check Issues section to see few known issues.
