@@ -1,8 +1,0 @@
-{
-  "name": "drmsweb",
-  "version": "0.1.0",
-  "dependencies": {},
-  "devDependencies": {
-    "breakpoint-sass": "^2.7.0"
-  }
-}

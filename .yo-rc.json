@@ -2,7 +2,6 @@
   "generator-webpack-versatile": {
     "appname": "drmsweb",
     "dirs": {
-      "bower": "bower_components",
       "src": "src",
       "test": "test",
       "tmp": ".tmp",
@@ -14,10 +13,6 @@
     },
     "framework": "none",
     "frontend": "bootstrap",
-    "features": [
-      "modernizr",
-      "sass",
-      "crusher"
-    ]
+    "features": ["modernizr", "sass", "crusher"]
   }
 }
